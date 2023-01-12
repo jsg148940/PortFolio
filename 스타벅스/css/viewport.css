@@ -1,0 +1,322 @@
+@media screen and (max-width:800px){
+  /* page1 */
+  #page1{
+    background-image: url(../images/caffe.jpg);
+  }
+  header{
+    display: none;
+  }
+  .fa-ellipsis-vertical{
+    position: absolute; 
+    top: 0;
+    right: 10%;
+    opacity: 1;
+    font-size: 2rem;
+    color: #fff;
+    margin-top: 1em;
+    cursor: pointer;
+    z-index: 99;
+  }
+  .fa-ellipsis-vertical:active{
+    border: 1px solid red;
+  }
+  /* view port slide menu */
+  .viewport_menu{
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgb(51, 51, 51);
+    z-index: 100;
+    right: -600px;
+  }
+  .viewport_search{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+  .viewport_search >i{
+    font-size: 2rem;
+    color: #fff;
+    margin: 1em;
+    cursor: pointer;
+  }
+  .viewport_search >i:active{
+    border: 1px solid red;
+  }
+  .viewport_search input{
+    border: none;
+    width: 300px;
+    height: 40px;
+    position: relative;
+    right: 60px;
+    border-radius: 4px;
+    padding-left: 20px;
+  }
+  .viewport_list ul li{
+    list-style: none;
+    height: 70px;
+    border-top: 1px solid #fff;
+  }
+  .viewport_list ul :nth-child(7){
+    border-bottom: 1px solid #fff;
+  }
+  .viewport_list ul li a{
+    color: #fff;
+    font-size: 1.3rem;
+    margin-left: 1em;
+    position: relative;
+    top: 30%;
+  }
+  .viewport_menu ul li a:hover{
+    cursor: pointer;
+  }
+  .viewport_menu ul li:hover a{
+    color: black;
+    font-weight: bold;
+  }
+  .viewport_menu ul li:hover{
+    animation: chgcol .5s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+  @keyframes chgcol{
+    to{background: #fff;}
+  }
+  #backtotop{
+    bottom: 3%;
+    right: 6%;
+  }
+  /* page2 */
+  .map{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+  }
+  .rewards{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+  .rewardcard{
+    width: 100%;
+    height: 33%;
+    overflow: hidden;
+  }
+  .rewardcard img{
+    opacity: 0;
+  }
+  .box1{
+    background-image: url(../images/card1_viewport.jpeg);
+    position: relative;
+  }
+  .box1 button{
+    position: absolute;
+  }
+  .box2{
+    background-image: url(../images/card2_viewport.jpg);
+    position: relative;
+  }
+  .box2 button{
+    position: absolute;
+  }
+  .box3{
+    background-image: url(../images/card3_viewport.png);
+    position: relative;
+  }
+  .box3 button{
+    position: absolute;
+  }
+  .rewardcard button{
+    width: 250px;
+    height: 50px;
+    font-size: 1rem;
+  }
+  .rewards_title{
+    opacity: 0;
+    position: relative;
+  }
+  .rewards_title h2{
+    font-size: 1.7rem;
+    line-height: 40px;
+    word-spacing: normal;
+  }
+  .rewards_title p{
+    font-size: 1.1rem;
+    line-height: 30px;
+    word-spacing: normal;
+    font-family: 'Nanum Gothic Coding', monospace;
+    font-weight: bold;
+    margin-top: 1px;
+  }
+  .box1 >.rewards_title{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+  .box2 >.rewards_title{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+  .box3 >.rewards_title{
+    width: 100%;
+    height: 230px;
+    position: absolute;
+    top: 0;
+  }
+  .box3 button{
+    position: absolute;
+    bottom: 5%;
+  }
+  /* page3 */
+  .menu_name{
+    width: 70%;
+    position: absolute;
+    top: 3%;
+    left: 15%;
+  }
+  .menu_name p{
+    font-size: 5rem;
+  }
+  .new_coffee{
+    display: none;
+  }
+  .new_coffee_viewport{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 50%;
+    position: absolute;
+    top: 36%;
+  }
+  .new_coffee_title{
+    width: 100%;
+    height: 10%;
+    text-align: center;
+  }
+  .new_coffee_title p{
+    font-family: 'Sunflower', sans-serif;
+    font-size: 1.3rem;
+    color: rgb(40, 40, 100);
+  }
+  .new_coffee_title span{
+    color: palevioletred;
+  }
+  .new_coffee_main{
+    width: 100%;
+    height: 90%;
+  }
+  .new_coffee_main img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  /* page4 */
+  #page4 .map{
+    flex-direction: column;
+  }
+  .toraja_info{
+    display: none;
+  }
+  .toraja{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  .viewport_btn{
+    display: block;
+  }
+  .viewport_btn button{
+    width: 100%;
+    height: 50px;
+    background: rgba(8, 146, 15, 0.493);
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: 0;
+  }
+  .viewport_btn button:hover{
+    color: #fff;
+  }
+  .toraja_text1{
+    margin-top: 30px;
+    height: 140px;
+  }
+  .toraja_text2 img{
+    width: 250px;
+    height: 500px;
+    position: relative;
+    top: 10%;
+    left: 28%;
+  }
+  .toraja_text2 i{
+    position: relative;
+    top: 15%;
+    left: -10%;
+    margin-bottom: 10px;
+  }
+  .toraja_text2 p{
+    position: relative;
+    top: 15%;
+    left: 36%;
+  }
+  /* page5 */
+  .title{
+    opacity: 0.4;
+  }
+  .subtitle{
+    display: none;
+  }
+  #slide_image{
+    position: absolute;
+    left: 0;
+    bottom: 100px;
+  }
+  #page5 button{
+    position: absolute;
+    bottom: 3%;
+  }
+  /* page6 */
+  .map_text{
+    width: 100%;
+  }
+  .map_text h2{
+    font-size: 2rem;
+  }
+  .map_text h3{
+    font-size: 1.6rem;
+    color: rgb(104, 104, 104);
+  }
+  .map_text p{
+    font-size: 1.2rem;
+  }
+  /* footer */
+  footer{
+    display: flex;
+    flex-direction: column;
+  }
+  .sitemap_box1{
+    width: 100%;
+  }
+  .sitemap_txt{
+    height: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+  .sitemap_box2{
+    width: 100%;
+    border-top: 1px solid rgb(71, 71, 71);
+  }
+  .sitemap_box2 >div{
+    margin: 0;
+  }
+  .icones i{
+    margin: 16px;
+  }
+}

@@ -1,0 +1,268 @@
+@media screen and (max-width:800px){
+  .weather,
+  .date,
+  .side_menu,
+  .drop_down{
+    display: none;
+  }
+  .navmenu_bar{
+    position: relative;
+  }
+  .hambeger_menu{
+    width: 40px;
+    height: 40px;
+    background: rgb(52, 81, 153);
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+    display: block !important;
+    cursor: pointer;
+    position: absolute;
+    top: 25%;
+    left: 3%;
+  }
+  .white_logo{
+    cursor: pointer;
+    position: absolute;
+    top: 10%;
+  }
+  .magnifying{
+    width: 40px;
+    height: 40px;
+    color: rgb(65, 65, 65);
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 25%;
+    right: 3%;
+  }
+  /* viewport side menu */
+  .viewport_side{
+    position: relative;
+    display: flex;
+    width: 400px;
+    height: 900px;
+    background: rgb(55, 86, 153);
+    position: relative;
+    display: none;
+    left: -900px;
+  }
+  .viewport_menu{
+    width: 100%;
+  }
+  .viewport_menu p{
+    border-top: 1px solid #fff;
+    font-size: 1.3rem;
+    height: 90px;
+    color: #fff;
+    font-family: 'Nanum Gothic', sans-serif;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    cursor: pointer;
+  }
+  .viewport_menu :nth-child(4){
+    border-bottom: 1px solid #fff;
+  }
+  .viewport_side2{
+    width: 100%;
+    height: 100px;
+    background: #fff;
+    position: relative;
+    top: 20px;
+    display: flex;
+    flex-direction: unset;
+    align-items: center;
+    display: none;
+  }
+  .viewport_side2 input{
+    border: 0;
+    width: 100%;
+    border-bottom: 3px solid rgb(55, 86, 153);
+    height: 50px;
+    padding-left: 1em;
+    font-size: 1rem;
+    position: relative;
+    top: 20%;
+    left: 0;
+  }
+  .viewport_side2 >i{
+    position: absolute;
+    right: 10px;
+    bottom: 40px;
+    font-size: 1.6rem;
+    color: rgb(55, 86, 153);
+    cursor: pointer;
+  }
+
+  /* main notice rolling */
+  .slide_image{
+    position: relative;
+    top: -53px;
+    height: 400px;
+    width: 100%;
+    display: none;
+  }
+  .slide_image2{
+    position: relative;
+    top: -53px;
+    height: 400px;
+    width: 100%;
+    display: block;
+  }
+  .controller_num1{
+    display: none;
+  }
+  .notice_bar{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    top: -53px;
+  }
+  .notice_one{
+    height: 50px;
+  }
+  .notice_two{
+    width: 100%;
+    height: 50px;
+    background: rgb(63, 110, 163);
+  }
+
+  /* main box1 */
+  .boxes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: -50px;
+  }
+  .box{
+    width: 100%;
+    height: 300px;
+    margin-bottom: -60px;
+  }
+  .notice_name{
+    width: 100%;
+    height: 25%;
+  }
+  .notice_name div{
+    width: 100%;
+    height: 40px;
+    border-bottom: 0;
+  }
+  .notice_name div p{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    bottom: 10px;
+  }
+  .change_board{
+    width: 100%;
+    height: 75%;
+  }
+  .noticebox1 li{
+    margin-bottom: 14px;
+  }
+  .number2_btn{
+    position: relative;
+    bottom: 8px;
+  }
+
+  /* main box2 */
+  .silderBottom{
+    width: 89%;
+    height: 77%;
+  }
+  .silderBottom li img{
+    width: 100%;
+    height: 40px;
+  }
+  .silderBottom li p{
+    position: absolute;
+    bottom: 0;
+  }
+
+  /* main box3 */
+  iframe{
+    height: 220px;
+  }
+  .video_box{
+    width: 100%;
+    height: 130px;
+  }
+  .video_box a{
+    width: 49.5%;
+    height: 60px;
+  }
+
+  /* footer */
+  footer{
+    position: relative;
+    top: 290px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .family_company{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .controls h3{
+    display: none;
+    width: 100%;
+  }
+  .design2{
+    width: auto;
+  }
+  .slider_bottom_banner{
+    position: relative;
+    right: 10px;
+    width: 70%;
+  }
+  .site_map .txt{
+    line-height: 30px;
+  }
+  .site_map div{
+    margin: 10px;
+  }
+  .site_map a:hover{
+    cursor: pointer;
+  } 
+
+
+  .bottom_site_map{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+  }
+  .address{
+    width: 90%;
+    position: relative;
+    left: 0;
+  }
+  .logo_image2{
+    position: relative;
+    left: 0;
+    padding: 20px;
+  }
+
+  .bottom_site_map{
+    text-align: center;
+  }
+  .bottom_site_map .dark_logo{
+    position: relative;
+    left: -10px;
+  }
+
+  
+
+}
+
+
+
