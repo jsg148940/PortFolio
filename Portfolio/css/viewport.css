@@ -1,11 +1,17 @@
-@media (max-width:1200px){
-.greeting p{
-  font-size: 15vw;
-}
-.circle{
-  display: none;
+@media (max-width:1600px){
+  .circle{
+    position: relative;
+    top: 5px;
+  }
 }
 
+@media (max-width:1200px){
+  .greeting p{
+    font-size: 15vw;
+  }
+  .circle{
+    display: none;
+  }
 }
 
 @media (max-width:800px){
