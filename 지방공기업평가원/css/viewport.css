@@ -1,3 +1,70 @@
+.hambeger_menu{
+  display: none !important;
+}
+.viewport_side{
+  display: none;
+}
+.emphasized{
+  position:fixed;
+  top:150px;
+  left:30px;
+  box-shadow : rgba(0,0,0,0.5) 0 0 0 9999px, rgba(0,0,0,0.5) 2px 2px 3px 3px;
+  z-index : 100;
+}
+.viewport_side2{
+  width: 100%;
+  height: 100px;
+  background: #fff;
+  position: relative;
+  top: 20px;
+  left: 0;
+  display: flex;
+  flex-direction: unset;
+  align-items: center;
+  display: none;
+}
+.viewport_side2 input{
+  border: 0;
+  width: 50%;
+  border-bottom: 3px solid rgb(55, 86, 153);
+  height: 50px;
+  padding-left: 1em;
+  font-size: 1rem;
+  position: relative;
+  top: 20%;
+  left: 25%;
+}
+.viewport_side2 input:focus{
+  outline-color: red;
+}
+.viewport_side2 >i{
+  position: absolute;
+  right: 540px;
+  bottom: 40px;
+  font-size: 1.6rem;
+  color: rgb(55, 86, 153);
+  cursor: pointer;
+}
+.viewport_side2 :active{
+  display: block;
+}
+.viewport_side2 i:active{
+  border: 1px solid red;
+}
+.slide_image2{
+  width: 100%;
+  height: 560px;
+  overflow: hidden;
+  position: relative;
+  top: -5px;
+  display: none;
+}
+.slide_image2 img{
+  width: 100%;
+  height: 100%;
+}
+
+
 @media screen and (max-width:800px){
   .weather,
   .date,

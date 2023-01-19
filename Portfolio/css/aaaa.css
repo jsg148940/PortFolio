@@ -3,59 +3,58 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: consolas;
+  font-family: 'Sofia Sans', sans-serif;
+  cursor: none;
 }
-/* body::-webkit-scrollbar { 
+body::-webkit-scrollbar { 
   display: none;
-}    */
+}   
 html,body{
   width: 100%;
   height: 100%;
   background-color: #222;
+
 }
 section{
   height: 100vh;
-  width: 100vw; 
+  width: 100vw;
 }
-      
-/* 첫페이지 */
+
 /* 커서 애니매이션 */
-.CursorEffect{
-  z-index: 999;
+#cursor {
   position: fixed;
-  background: #fff;
-  width: 20px;
-  height: 20px;
+  top: -5px;
+  left: -5px;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
   border-radius: 50%;
   pointer-events: none;
-  position:absolute;
-  box-shadow: 0 0 20px #fff, 
-              0 0 20px #fff,
-              0 0 20px #fff;
-  animation: visib 3s infinite;
+  z-index: 999;
 }
-@keyframes visib{
-  0%{opacity: 1;}
-  50%{opacity: 0.5;}
-  100%{opacity: 1;}
-}
-.CursorEffect::before{
-  content: "";
-  position: absolute;
-  background-color: #ddd;
-  width: 50px;
-  height: 50px;
-  opacity: 0.2;
-  transform:  translate(-30%, -30%);
+#cursor-border {
+  --size: 50px;
+  position: fixed;
+  top: calc(var(--size) / -2);
+  left: calc(var(--size) / -2);
+  width: var(--size);
+  height: var(--size);
   border-radius: 50%;
+  box-shadow: 0 0 0 1px #fff;
+  pointer-events: none;
+  transition: top 0.15s ease-out, left 0.15s ease-out, width 0.15s ease-out,
+    height 0.15s ease-out, background-color 0.15s ease-out;
+  z-index: 999;
 }
+
+/* 1 */
 #first{
   flex-direction: column;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.greeting{
+.hollow{
   width: auto;
   height: auto;
   text-align: center;
@@ -70,26 +69,23 @@ section{
   opacity: 1;
   }
 }
-.greeting.add{ 
+.hollow.add{ 
   transform: translateY(0); 
   opacity: 1; 
 }
-.greeting p{ 
-  font-family: 'Raleway', sans-serif; 
+.hollow p{ 
   font-size: 15vh; 
   font-style: italic; 
   color: #fff;
 }
-.greeting p:hover{ 
-  color: rgb(21, 98, 214); 
+.hollow p:hover{ 
+  color: rgb(13, 218, 105); 
   animation: color 4s infinite;
 }
-
 @keyframes color{
   0%{filter: hue-rotate(0deg);}
   100%{flter: hue-rotate(360deg);}
 }
-
 /* 원 애니메이션 */
 .circle{
   position: relative;
@@ -106,7 +102,7 @@ section{
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  background-image: url(./Portfolio/images/down_arrow.png);
+  background-image: url(../images/down_arrow.png);
   background-size: 50%;
   background-repeat: no-repeat;
   background-position: 40px;
@@ -116,7 +112,7 @@ section{
   width: 100%;
   height: 100%;
   animation: rotares 10s linear infinite;
-  color: rgb(255, 255, 255);
+  color: rgb(13, 218, 105); 
 }
 .text span{
   position: absolute;
@@ -129,14 +125,7 @@ section{
   0%{transform: rotate(360deg);}
   100%{transform: rotate(0deg);}
 }
-    
-/* 두번째 */
-#maintext{
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-  position: relative;
-}
+
 /* 네비메뉴 */
 nav{
   width: 100%;
@@ -144,139 +133,121 @@ nav{
   z-index: 200;
   display: flex;
   flex-direction: row;
-  background-color: rgb(167, 50, 50);
-  /* white-space: nowrap; */
+  background-color: #222;
 }
 nav ul{
   width: 100%;
   max-height: 200em;
-  margin-top: 10px;
+  margin-top: 1px;
 }
 nav ul li{
   display: inline-block;
   list-style: none;
-  margin: 20px 30px;
+  margin: 10px 30px;
   color: #fff;
 }
-nav.sticky{
+nav.stickys{
   position: fixed;
   top: 0;
   left: 0;
 }
-nav ul li a{
+nav ul li a {
+  display: inline-block;
+  position: relative;
   text-decoration: none;
   color: #fff;
   margin: 10px;
-  background-image: linear-gradient(to right, rgba(218, 42, 42, 0) 50%,  rgb(155, 187, 14) 50%);
-  background-position: -0% 0;
-  background-size: 200% auto;
   font-size: 2rem;
-  line-height: 2rem;
-  transition: background-position 0.5s ease-out;
 }
-nav :hover{
-  background-position: -99.99% 0;
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  transform: scaleX(0);
+  bottom: 50%;
+  left: 0;
+  background-color: rgb(53, 140, 255);
+  transform-origin: left;
+  transition: transform 0.25s ease-out;
+}
+nav ul li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
-/* 소개 */
-.txt_box{
+/* 2 */
+#second{
   display: flex;
   flex-direction: row;
-  width: 100%;
-  height: 80%;
-  border:  1px solid red;
-  position: absolute;
-  top: 100px;
+  position: relative;
+  align-items: flex-end;
+  flex-wrap: wrap;
 }
-.about_me{
+/* 소개 */
+.texbox{
   width: 50%;
-  height: 100%;
-  opacity: 1;
-  /* transform: translateY(200px); */
-  transition: 1s all ease;
-  border:  1px solid white;
+  height: 94%;
   padding: 30px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-evenly;
 }
-.about_me.add{
-  transform: translateY(0);
-  opacity: 1;
-}
-.about_me h2{
-  font-family: 'Jua', sans-serif;
-  font-size: 4vw;
-  margin-bottom: 1em;
+.texbox h2{
+  font-size: 3vw;
   letter-spacing: 1px;
-  color: rgb(20, 222, 236);
+  -webkit-text-stroke: 1px rgb(62, 235, 128);
+  color: #222;
+  padding-left: 1em;
+  padding-right: 1em;
 }
-.about_me p{
-  font-family: 'Noto Sans KR', sans-serif;
-  font-size: 2.5vw;
+.texbox p{
+  font-family: 'IBM Plex Sans KR', sans-serif;
+  font-size: 2vw;
   padding-left: 1em;
   padding-right: 1em;
   color: #fff;
 }
 /* 스킬 */
-.skills{
+.skilltext{
   display: flex;
   flex-direction: column;
   width: 50%;
-  height: 100%;
-  margin-left: 1em;
-  opacity: 1;
-  /* transform: translateY(-200px); */
-  transition: 1s all ease;
-  border: 1px solid white;
-  top: 0;
+  height: 94%;
 }
-.skills.add{
-  transform: translateY(0);
-  opacity: 1;
-}
-.skill_text{
+.skilleffect{
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 80%;
-  border: 1px solid red;
 }
-.skill_text p{
-  font-family: 'Noto Sans KR', sans-serif;
+.skilleffect p{
+  font-family: 'IBM Plex Sans KR', sans-serif;
   font-size: 2vw;
   word-spacing: 7px;
 }
-.skill_btn{
+.skillbtn{
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
+  overflow: hidden;
   width: 100%;
   height: 20%;
-  border: 1px solid red;
 }
-.skill_btn button{
+.skillbtn button{
   background: none;
   word-spacing: -5px;
   border: 0;
-  margin-left: 20px;
-  margin-right: 20px;
-  background-color: rgb(21, 178, 189);
+  border-radius: 20px;
+  background-color: rgb(63, 63, 63); 
+  color: rgb(13, 218, 105); 
+  overflow: hidden;
+  height: 60%;
 }
-.skill_btn button p{
-  font-size: 1.8vw;
-  color: #222;
-}
-.skill_btn {
-  display: flex;
-  flex-wrap: wrap;
-}
-.skill_btn > * {
+.skillbtn > * {
   background: white;
-  padding: 1em;
   flex: auto;
   margin: 0.3em;
   text-align: center;
@@ -284,50 +255,49 @@ nav :hover{
   font-size: 1.5vw;
   text-decoration: none;
 }
-.skill_btn{
+.skillbtn{
   visibility: hidden;
 }
-.skill_btn > *{
+.skillbtn > *{
   visibility: visible;
 }
-.skill_btn > *{
+.skillbtn > *{
   transition: opacity 150ms linear 100ms, transform 150ms ease-in-out 100ms;
 }
-.skill_btn:hover > *{
+.skillbtn:hover > *{
   opacity: 0.4;
   transform: scale(0.9);
 }
-.skill_btn > *:hover{
+.skillbtn > *:hover{
   opacity: 1; 
   transform: scale(1); 
   transition-delay: 0ms, 0ms; 
 }
-.skill_btn button p:hover{
+.skillbtn button p:hover{
   transform: scale(1.07);
 }
 #html{
   display: block;
-}
+} 
 .content{
   display: none;
   padding: 10px;
   width: 80%;
-  height: 90%;
-  border: 1px solid red;
-  animation: pp 1s ease-in-out forwards;
+  height: auto;
+  /* animation: changein 1s ease-in-out forwards; */
 }
-@keyframes pp{
-  0%{  transform: translatex(100px);}
-  100%{transform: translatex(0px);}
-}
+/* @keyframes changein{
+  0%{ transform: translatex(100px); }
+  100%{ transform: translatex(0px); }
+} */
 .content p{
   color: #fff;
 }
 
+/* 3 */
 /* 포트폴리오 */
 .sticky-parent{
   height: 700vh;
-  border: 1px solid red;
 }
 .sticky{
   position: sticky;
@@ -339,73 +309,62 @@ nav :hover{
 .horizontal{
   display: flex;
 }
-
 .dim{
-  display: flex;
-  /* display: block; */
   min-width: 100vw;
   height: 100vh;
+  display: flex;
   justify-content: center;
   align-items: center;
-
-
 }
-/* @media (max-width: 620px) {
-  .dim{
-    display: block;
-    min-width: 100vw;
-    height: 100vh;
-  }
-} */
 .pofol{
-  width: 80%;
-  height: 80%;
-  /* transform: translateY(200px);
-  opacity: 0;
-  transition: 1s all ease; */
+  width: 70%;
+  height: 70%;
   -webkit-transition: all .5s;
   -moz-transition: all .5s;
   transition: all .5s;
-  border: 1px solid red;
 }
 .pofol img{
   width: 100%;
   height: 100%;
   border-radius: 30px;
-  position: 0;
-  
 }
 #textEven{
-  width: 81%;
-  height: 81%;
+  width: 71%;
+  height: 71%;
   border-radius: 30px;
   position: absolute;
-  bottom: -100px;
+  bottom: -80px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  opacity: 1;
-  -webkit-transition: all .3s;
-  -moz-transition: all .3s;
-  transition: all 0.3s; 
+  opacity: 0;
+  transition: all 0.3s;
 }
 #textEven h1{
-  font-size: 6rem;
-  color: rgba(236, 236, 236, 0);
-  -webkit-text-stroke: 5px rgb(19, 16, 15);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 5vw;
 } 
-.dim p:last-child{
-  color:  rgb(212, 89, 44);
-  background-color: #f05555;
-  font-style: italic;
-}
 #textEven p{
-  font-size: 2.4rem;
-  font-family: 'Noto Sans KR', sans-serif;
-  font-weight: bold;
-  color: rgb(19, 16, 15);
-  line-height: 100px;
+  font-family: 'IBM Plex Sans KR', sans-serif;
+  font-size: 2vw;
+  font-weight: bolder;
+  width: 50%;
+  color: #fff;
+  line-height: 5rem;
+}
+.black{
+  color: rgb(0, 0, 0) !important;
+}
+.mypofol_text >h1,
+.public_text >h1{
+  color: rgba(206, 23, 23, 0);
+  -webkit-text-stroke: 4px rgb(7, 85, 255);
+}
+.starbuck_text >h1,
+.melon_text >h1{
+  color: rgba(206, 23, 23, 0);
+  -webkit-text-stroke: 4px rgb(13, 218, 105); 
 }
 .pofol:hover #textEven{
   opacity: 1;
@@ -413,10 +372,6 @@ nav :hover{
   -moz-transition: all .3s;
   transition: all .3s;
   bottom: 100px;
-  cursor: pointer; 
-}
-.pofol:hover #textEven h1,p{
-    cursor: pointer; 
 }
 .pofol:hover img{
   filter: grayscale(80%) blur(10px);
@@ -426,21 +381,21 @@ nav :hover{
   opacity: 1;
 }  */
 
-
 /* footer */
-footer{width: 100vw;
-  border: 1px solid red;
+footer{
+  width: 100vw;
   height: 80vh;
-  background-color: rgb(21, 178, 189);
+  background-color: rgb(13, 218, 105); 
   position: relative;
+  text-align: left;
 }
 #bye >p{
   font-size: 8rem;
   text-align:center;
   position: absolute;
   top: 100px;
-  left: 15%;
-  color: rgb(197, 240, 5);
+  left: 5%;
+  color: rgb(0, 57, 65);
 }
 footer :hover .bye >p{
   color:rgba(0,0,0,0);
@@ -448,11 +403,12 @@ footer :hover .bye >p{
 .contact{
   float: left;
   color: #fff;
-  font-size: 6rem;
+  font-size: 4rem;
   position: absolute;
   top: 280px;
-  left: 20%;
-  word-spacing: 100px;
+  left: 5%;
+  word-spacing: 50px;
+  text-align: left;
 }
 .contact i{
   padding-right: 13px;
@@ -462,9 +418,9 @@ footer :hover .bye >p{
   color: rgb(254, 254, 255);
 }
 .rights{
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #fff;
   position: absolute;
   bottom: 80px;
-  left: 50%;
+  left: 5%;
 }

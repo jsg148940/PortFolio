@@ -1,241 +1,70 @@
-@media (max-width:1600px){
-  .circle{
-    position: relative;
-    top: 5px;
-  }
-  .txt_box{
-    top: 70px;
-    
-  }
-}
-
 @media (max-width:1200px){
-  .greeting p{
+  /* 1 */
+  .hollow p{
     font-size: 15vw;
   }
   .circle{
     display: none;
   }
+  /* 2 */
   nav{
     display: flex;
   }
   nav ul li a{
     font-size: 1.5rem;
   }
-  nav ul li{
-    margin: 10px 10px
-  }
   .txt_box{
     top: 40px;
-    
+  }
+  /* 3 */
+  #textEven h1{
+    font-size: 9vw;
+  }
+  #textEven p{
+    font-size: 3vw;
   }
 }
 
 @media (max-width:800px){
+  /* 2 */
   nav{
-    white-space: nowrap;
     text-align: center;
   }
   nav ul li{
     margin: 1px 10px
   }
-
-  #container_1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .greeting p{ font-size: 5rem;}
-  #page2{
-    position: relative;
+  .texbox{
     width: 100%;
-    height: 100%;
+    height: 50%;
+    padding-top: 5em;
   }
-  .greeting p{
-    font-size: 10vh;
-  }
-  .nav_menu{
-    background: #fff;
-  }
-  .nav_menu ul li a{
-    font-size: 1.7rem;
-  }
-  .txt_box{
-    width: 100%;
-    height: 800px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .about_me{
-    width: 100%;
-    height: 400px;
-    margin: 10px;
-    text-align: center;
-  }
-  .about_me h2{
+  .texbox h2{
     font-size: 5vw;
-    width: 360px;
   }
-  .about_me p{
+  .texbox p{
     font-size: 4vw;
-    font-weight: lighter;
-    position: relative;
-    right: 15px;
-    font-weight: bold;
   }
-  .skills{
+  .skilleffect p{
+    font-size: 4vw;
+  }
+  .skilltext{
     width: 100%;
-    height: 300px;
-    margin: 10px;
-    position: relative;
-    top: 10px;
+    height: 50%;
   }
-  .skill_text{
-    width: 90%;
-  }
-  .skill_text p{
-    font-size: 3.6vw;
-    line-height: 40px;
-  }
-  #c >p{
-    font-size: 3.9vw;
-  }
-  .content{
-    width: 90%;
-    position: relative;
-    top: 10px;
-  }
-  .skill_btn{
-    position: relative;
-    top: 10px;
-  }
-  .skill_btn button{
-    font-size: 3vw;
-    margin-left: 10px;
-    margin-right: 10px;
-    border-bottom: 1px solid royalblue;
-  }
-  .backTotop{
-    position: absolute;
-    bottom: 10px;
-    right: 40px;
-  }
-  .fa-square-caret-up{
-    opacity: 0.3;
-  }
-  .fa-square-caret-up:hover{
-    opacity: 1;
-  }
-  /* page3 */
-  ::-webkit-scrollbar{
-    border-radius: 100px;
-  }
-  ::-webkit-scrollbar-track{
-    border-radius: 5px;
-    box-shadow: inset 0px 0px 5px rgb(189, 189, 189);
-  }
-  ::-webkit-scrollbar-thumb{
-    background-color: rgba(26, 135, 236, 0.842);
+  .skillbtn button{
+    font-size: 3.5vw;
     border-radius: 10px;
-    background-clip: padding-box;
-    border: 4px solid transparent;
+    height: 70%;
   }
-  #page3{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-  }
-
-    .horizontal_slidebar{
-    width: 90%;
-    height: 700px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow-y: scroll;
-  }
-  .pofol{
-    width: 400px;
-    height: 400px;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .pofol img{
-    width: 400px;
-    height: 400px;
-  }
-  .pofol h1{
-    font-size: 1.9rem;
-    position: relative;
-  }
-  .pofol p{
-    font-size: 1.3rem;
-    position: relative;
-    line-height: 40px;
-  }
-  .pofol h4{
-    font-size: 2rem;
-    position: relative;
-    top: 10px;
-  }
-  .fa-computer-mouse{
-    position: relative;
-    top: 10px;
-    font-size: 2.5rem;
-  }
-  .horizontal_slidebar :nth-child(1) h4,
-  .horizontal_slidebar :nth-child(1) i{
-    position: relative;
-    top: 45px;
-  }
-  .melon_text,
-  .public_text,
-  .starbuck_text,
-  .mypofol_text{
-    width: 400px;
-    height: 400px;
-  }   
-  /* footer */
-  #footer{
-    width: 100%;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content:space-around;
-  }
-  .bye p{
-    font-size: 2.2rem;
-  }
-  .contact{
-    text-align: center;
-    font-size: 2.5rem;
-    position: relative;
-    left: 10px;
-  }
-  .rights{
-    width: 100%;
-  }
-  .rights p{
-    position: relative;
-    left: -5px;
-    width: auto;
-    text-align: center;
-  }
-
-} 
-
+  /* 3 */
+}
 
 @media (max-width: 620px) {
   .dim{
-  display: block;
-  min-width: 100vw;
-  height: 100vh;
+    display: flex;
+    min-width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
   }
-  }
+}
