@@ -224,7 +224,6 @@
             </div>
           </div>
         </div>
-  
         <div class="event box">
           <div class="event_controll">
             <div class="event_title">
@@ -236,35 +235,39 @@
               <button class="btn_next"><i class="fa-solid fa-caret-right"></i></button>
             </div>
           </div>
-
           <div class="event_slider">
-            <div class="big">
-              <!-- <div class="imge">
-                <img src="./images/pic1.png" alt="">
-                <p>나무심기의 날 행사</p>
-              </div>
-              <div class="imge">
-                <img src="./images/pic2.png" alt="">
-                <p>울진 삼척 산블피해 구호 성금 전달</p>
-              </div>
-              <div class="imge">
-                <img src="./images/pic3.png" alt="">
-                <p>[동향] ERC 경영혁신TF팀 2기 발대식</p>
-              </div> -->
+            <div class="evensection">
+              <ul>
+                <li>
+                  <img src="./images/pic1.png" alt="">
+                  <p>나무심기의 날 행사</p>
+                </li>
+                <li>
+                  <img src="./images/pic2.png" alt="">
+                  <p>울진 삼척 산블피해 구호 성금 전달</p>
+                </li>
+                <li>
+                  <img src="./images/pic3.png" alt="">
+                  <p>[동향] ERC 경영혁신TF팀 2기 발대식</p>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
-  
-        <div class="box num3">
-          <div class="video">
-            <iframe width="100%" height="250" src="https://www.youtube.com/embed/XlKKIjobe0g? controls=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="video box">
+          <div class="youtube">
+            <iframe src="https://www.youtube.com/embed/XlKKIjobe0g? controls=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
-          <div class="video_box">
-            <a href="#"><p>CEO정책포럼</p></a>
-            <a href="#"><p>지방공기업평가원</p></a>
-            <a href="#"><p>지방공기업</p></a>
-            <a href="#"><p>지방출자출연</p></a>
-          </div>
+          <table class="videobtn">
+            <tr>
+              <td>CEO정책포럼</td>
+              <td>지방공기업평가원</td>
+            </tr>
+            <tr>
+              <td>지방공기업</td>
+              <td>지방출자출연</td>
+            </tr>
+          </table>
         </div>
       </div>
     </section>
@@ -272,14 +275,14 @@
 
   <footer>
     <div class="family_company">
-      <div class="controls">
+      <div class="sitemap_slider">
         <h3>협력기관</h3>
-        <!-- <div class="silder_controller design2">
-          <button class="left_arrow"><p></p></button>
-          <button class="pause"><p></p></button>
-          <button class="right_arrow"><p></p></button>
-        </div> -->
-        <div class="slider_bottom_banner">
+        <div class="sitemap_controll">
+          <button class="btn_prev"><i class="fa-solid fa-caret-left"></i></button>
+          <button class="btn_auto"><i class="fa-solid fa-pause"></i></button>
+          <button class="btn_next"><i class="fa-solid fa-caret-right"></i></button>
+        </div>
+        <div class="sitemap_scroll">
           <ul>
             <li>
               <img src="../지방공기업평가원/images/bottom_slider1.png" alt="">
@@ -303,32 +306,37 @@
         </div>
       </div>
     </div>
-    <div class="site_map">
-      <div class="txt">
+    <div class="site_info">
+      <div class="site_info_text">
         <a href="#">개인정보처리방침</a> |
         <a href="#">영상정보처리방침</a> |
         <a href="#">이메일무단수집거부</a> |
         <a href="#">지방공기업평가원소개</a> |
         <a href="#">찾아오시는 길</a>
       </div>
-      <div class="sns_btn">
+      <div class="site_info_btn">
         <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
         <a href="#"><i class="fa-brands fa-youtube"></i></a>
       </div>
     </div>
-    <div class="bottom_site_map">
-      <div class="dark_logo">
-        <img src="../지방공기업평가원/images/지방공기업로고black.png">
+    <div class="site_text">
+      <div class="site_text_logo">
+        <a href="#"><img src="../지방공기업평가원/images/지방공기업로고black.png"></a>
       </div>
-      <div class="address">
+      <div class="site_text_address">
         <h4>(우) 06647 서울 서초구 반포대로30길 12-6 (지번) 서초동 1552-13</h4>
         <h4>기획운영실 - TEL : 02-3489-2700  FAX : 02-3489-2709 / 인재개발센터 - TEL : 02-3489-2781~8  FAX : 02-3489-2789</h4>
         <p>Copyright(c) Evaluation Institute of Regional Public Corporation. All Rights Reserved.</p>
         <p>본 홈페이지에 게시된 이메일 주소가 자동수집 되는 것을 거부하며, 이를 위반시 정보통신망법에 의해 처벌됨을 유념하시기 바랍니다.</p>
       </div>
-      <div class="logo_image2">
-        <button>관련기관 바로가기<p onclick=""></p></button>
-        <img src="../지방공기업평가원/images/bottom_logo.png">
+      <div class="site_text_btn">
+        <select class="site_link" name="site_link">
+          <option>관련기관 바로가기</option>
+          <option>사업 공사</option>
+          <option>개발 공사</option>
+          <option>사업 공사</option>
+        </select>
+        <a href="#"><img src="../지방공기업평가원/images/bottom_logo.png"></a>
       </div>
     </div>
   </footer>

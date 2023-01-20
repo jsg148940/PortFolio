@@ -182,22 +182,21 @@ $(".right").click(function(){
 }); 
 
 
-
 // 행사 이미지 자동 슬라이더
-// setInterval(fnSlide, 3000);
-// function fnSlide() {
-//   $(".event_slider >ul").animate({ "margin-left": "-420px" }, 1200, function () {
-//     $(".event_slider >ul").css({ "margin-left": "-1px" });
-//     $(".event_slider >ul li:first-child").insertAfter(".event_slider >ul li:last-child");
-//   });
-// };
-
+setInterval(fnSlide, 2000);
+function fnSlide() {
+  $(".evensection >ul").animate({ "margin-left": "-400px" }, 1200, function () {
+    $(".evensection >ul").css({ "margin-left": "2px" });
+    $(".evensection >ul li:first-child").insertAfter(".evensection >ul li:last-child");
+  });
+};
 
 // 배너 자동 슬라이더
 setInterval(fnSlide2, 2000);
 function fnSlide2() {
-  $(".slider_bottom_banner >ul").animate({ "margin-left": "-260px" }, 600, function () {
-    $(".slider_bottom_banner >ul").css({ "margin-left": "-8px" });
-    $(".slider_bottom_banner >ul li:first-child").insertAfter(".slider_bottom_banner >ul li:last-child");
+  $(".sitemap_scroll >ul").animate({ "margin-left": "-260px" }, 600, function () {
+    $(".sitemap_scroll >ul").css({ "margin-left": "-8px" });
+    $(".sitemap_scroll >ul li:first-child").insertAfter(".sitemap_scroll >ul li:last-child");
   });
 };
+
