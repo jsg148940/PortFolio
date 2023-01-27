@@ -1,51 +1,51 @@
+// 커서 애니메이션
+const cursor = document.querySelector("#cursor");
+const cursorBorder = document.querySelector("#cursor-border");
+const cursorPos = { x: 0, y: 0 };
+const cursorBorderPos = { x: 0, y: 0 };
 
-    
-   
-    // 스킬메뉴 토글
-    $(".btn").on("click",function(e) {
-      e.preventDefault();
-      $(".content").hide();
-      $("#"+this.id).show();
-    });
-    
-
-// Adding scroll event listener
-document.addEventListener('scroll', horizontalScroll);
-
-//Selecting Elements
-let sticky = document.querySelector('.sticky');
-let stickyParent = document.querySelector('.sticky-parent');
-
-let scrollWidth = sticky.scrollWidth;
-let verticalScrollHeight = stickyParent.getBoundingClientRect().height-sticky.getBoundingClientRect().height;
-
-//Scroll function 
-function horizontalScroll(){
-
-    //Checking whether the sticky element has entered into view or not
-    let stickyPosition = sticky.getBoundingClientRect().top;
-    if(stickyPosition > 1){
-        return;
-    }else{
-        let scrolled = stickyParent.getBoundingClientRect().top; //how much is scrolled?
-        sticky.scrollLeft =(scrollWidth/verticalScrollHeight)*(-scrolled)*0.90;
-    
-    }
-}
-
-//마우스포인트 애니매이션
-const cursor = document.querySelector(".CursorEffect");
 document.addEventListener("mousemove", (e) => {
-  let x = e.pageX;
-  let y = e.pageY;
+  cursorPos.x = e.clientX;
+  cursorPos.y = e.clientY;
 
-  cursor.style.top = y + "px";
-  cursor.style.left = x + "px";
-  cursor.style.displye = "block";
+  cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
 });
 
-document.addEventListener("mouseover", () =>{
-  cursor.style.displye = "none";
+requestAnimationFrame(function loop() {
+  const easting = 8;
+  cursorBorderPos.x += (cursorPos.x - cursorBorderPos.x) / easting;
+  cursorBorderPos.y += (cursorPos.y - cursorBorderPos.y) / easting;
+
+  cursorBorder.style.transform = `translate(${cursorBorderPos.x}px, ${cursorBorderPos.y}px)`;
+  requestAnimationFrame(loop);
+});
+
+document.querySelectorAll("[data-cursor]").forEach((item) => {
+  item.addEventListener("mouseover", (e) => {
+    if (item.dataset.cursor === "pointer") {
+      cursorBorder.style.mixBlendMode = "difference";
+      cursorBorder.style.setProperty("--size", "20px");
+    }
+  });
+  item.addEventListener("mouseover", (e) => {
+    if (item.dataset.cursor === "pointer2") {
+      cursorBorder.style.mixBlendMode = "difference";
+      cursorBorder.style.setProperty("--size", "80px");
+    }
+  });
+  item.addEventListener("mouseover", (e) => {
+    if (item.dataset.cursor === "pointer3") {
+      cursorBorder.style.mixBlendMode = "difference";
+      cursorBorder.style.backgroundColor = "white";
+      cursorBorder.style.setProperty("--size", "70px");
+    }
+  });
+  
+  item.addEventListener("mouseout", (e) => {
+    cursorBorder.style.backgroundColor = "unset";
+    cursorBorder.style.mixBlendMode = "unset";
+    cursorBorder.style.setProperty("--size", "40px");
+  });
 });
 
 //움직이는 원 애니메이션
@@ -55,131 +55,98 @@ text.innerHTML = text.innerText.split("").map(
 `<span style= "transform:rotate(${i * 10.5}deg)">${char}</span>`
 ).join("")
 
-//Fade in 
-$(window).scroll(function() {
-  var windowBottom = $(this).scrollTop() + $(this).innerHeight();
-  $(".about_me").each(function() {
-    var objectBottom = $(this).offset().top + $(this).outerHeight();
-    
-    if (objectBottom < windowBottom) { 
-      if ($(this).css("opacity")==0) {$(this).fadeTo(1000,1);}
-    } else { 
-      if ($(this).css("opacity")==1) {$(this).fadeTo(500,0);}
-    }
-  });
-}).scroll();
-  
 // 내비메뉴 고정 
 var navbar = document.getElementById("navbar");
 var menu = document.getElementById("menu");
 
 window.onscroll = function(){
-  if(this.window.pageYOffset >= menu.offestTop){
-    navbar.classList.add("sticky");
+  if(window.pageYOffset >= menu.offsetTop){
+    navbar.classList.add("stickys");
   }
-  else{
-    navbar.classList.remove("sticky");
+    else{
+    navbar.classList.remove("stickys");
   }
 }
-//메뉴 앵커
-$("#main").click(function(){
-  $('html,body').animate({
-    scrollTop:$((this).attr('href')).offset().top
-  },5000);
-  return false;
-  });
-  $("#aboutme").click(function(){
-    $('html,body').animate({
-      scrollTop:$((this).attr('href')).offset().tops
-    },5000);
-    return false;
-  }); 
-  $("#pofolsite").click(function(){
-    $('html,body').animate({
-      scrollTop:$((this).attr('href')).offset().top
-    },5000);
-    return false;
-  });
-  $("#sitmap").click(function(){
-    $('html,body').animate({
-      scrollTop:$((this).attr('href')).offset().top
-    },5000);
-    return false;
-  });
+
 
 // 스킬메뉴 토글
-$(button).on("click",function(e) {
-  // e.preventDefault();
+$('.btn').on("click",function(e) {
+  e.preventDefault();
 
-  // var divname= this.name;ss
   $(".content").hide();
-  // $("#"+this.id).show();
+  $("#"+this.id).show();
 });
 
 
-// // 처음으로 가기 애니메이션
-// $(window).scroll(function() {
-//   var windowBottom = $(this).scrollTop() + $(this).innerHeight();
-//   $(".fa-square-caret-up").each(function() {
-//     var objectBottom = $(this).offset().top + $(this).outerHeight();
-    
-//     if (objectBottom < windowBottom) { 
-//       if ($(this).css("opacity")==0) {$(this).fadeTo(500,1);}
-//     } else {
-//       if ($(this).css("opacity")==1) {$(this).fadeTo(500,0);}
-//     }
-//   });
-// }).scroll();
+//가로 스크롤
+document.addEventListener('scroll', horizontalScroll);
 
-//
-$(window).scroll(function() {
-  var windowBottom = $(this).scrollTop() + $(this).innerHeight();
-  $(".about_me").each(function() {
-    var objectBottom = $(this).offset().top + $(this).outerHeight();
+let sticky = document.querySelector('.sticky');
+let stickyParent = document.querySelector('.pofol_box');
+let scrollWidth = sticky.scrollWidth;
+let verticalScrollHeight = stickyParent.getBoundingClientRect().height-sticky.getBoundingClientRect().height;
+
+function horizontalScroll(){
+
+    let stickyPosition = sticky.getBoundingClientRect().top;
+    if(stickyPosition > 1){
+        return;
+    }else{
+        let scrolled = stickyParent.getBoundingClientRect().top;
+        sticky.scrollLeft =(scrollWidth/verticalScrollHeight)*(-scrolled)*0.80;
     
-    if (objectBottom < windowBottom) { 
-      if ($(this).css("opacity")==0) {$(this).fadeTo(1000,1);}
-    } else { 
-      if ($(this).css("opacity")==1) {$(this).fadeTo(500,0);}
     }
-  });
-}).scroll();
+}
 
-// // fade to top
-// function reveal() {
-//   var reveals = document.querySelectorAll(".about_me");
+// slide in 이펙트
+function reveal() {
+  var reveals = document.querySelectorAll(".texbox");
 
-//   for (var i = 0; i < reveals.length; i++) {
-//     var windowHeight = window.innerHeight;
-//     var elementTop = reveals[i].getBoundingClientRect().top;
-//     var elementVisible = 100;
+  for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 100;
 
-//     if (elementTop < windowHeight - elementVisible) {
-//       reveals[i].classList.add("add2");
-//     } else {
-//       reveals[i].classList.remove("add2");
-//     }
-//   }
-// }
-// window.addEventListener("scroll", reveal);
+      if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("add");
+      } else {
+      reveals[i].classList.remove("add");
+      }
+  }
+  }
+  window.addEventListener("scroll", reveal);
 
-// // back to top button set
-// const backToTop = document.getElementById('backtotop');
-// const checkScroll=()=>{
-//   let pageOffset = window.pageYOffset;
+function reveal2() {
+  var reveals = document.querySelectorAll(".skill_effect");
 
-//   if(pageYOffset !== 0){
-//       backToTop.classList.add('show');  
-//   }else{
-//       backToTop.classList.remove('show'); 
-//   }
-// }
-// const moveBackToTop=()=>{
-//     if(window.pageYOffset > 0 ){
-//         window.scrollTo({top:0, behavior:"smooth"});
-//     }
-// }
-// window.addEventListener('scroll', checkScroll);
-// backToTop.addEventListener('click',moveBackToTop);
+  for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 100;
 
+      if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("add");
+      } else {
+      reveals[i].classList.remove("add");
+      }
+  }
+  }
+  window.addEventListener("scroll", reveal2);
 
+// fade in 이펙트
+function reveal3() {
+  var reveals = document.querySelectorAll(".dim");
+
+  for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 100;
+
+      if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("add");
+      } else {
+      reveals[i].classList.remove("add");
+      }
+  }
+  }
+  window.addEventListener("scroll", reveal3);

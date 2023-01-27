@@ -4,16 +4,17 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/aaaa.css" defer>
-  <link rel="stylesheet" href="./css/viewport.css" defer>
-  <script type="text/javascript" src="./js/fdfd.js" defer></script>
+  <link rel="stylesheet" href="./css/Portfolio.css" defer>
+  <link rel="stylesheet" href="./css/viewport.css">
+  <script type="text/javascript" src="./js/PofolMain.js" defer></script>
+  <script type="text/javascript" src="./js/jquery.js" ></script>
   <script src="https://kit.fontawesome.com/242516d697.js" crossorigin="anonymous"></script>
+  <title>fofo</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Sofia+Sans&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
   </style>
-  <title>fofo</title>
 </head>
 <body>
   <div id="cursor"></div>
@@ -34,8 +35,8 @@
   <section id="second"> 
     <nav id="navbar">
       <ul id="menu" class="meu">  
-        <li><a href="#first" id="main" data-cursor="pointer">fdf</a></li>
-        <li><a href="#second" id="aboutme" data-cursor="pointer">Hellow</a></li>
+        <li><a href="#first" id="main" data-cursor="pointer">Hellow</a></li>
+        <li><a href="#second" id="aboutme" data-cursor="pointer">AboutMe</a></li>
         <li><a href="#lastpage" id="pofolsite" data-cursor="pointer">Works</a></li>
         <li><a href="#bye" id="conact" data-cursor="pointer">Contat</a></li>
       </ul>
@@ -44,20 +45,19 @@
         <h2>편리함을 디자인하는 <br>웹퍼블리셔 정슬기 입니다.</h2>
         <p>우연한 계기로 퍼블리싱을 공부하게 되었는데<br>
           내가 만드는데로 바로 보여지것에 흥미가 생겨 웹퍼블리셔로 전향하게 되었습니다.<br>
-          <br>
           멈추지 않는 도전과 새로운 기술의 도입은 물론<br>
           팀원과의 융합을 가장의 목표로 하며 클라이언트와 DB, 서버 사이드 코드의<br>
           학습을 토대로 풀스택을 목포로 하고있습니다.
         </p>
     </div>
-    <div class="skilltext">
-      <div class="skilleffect">
+    <div class="skill_effect">
+      <div class="skill_text">
         <div id="html" class="content" >
           <p>인라인과 블록 요소등 웹 표준과 웹 접근성에 숙달하고<br>
             하드코딩이 가능하며, 반응형 웹 페이지를 제작가능합니다.<br>
             또한, GitHub을 사용할수 있습니다.</p>
         </div>
-        <div id="java" class="content"  data-target=".html" >
+        <div id="java" class="content">
           <p>메서드를 이용한 제어문, 이벤트등에 숙달하며<br>
             바닐라자바스크립트가 가능하고<br>
             jQuery 라이브러리를 이용해 엘리먼트 관리, 생성 가능합니다.</p>
@@ -72,61 +72,62 @@
           Illustrator의 간단한 기능을 사용가능합니다.</p>
         </div>
       </div>
-      <div class="skillbtn">
-        <button class="btn" type="button" id="html" data-cursor="pointer2"><p>HTML/CSS</p></button>
-        <button class="btn" type="button" id="java" data-cursor="pointer2"><p>JavaScript/jQuery</p></button>
-        <button class="btn" type="button" id="clanguage" data-cursor="pointer2"><p>C++/C#</p></button>
-        <button class="btn" type="button" id="design" data-cursor="pointer2"><p>Design Tolls</p></button> 
+      <div class="skill_btn">
+        <button class="btn" id="html" data-cursor="pointer2" >HTML/CSS</button>
+        <button class="btn" id="java" data-cursor="pointer2">JavaScript/jQuery</button>
+        <button class="btn" id="clanguage" data-cursor="pointer2">C++/C#</button>
+        <button class="btn" id="design" data-cursor="pointer2">Design Tolls</button> 
      </div>
     </div>
   </section>
 
-  <div id="lastpage">
-  <div class="sticky-parent">
-    <div class="sticky">
-      <div class="horizontal">
-    
-        <div class="dim">
-          <div class="pofol mypofol">
-            <img src="../Portfolio/images/pofol.jpg">
-            <div class="mypofol_text" id="textEven" data-cursor="pointer3" onclick="window.open('http://127.0.0.1:5500/Portfolio/ppp.html')">
-              <h1>Main Portfolio</h1>
-              <p>메인 포트폴리오로 기획, 디자인, 퍼블리싱 100% 로 제작한 반응형 웹사이트입니다.<br>
-                제작기간 : 2주<br>
-                <span>#design&nbsp;&nbsp;&nbsp;#viewport&nbsp;&nbsp;&nbsp;#publishing</span></p>
+  <div id="horizontal_scroll">
+    <div class="pofol_box">
+      
+      <div class="sticky">
+        <div class="horizontal">
+          <div class="dim">
+            <div class="pofol mypofol">
+              <img src="../Portfolio/images/pofol.png">
+              <div class="mypofol_text" id="textEven" data-cursor="pointer3" onclick="window.open('http://127.0.0.1:5500/Portfolio/ppp.html')">
+                <h1>Main Portfolio</h1>
+                <p>메인 포트폴리오로 기획, 디자인, 퍼블리싱 100% 로 제작한 반응형 웹사이트입니다.<br>
+                  제작기간 : 2주<br>
+                  <span>#design #viewport #publishing</span></p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="dim">
-          <div class="pofol public">
-            <img src="../Portfolio/images/공기업평가.png">
-            <div class="public_text" id="textEven" data-cursor="pointer3" onclick="window.open('http://127.0.0.1:5500/%EC%A7%80%EB%B0%A9%EA%B3%B5%EA%B8%B0%EC%97%85%ED%8F%89%EA%B0%80%EC%9B%90/PublicMain.html')">
-              <h1>공기업 평가원</h1>
-              <p class="black">공기업평가원 웹사이트를 퍼블리싱100% 로 제작한 반응형 웹사이트입니다.<br>
-                제작기간 : 4일<br>
-                <span>#html&nbsp;&nbsp;&nbsp;#viewport&nbsp;&nbsp;&nbsp;#publishing</span></p>
+          <div class="dim">
+            <div class="pofol public">
+              <img src="../Portfolio/images/공기업평가.png">
+              <div class="public_text" id="textEven" data-cursor="pointer3" onclick="window.open('http://127.0.0.1:5500/%EC%A7%80%EB%B0%A9%EA%B3%B5%EA%B8%B0%EC%97%85%ED%8F%89%EA%B0%80%EC%9B%90/PublicMain.html')">
+                <h1>공기업 평가원</h1>
+                <p class="black">공기업평가원 웹사이트를 퍼블리싱100% 로 제작한 반응형 웹사이트입니다.<br>
+                  제작기간 : 4일<br>
+                  <span>#html #viewport #publishing</span></p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="dim">
-          <div class="pofol starbuck">
-            <img src="../Portfolio/images/starbucks.png">
-            <div class="starbuck_text" id="textEven" data-cursor="pointer3" onclick="window.open('http://127.0.0.1:5500/%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4/StarbuckMain.html')">
-              <h1>Starbuck Renewal</h1>
-              <p class="black">starbuck.com 을 디자인 100% 퍼블리싱 100% 로 리뉴얼 제작한 반응형 사이트입니다.<br>
-                제작기간 : 10일<br>
-                <span>#jQuery&nbsp;&nbsp;&nbsp;#publishing&nbsp;&nbsp;&nbsp;#redesign</span></p>
+          <div class="dim">
+            <div class="pofol starbuck">
+              <img src="../Portfolio/images/starbucks.png">
+              <div class="starbuck_text" id="textEven" data-cursor="pointer3" onclick="window.open('http://127.0.0.1:5500/%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4/StarbuckMain.html')">
+                <h1>Starbuck Renewal</h1>
+                <p class="black">starbuck.com 을 디자인 100% 퍼블리싱 100% 로 리뉴얼 제작한 반응형 사이트입니다.<br>
+                  제작기간 : 10일<br>
+                  <span>#jQuery #publishing #redesign</span></p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="dim">
-          <div class="pofol melon" id="meee">
-            <img src="../Portfolio/images/melon.png" >
-            <div class="melon_text" id="textEven" data-cursor="pointer3" onclick="window.open('http://127.0.0.1:5500/%EB%A9%9C%EB%A1%A0/MelonMain.html')">
-              <h1>Mellon Renewal</h1>
-              <p>Mellon.com 을 디자인 100% 퍼블리싱 100% 로 리뉴얼 제작한 반응형 웹사이트입니다.<br>
-                제작기간 : 7일<br>
-                <span>#redesign&nbsp;&nbsp;&nbsp;#javascript&nbsp;&nbsp;&nbsp;#viewport</span></p>
+          <div class="dim">
+            <div class="pofol melon" id="meee">
+              <img src="../Portfolio/images/melon.png" >
+              <div class="melon_text" id="textEven" data-cursor="pointer3" onclick="window.open('http://127.0.0.1:5500/%EB%A9%9C%EB%A1%A0/MelonMain.html')">
+                <h1>Mellon Renewal</h1>
+                <p>Mellon.com 을 디자인 100% 퍼블리싱 100% 로 리뉴얼 제작한 반응형 웹사이트입니다.<br>
+                  제작기간 : 7일<br>
+                  <span>#redesign #javascript& #viewport</span></p>
+              </div>
             </div>
           </div>
         </div>

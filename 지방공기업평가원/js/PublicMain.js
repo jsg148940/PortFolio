@@ -44,10 +44,11 @@ $firstmenu.mouseenter(function(){
 //     });
 // });
 
-// 이미지 슬라이더
+// 이미지 슬라이더 핸들
 const prev = document.querySelector('.left_arrow');
 const next = document.querySelector('.right_arrow');
 const slides = document.getElementsByClassName('slider_image');
+
 let index = 0;
 var slides2 = document.querySelectorAll(".slider_image");
 let slideIndex = 0;
@@ -64,6 +65,7 @@ const showSlides = (n) => {
 
 prev.addEventListener('click', () => showSlides(--slideIndex));
 next.addEventListener('click', () => showSlides(++slideIndex));
+
 
 // 이미지 슬라이더 자동
 function changeSlide(){
@@ -89,6 +91,37 @@ function changeSlide(){
 }
 
 changeSlide();
+// //
+// var slides = document.querySelectorAll('#slides .slide');
+// var currentSlide = 0;
+// var slideInterval = setInterval(nextSlide,2000);
+
+// function nextSlide(){
+// 	slides[currentSlide].className = 'slide';
+// 	currentSlide = (currentSlide+1)%slides.length;
+// 	slides[currentSlide].className = 'slide showing';
+// }
+
+// var playing = true;
+// var pauseButton = document.getElementById('pause');
+
+// function pauseSlideshow(){
+// 	pauseButton.innerHTML = 'Play';
+// 	playing = false;
+// 	clearInterval(slideInterval);
+// }
+
+// function playSlideshow(){
+// 	pauseButton.innerHTML = 'Pause';
+// 	playing = true;
+// 	slideInterval = setInterval(nextSlide,2000);
+// }
+
+// pauseButton.onclick = function(){
+// 	if(playing){ pauseSlideshow(); }
+// 	else{ playSlideshow(); }
+// };
+
 
 
 

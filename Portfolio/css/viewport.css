@@ -1,70 +1,129 @@
+@media (max-width:1500px){
+  /* 1 */
+  .circle{
+    display: none;
+  }
+}
+
 @media (max-width:1200px){
   /* 1 */
   .hollow p{
     font-size: 15vw;
   }
-  .circle{
-    display: none;
-  }
   /* 2 */
   nav{
-    display: flex;
+    margin: 0;
   }
-  nav ul li a{
-    font-size: 1.5rem;
+  nav ul li{
+    margin: 0;
+    padding: 0 20px;
   }
-  .txt_box{
-    top: 40px;
+  .texbox{
+    width: 100%;
+    height: 50%;
+    margin-top: 40px;
   }
-  /* 3 */
-  #textEven h1{
-    font-size: 9vw;
+  .texbox h2{
+    font-size: 3rem;
+    padding: 0;
+    margin: 0;
+  }
+  .texbox p{
+    font-size: 1.8rem;
+    line-height: 50px;
+    padding: 0;
+    margin: 0;
+  }
+  .skill_effect{
+    width: 100%;
+    height: 50%;
+  }
+  .skill_btn button{
+    font-size: 2rem;
+  }
+  .content p{
+    font-size: 2rem;
+  }
+   /* 3 */
+   #textEven h1{
+    font-size: 7vw;
   }
   #textEven p{
-    font-size: 3vw;
+    font-size: 2.5vw;
+    padding-bottom: 30px;
+  }
+  /* footer */
+  footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #bye p{
+    font-size: 11vw;
+  }
+  .contact i{
+    font-size: 12vw;
+  }
+  .rights{
+    text-align: center;
   }
 }
 
 @media (max-width:800px){
   /* 2 */
-  nav{
-    text-align: center;
-  }
   nav ul li{
-    margin: 1px 10px
+    padding: 0 6px;
+  }
+  nav ul li a{
+    font-size: 2rem;
   }
   .texbox{
-    width: 100%;
-    height: 50%;
     padding-top: 5em;
   }
   .texbox h2{
-    font-size: 5vw;
+    font-size: 6vw;
   }
   .texbox p{
     font-size: 4vw;
+    line-height: normal;
   }
-  .skilleffect p{
-    font-size: 4vw;
+  .skill_text p{
+    font-size: 4.5vw;
   }
-  .skilltext{
+  .skill_effect{
     width: 100%;
     height: 50%;
   }
-  .skillbtn button{
+  .skill_btn button{
     font-size: 3.5vw;
     border-radius: 10px;
     height: 70%;
   }
   /* 3 */
-}
 
-@media (max-width: 620px) {
-  .dim{
-    display: flex;
-    min-width: 100vw;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
+  #textEven{
+
+    text-align: center;
   }
+  #textEven h1{
+    font-size: 10vw;
+  }
+  #textEven p{
+    font-size: 4vw;
+    line-height: normal;
+  }
+  .pofol{
+    border: 1px solid red;
+    overflow: hidden;
+  }
+  .pofol img{
+    width: 150%;
+  }
+  /* footer */
+  #bye >p{
+    font-size: 9vw;
+  }
+  .rights{
+    left: 8%;
+  } 
 }

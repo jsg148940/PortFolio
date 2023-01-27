@@ -185,8 +185,8 @@ nav > ul >li >a{
   position: relative;
 }
 .slider_arrows{
-  display: flex;
   height: inherit;
+  display: flex;
   justify-content: space-between;
 }
 .slider_arrow {
@@ -220,14 +220,18 @@ nav > ul >li >a{
   background-color: rgba(255, 255, 255, 0);
   cursor: pointer;
 }
-/* .pause >p{
-  width: 2px; 
-  height: 15px; 
-  border-left: 3px solid rgb(141, 141, 141);
-  border-right: 3px solid rgb(141, 141, 141);
-  position: relative;
-  left: 14px;
-} */
+.pause{
+  font-size: 1rem;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 500px;
+  left: 1040px;
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: rgba(91, 148, 233, 0.315);
+  cursor: pointer;
+}
 
 /* 이미지 슬라이더 */
 .slider_carousel{
@@ -250,6 +254,7 @@ to {opacity: 1;}
 }
 .slider_image img{
   width: 100%;
+  height: inherit;
 }
 
 /* 세로메뉴 */
@@ -684,12 +689,13 @@ footer{
   border: 1px solid red;
 }
 .sitemap_scroll{
-  width: 50vw;
+  width: ;
   height: 100%;
   position: relative;
   left: 5%;
   z-index: 100;
   overflow: hidden;
+  border: 1px solid red;
 }
 .sitemap_scroll ul{
   width: 50vw;
@@ -822,14 +828,14 @@ footer{
   justify-content: center;
   align-items: center;
 }
-section{
+.site_link{
   width: 180px;
   height: 40px;
 }
-select p{
+.site_link p{
   color: #fff;
 }
-select:hover{
+.site_link:hover{
   cursor: pointer;
   text-decoration: underline;
 }

@@ -1,4 +1,3 @@
-/* 초기화 */
 *{
   margin: 0; 
   padding: 0; 
@@ -9,9 +8,9 @@ html,body{
   width: 100%; 
   height: 100%; 
 }
- body::-webkit-scrollbar {
-  display: none; 
-}
+body::-webkit-scrollbar { 
+  display: none;
+}   
 .viewport_side{
   display: none;
 }
@@ -19,10 +18,11 @@ html,body{
 /* 헤더 */
 header{
   width: 100%;
-  height: 100px;
+  height: 80px;
   background: rgb(12, 145, 34);
   display: flex;
   flex-direction: column;
+  justify-content: center;
   position:fixed;
   z-index: 900;
 }
@@ -57,7 +57,8 @@ header{
   -webkit-transition: all 0.1s ease-in;
   -o-transition: all 0.1s ease-in;
   transition: all 0.1s ease-in;
-  font-size: 1.5vw;
+  font-size: 50px;
+  font-weight: bold;
 }
 .slide_down ul li ul li >a{
   display: inline-block;
@@ -72,12 +73,12 @@ header{
 .slide_down ul li a:hover{
   background: #646464;
 }
-.slide_down ul li > ul{
+.slide_down ul li >ul{
   display: none;
   position: absolute;
   width: 150px;
-  top: 100%;
-  left: -26px;
+  top: 89%;
+  left: 5%;
   z-index: 1;
   text-align: left;
 }
@@ -90,7 +91,7 @@ header{
 }
 .slide_down ul li > ul li a{
   display: block;
-  border-top: 1px solid rgb(231, 230, 233);
+  /* border-top: 1px solid rgb(231, 230, 233); */
   text-align: center;
 }
 .slide_down ul li > ul li a:hover{
@@ -138,7 +139,6 @@ input::placeholder{
   z-index: 100;
   position: relative;
   right: 60px;
-  z-index: 100;
   background-color: #fff;
 }
 .search_bar a:hover{
@@ -148,18 +148,20 @@ input::placeholder{
 input{
 outline-color: gray;
 }
+.hambeger_menu{
+  display: none;
+}
 /* 가입 */
 .join{
   display: flex;
   align-items: center;
   position: relative;
-  right: 100px;
 }
 .join a{
   color: #fff;
   font: bold 20px normal;
   text-decoration: none;
-  margin-left: 30px;
+  margin: 10px;
 }
 .join a:hover{
   color: rgb(40, 31, 192);
@@ -171,14 +173,16 @@ outline-color: gray;
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 30%;
+	height: 30px; 
+  margin-top: 110px;
   overflow: hidden;
-  border: 1px solid red;
-  cursor: pointer;
+  position: fixed;
+  background: rgb(12, 145, 34);
 }
 .chart_rollig ul{
   height: 20px;
   list-style: none;
+  display: inline-block;
 }
 .chart_rollig ul li{
   width: 300px;
@@ -194,11 +198,10 @@ outline-color: gray;
   font-size: 1.2rem;
   font-weight: bold;
   width: 400px;
-  padding: 2px 0;
 }
 .chart_rollig >a{
   text-decoration: none;
-  font-size: 20px;
+  font-size: 17px;
   font-weight: bold;
   padding: 0 20px; 
   color: whitesmoke;
@@ -206,7 +209,6 @@ outline-color: gray;
 .chart_rollig >a:hover{
   transform: scale(1.1);
 }
-
 /* 메인 */
 section{
   display: flex;
@@ -225,17 +227,17 @@ section{
 }
 .board_slider{
   width: 100%;
-  height: 90%;
+  min-height: 60vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  overflow: hidden;
 }
 /* 글 */
 .text_slider{
   width: 50%;
   height: 100%;
   border: 1px solid red;
-  overflow: hidden;
 }
 .text_slider ul{
   list-style: none;
@@ -251,14 +253,15 @@ section{
   color: rgb(0, 0, 0);
   width: auto;
   font-family: 'Noto Sans KR', sans-serif;
-  font-size: 2.6rem;
+  font-size: 2vw;
   text-align: center;
 }
 .text_slider ul li h3{
-  color: rgb(0, 0, 0);
+  color: rgb(80, 73, 73);
   margin: 1em;
   width: auto;
-  font: 300 1.5rem 'Noto Sans KR';
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 1.15vw;
   line-height: 50px;
 }
 /* 이미지 */
@@ -306,14 +309,13 @@ section{
   flex-wrap: wrap;
   width: 70vw;
   height: 70vh;
+}
+.new_album_text{
+  width: 100%;
+  height: 20%;
   border: 1px solid red;
 }
-.new_album_btn{
-  width: 100%;
-  height: 30%;
-  border: 1px solid black;
-}
-.new_album_btn h1{
+.new_album_text h1{
   font-size: 6vw;
   color: rgba(0, 0, 0, 0);
   -webkit-text-stroke: 3px rgb(40, 31, 192);
@@ -325,12 +327,12 @@ section{
 /* 새 앨범 */
 .album_list{
   width: 100%;
-  height: 70%;
+  height: 80%;
   display: flex;
-  justify-content: center;
   flex-wrap: nowrap;
   list-style: none;
   border: 1px solid black;
+  padding: 20px;
 }
 .album_list li{
   width: 25%;
@@ -342,15 +344,11 @@ section{
   filter: drop-shadow(5px 5px 5px  rgb(95, 93, 93));
 }
 .album_list img{
-  width: 100%;
+  width: 110%;
   height: 100%;
   transition: all 0.6s ease-in-out;
   filter: saturate(70%);
   box-shadow: #646464;
-}
-.album_list li:hover .album_info{
-  opacity: 1;
-  transform: translateY(-510px);
 }
 .album_list li:hover img{
   transform: scale(1.2);
@@ -365,7 +363,7 @@ section{
   flex-direction: column;
   align-items: center;
   z-index: 10; 
-  transition: all 0.6s ease-in-out;
+  transition: all 0.5s ease-in-out;
   border-radius: 0 70px 0 0;
   position: absolute;
 }
@@ -381,6 +379,10 @@ section{
   font-size: 1vw;
   font-weight: bold;
   border: 1px solid red;
+}
+.album_list li:hover .album_info{
+  opacity: 1;
+  top: 0;
 }
 .inner_text{
   border: 1px solid red;
@@ -487,6 +489,7 @@ video{
   font-size: 4vw;
   color: rgb(40, 31, 192);
   margin-bottom: 10px;
+  text-align: center;
 }
 .promo:hover .video_text h1{
   color: rgba(39, 31, 192, 0);
@@ -525,7 +528,6 @@ video{
 .hot_this_week{
   width: 80vw;
   height: 80vh;
-  margin: 80px 0;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -557,48 +559,83 @@ video{
   background: rgb(25, 18, 158);
   color: #fff;
 }
-/*  */
-.hot_list{
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
+
+
+
+
+.hot_list {
   width: 100%;
-  height: 70%;
-  position: relative;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  position: sticky;
-}
-.hot_list ul{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  border: 1px solid red;
-}
-.hot_list ul li{
-  list-style: none;
-  padding: 10px;
+  min-height: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 1px solid red;
-  opacity: 1;
-  transition: 1s all ease;
-  /* transform: translatey(500px);  */
 }
-.hot_list p{
-  color: #000;
-  font-size: 1vw;
-  font-family: 'Noto Sans KR', sans-serif;
+.grow {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
 }
-.hot_list img{
-  width: 400px;
-  height: 500px;
+.grow .item {
+  box-sizing: border-box;
+  flex-grow: 1;
+  transition: width 0.4s ease;
+  width: 0;
+}
+.grow .item:hover {
+  width: 20%;
+  filter: saturate(1%);
   cursor: pointer;
 }
-.hot_list img:hover{
-  filter: saturate(1%);
+.item img {
+  width: 100%;
+  height: 100%;
+}
+.grow .item {
+  position: relative;
+  overflow: hidden;
+}
+.text {
+  position: absolute;
+  font-size: 1vw;
+  padding: 10px;
+  font-weight: 700;
+  font-family: sans-serif;
+  color: rgb(255, 253, 253);
+  opacity: 0;
+  text-shadow: 2px 2px 0 rgba(19, 19, 19, 0.5);
+  bottom: 0%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  width: 300px;
+  background: rgba(58, 56, 56, 0.836);
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+  text-align: center;
+  border-radius: 10px;
+  transition-property: opacity, bottom;
+  transition-duration: 0.1s;
+  transition-delay: 0;
+  transition-timing-function: linear, ease;
+}
+.grow .item:hover .text {
+  opacity: 1;
+  bottom: 10%;
+  transition-duration: 0.3s, 0.7s;
+  transition-delay: 0.4s, 0.2s;
+}
+.grow .item:before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  right: 3px;
+  left: 3px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 25%;
 }
 
 /* 바닥 */
@@ -607,42 +644,31 @@ footer{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
-  top: 3700px;
+  margin: 180px 0;
   width: 100%;
-  height: 200px;
+  min-height: 200px;
   background: rgb(41, 38, 36);
+  text-align: center;
 }
 footer a:hover{
   text-decoration: underline;
   color: #fff;
 }
-.BottomTop{
-  width: auto;
-  height: auto;
+.bottom_menu{
+  width: 70%;
   padding-bottom: 1em;
   color: rgb(224, 215, 214);
+  border: 1px solid red;
 }
-.BottomTop a{
+.bottom_menu a{
   margin-left: 1em;
   margin-right: 1em;
   text-decoration: none;
   color: rgb(161, 161, 161);
 }
-.BottomMiddle{
-  width: auto;
-  height: auto;
-  color: rgb(224, 215, 214);
-}
-.BottomMiddle a{
-  margin-left: 1em;
-  margin-right: 1em;
-  text-decoration: none;
-  color: rgb(161, 161, 161);
-}
-.BottomFlat{
-  width: 100%;
-  height: auto;
+.bottom_text{
+  width: 70%;
+  border: 1px solid red;
   margin-top: 1em;
   color: rgb(161, 161, 161);
   display: flex;

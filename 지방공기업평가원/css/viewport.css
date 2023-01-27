@@ -64,6 +64,23 @@
   height: 100%;
 }
 
+@media screen and (max-width: 1400px){
+
+  .Horizontalmenu{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1200px){
+  .dropdown,
+  .Horizontalmenu{
+    display: none;
+  }
+  .slider{
+    width: 100%;
+    height: 100%;
+  }
+}
 
 @media screen and (max-width:800px){
   .weather,
@@ -331,6 +348,5 @@
   
 
 }
-
 
 

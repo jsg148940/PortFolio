@@ -1,3 +1,10 @@
+.new_album_btn p,
+.new_album_btn i{
+  display: none;
+}
+
+
+
 @media screen and (max-width:800px){
   .viewport_side{
     position: fixed;
