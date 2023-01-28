@@ -1,7 +1,7 @@
 @media screen and (max-width:1300px){
   /* 헤더 */
   header{
-    border: 1px solid red;
+
   }
   .menu{
     justify-content: space-between;
@@ -75,7 +75,6 @@
 
 @media screen and (max-width:800px){
   header{
-    border: 1px solid black;
   }
   .menu{
     display: flex;
@@ -89,12 +88,11 @@
   .search_bar input{
     width: 100%;
   }
-  .search_bar a >i{
+  .search_bar i{
     display: block;
   }
   .hambeger_menu{
     display: block;
-    border: 1px solid red;
     height: 100%;
     width: 100px;
     text-align: center;

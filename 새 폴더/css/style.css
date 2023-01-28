@@ -126,14 +126,14 @@ input::placeholder{
 }
 .search input{
   border-radius: 30px;
-  width: 20vw;
+  width: 30vw;
   height: 50px;
   background-color: rgb(255, 255, 255);
   padding-left: 30px;
   padding-right: 70px;
   border: none;
 }
-.search_bar a{
+.search_bar i{
   color: rgb(12, 145, 34);
   font-size: 2rem;
   z-index: 100;
@@ -141,7 +141,7 @@ input::placeholder{
   right: 60px;
   background-color: #fff;
 }
-.search_bar a:hover{
+.search_bar i:hover{
   cursor: pointer;
   border: 1px solid gray;
 }

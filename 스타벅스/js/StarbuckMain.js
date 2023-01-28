@@ -1,45 +1,45 @@
 // 마우스휠 자동 스크롤
-window.onload = function () {
-  var elm = ".container";
-  $(elm).each(function (index) {
+// window.onload = function () {
+//   var elm = ".container";
+//   $(elm).each(function (index) {
     
-      $(this).on("mousewheel DOMMouseScroll", function (e) {
-          e.preventDefault();
-          var delta = 0;
-          if (!event) event = window.event;
-          if (event.wheelDelta) {
-              delta = event.wheelDelta / 120;
-              if (window.opera) delta = -delta;
-          } 
-          else if (event.detail)
-              delta = -event.detail / 3;
-          var moveTop = $(window).scrollTop();
-          var elmSelecter = $(elm).eq(index);
+//       $(this).on("mousewheel DOMMouseScroll", function (e) {
+//           e.preventDefault();
+//           var delta = 0;
+//           if (!event) event = window.event;
+//           if (event.wheelDelta) {
+//               delta = event.wheelDelta / 120;
+//               if (window.opera) delta = -delta;
+//           } 
+//           else if (event.detail)
+//               delta = -event.detail / 3;
+//           var moveTop = $(window).scrollTop();
+//           var elmSelecter = $(elm).eq(index);
 
-          if (delta < 0) {
-              if ($(elmSelecter).next() != undefined) {
-                  try{
-                      moveTop = $(elmSelecter).next().offset().top;
-                  }catch(e){}
-              }
+//           if (delta < 0) {
+//               if ($(elmSelecter).next() != undefined) {
+//                   try{
+//                       moveTop = $(elmSelecter).next().offset().top;
+//                   }catch(e){}
+//               }
   
-          } else {
-              if ($(elmSelecter).prev() != undefined) {
-                  try{
-                      moveTop = $(elmSelecter).prev().offset().top;
-                  }catch(e){}
-              }
-          }
+//           } else {
+//               if ($(elmSelecter).prev() != undefined) {
+//                   try{
+//                       moveTop = $(elmSelecter).prev().offset().top;
+//                   }catch(e){}
+//               }
+//           }
  
-          $("html,body").stop().animate({
-              scrollTop: moveTop + 'px'
-          }, {
-              duration: 800, complete: function () {
-              }
-          });
-      });
-  });
-}
+//           $("html,body").stop().animate({
+//               scrollTop: moveTop + 'px'
+//           }, {
+//               duration: 800, complete: function () {
+//               }
+//           });
+//       });
+//   });
+// }
 
 
 // page2 리워드
@@ -136,4 +136,38 @@ $('.fa-x').click(function(){
 $('.viewport_menu').animate({left:'600px'}).css({'display':'none'});
 });
 
-  
+
+
+
+//
+// var ctrl = new ScrollMagic.Controller({   
+// });
+// // This each sets the animation
+// $('.container').each(function(index,element) {  
+//     ////////// scroll up //////////
+//     new ScrollMagic.Scene({
+//         triggerHook: 0,
+//         triggerElement: this,
+//         offset:-50 // small offset added to prevent overscrolling accidentally triggering
+//     })
+//     .on('leave', function () {
+//             TweenLite.to(window, .5, {scrollTo:{y:$(window).height() * (index-1), autoKill:false},ease: Linear.easeNone})
+//     })
+//     .addTo(ctrl);  // scene end
+
+
+
+
+//     //////////scroll down //////////
+
+//     new ScrollMagic.Scene({
+//             triggerElement: this,
+//             triggerHook: 0,
+//             offset:50 // small offset added to prevent overscrolling accidentally triggering
+//         })
+//         .on('enter', function () {
+//             TweenLite.to(window, .5, {scrollTo:{y:$(window).height() * (index+1), autoKill:false},ease: Linear.easeNone});   
+//         })
+//         .addTo(ctrl); // scene end
+
+// });
