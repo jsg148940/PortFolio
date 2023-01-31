@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/Portfolio.css" defer>
+  <link rel="stylesheet" href="./css/color.css" defer>
   <link rel="stylesheet" href="./css/viewport.css">
   <script type="text/javascript" src="./js/PofolMain.js" defer></script>
   <script type="text/javascript" src="./js/jquery.js" ></script>
@@ -14,6 +15,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Sofia+Sans&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Scope+One&display=swap');
   </style>
 </head>
 <body>
@@ -22,7 +24,7 @@
 
   <section id="first">
     <div class="hollow">
-      <p>DESIGNED PORTFOLIO<br>START WITH SCROOLL</p>
+      <p>DESIGNED PORTFOLIO<br><span>START WITH SCROOLL</span></p>
     </div>  
     <div class="circle">
       <div class="logo"></div>
@@ -42,20 +44,31 @@
       </ul>
     </nav>
     <div class="texbox">
-        <h2>편리함을 디자인하는 <br>웹퍼블리셔 정슬기 입니다.</h2>
-        <p>우연한 계기로 퍼블리싱을 공부하게 되었는데<br>
-          내가 만드는데로 바로 보여지것에 흥미가 생겨 웹퍼블리셔로 전향하게 되었습니다.<br>
-          멈추지 않는 도전과 새로운 기술의 도입은 물론<br>
-          팀원과의 융합을 가장의 목표로 하며 클라이언트와 DB, 서버 사이드 코드의<br>
-          학습을 토대로 풀스택을 목포로 하고있습니다.
-        </p>
+        <h2>편리함을 디자인하는 <br>웹퍼블리셔 <span>정슬기</span> 입니다</h2>
+        <p>내 손 끝에서 만들어지는 가상의 세계에 매력을 느껴<br>
+          웹퍼블리싱과 프론트엔드를 공부하게 되었습니다.</p>
+        <p>기본적인CSS와 사용자의 시선으로 보는 편리함과 최대의 효율을<br>
+          구현해낼수있는 디자인과 마크업을 위해 언제나 노력합니다.</p>
+        <p>멈추지 않는 도전과 새로운 기술의 도입은 물론<br>
+          팀원과의 융합을 가장의 목표로 하며 클라이언트 사이드의<br>
+          학습을 토대로 프론트엔드를 목표로 공부중입니다.</p>
     </div>
     <div class="skill_effect">
+      <div class="skill_btn">
+        <p class="btn" id="design" data-cursor="pointer2"><img src="./images/git.png"></p> 
+        <p class="btn" id="html" data-cursor="pointer2" ><img src="./images/html.png"></p>
+        <p class="btn" id="java" data-cursor="pointer2"><img src="./images/css.png"></p>
+        <p class="btn" id="clanguage" data-cursor="pointer2"><img src="./images/js.png" style="width: 89px;"></p>
+        <p class="btn" id="design" data-cursor="pointer2"><img src="./images/ps.png"></p>
+        <p class="btn" id="design" data-cursor="pointer2"><img src="./images/c++.png"></p>
+        <p class="btn" id="design" data-cursor="pointer2"><img src="./images/c#.png"></p>
+     </div>
       <div class="skill_text">
         <div id="html" class="content" >
           <p>인라인과 블록 요소등 웹 표준과 웹 접근성에 숙달하고<br>
             하드코딩이 가능하며, 반응형 웹 페이지를 제작가능합니다.<br>
             또한, GitHub을 사용할수 있습니다.</p>
+          
         </div>
         <div id="java" class="content">
           <p>메서드를 이용한 제어문, 이벤트등에 숙달하며<br>
@@ -72,12 +85,6 @@
           Illustrator의 간단한 기능을 사용가능합니다.</p>
         </div>
       </div>
-      <div class="skill_btn">
-        <button class="btn" id="html" data-cursor="pointer2" >HTML/CSS</button>
-        <button class="btn" id="java" data-cursor="pointer2">JavaScript/jQuery</button>
-        <button class="btn" id="clanguage" data-cursor="pointer2">C++/C#</button>
-        <button class="btn" id="design" data-cursor="pointer2">Design Tolls</button> 
-     </div>
     </div>
   </section>
 
