@@ -48,6 +48,16 @@ document.querySelectorAll("[data-cursor]").forEach((item) => {
   });
 });
 
+
+// 스킬메뉴 토글
+$('.btn').hover(function(e) {
+  e.preventDefault();
+  
+  $(".content").hide();
+  $("#"+this.id).show();
+});
+
+
 //움직이는 원 애니메이션
 const text = document.querySelector('.text p');
 text.innerHTML = text.innerText.split("").map(
@@ -67,15 +77,6 @@ window.onscroll = function(){
     navbar.classList.remove("stickys");
   }
 }
-
-
-// 스킬메뉴 토글
-$('.btn').on("click",function(e) {
-  e.preventDefault();
-
-  $(".content").hide();
-  $("#"+this.id).show();
-});
 
 
 //가로 스크롤
@@ -156,23 +157,23 @@ function reveal3() {
 Spanizer
 - Wraps letters with spans, for css animations
 -----*/
-(function($) {
-  var s,
-  spanizeLetters = {
-    settings: {
-      letters: $('.js-spanize'),
-    },
-    init: function() {
-      s = this.settings;
-      this.bindEvents();
-    },
-    bindEvents: function(){
-      s.letters.html(function (i, el) {
-        //spanizeLetters.joinChars();
-        var spanizer = $.trim(el).split("");
-        return '<span>' + spanizer.join('</span><span>') + '</span>';
-      });
-    },
-  };
-  spanizeLetters.init();
-})(jQuery);
+// (function($) {
+//   var s,
+//   spanizeLetters = {
+//     settings: {
+//       letters: $('.js-spanize'),
+//     },
+//     init: function() {
+//       s = this.settings;
+//       this.bindEvents();
+//     },
+//     bindEvents: function(){
+//       s.letters.html(function (i, el) {
+//         //spanizeLetters.joinChars();
+//         var spanizer = $.trim(el).split("");
+//         return '<span>' + spanizer.join('</span><span>') + '</span>';
+//       });
+//     },
+//   };
+//   spanizeLetters.init();
+// })(jQuery);

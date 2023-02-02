@@ -6,52 +6,131 @@
 }
 
 @media (max-width:1200px){
-  /* 1 */
   .hollow p{
-    font-size: 15vw;
+    font-size: 11vw;
+  }
+  .hollow span{
+    font-size: 9vw;
   }
   /* 2 */
-  nav{
-    margin: 0;
-  }
-  nav ul li{
-    margin: 0;
-    padding: 0 20px;
+  nav ul li a{
+    font-size: 4.5vw;
   }
   .texbox{
     width: 100%;
     height: 50%;
-    margin-top: 40px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    text-align: left;
+    padding: 50px 50px 0 50px;
   }
   .texbox h2{
-    font-size: 3rem;
-    padding: 0;
-    margin: 0;
+    font-size: 3vw;
+    line-height: normal;
+    padding-bottom: 10px;
   }
   .texbox p{
-    font-size: 1.8rem;
-    line-height: 50px;
+    font-size: 2vw;
+    line-height: normal;
     padding: 0;
-    margin: 0;
   }
   .skill_effect{
     width: 100%;
     height: 50%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
   }
-  .skill_btn button{
-    font-size: 2rem;
+  .skill_btn{
+    display: flex;
+    flex-wrap: wrap;
+    width: 20em;
+    height: 20em;
   }
-  .content p{
-    font-size: 2rem;
+  .btn{
+    width: 30%;
+    height: 5em;
+    margin: 5px;
   }
-   /* 3 */
-   #textEven h1{
-    font-size: 7vw;
+  .btn img{
+    width: 70%;
+    height: 100%;
   }
-  #textEven p{
-    font-size: 2.5vw;
-    padding-bottom: 30px;
+  .skill_text{
+    padding: 0;
+    margin: 0;
+    width: 60%;
   }
+  .skill_text p{
+    font-size: 2vw;
+  }
+  /* 3 */
+  .pofol{
+    width: 90%;
+  }
+  .mypofol_text{
+    display: none;
+  }
+  .text_even{
+    display: block;
+    border-radius: 30px;
+    width: 100%;
+    height: 100%;
+    padding: 80px;
+    background: rgba(240, 248, 255, 0.863);
+    transition: all .5s ease-in-out;
+    transform: translateY(700px);
+    opacity: 0;
+    position: relative;
+  }
+  .pofol:hover .text_even{
+    opacity: 1;
+    transform: translateY(0px);
+    transition: all .5s ease-in-out;
+  } 
+  .text_even h2{
+    font-size: 4vw;
+    color: rgb(54, 54, 54);
+    border-left: 4px solid rgb(75, 109, 219);
+    padding-left: 10px;
+  }
+  .text_even p{
+    color: rgb(54, 54, 54);
+    font-size: 20px;
+    padding: 10px 0 0 10px;
+    font-weight: bold;
+  }
+  .text_even span{
+    padding-left: 30px;
+  }
+  .text_even :nth-child(4){
+    padding-bottom: 50px;
+  }
+  .text_even img{
+    box-shadow: 0 5px 10px rgba(0,0,0,0.25);
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: 20px;
+    margin: 5px;
+  }
+  .text_even button{
+    border-radius: 10px;
+    padding: 5px 40px;
+    width: 150px;
+    transition: all .5s ease-in-out;
+    font-weight: bold;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.25);
+    margin: 40px 0;
+  }
+  .text_even button:hover{
+    background: rgb(58, 58, 58);
+    color: aliceblue;
+    border: 1px solid aliceblue;
+    transition: all .5s ease-in-out;
+  }
+
   /* footer */
   footer{
     display: flex;
@@ -70,21 +149,23 @@
 }
 
 @media (max-width:800px){
+  .hollow p{
+    font-size: 15vw;
+  }
+  .hollow span{
+    font-size: 10vw;
+  }
   /* 2 */
-  nav ul li{
-    padding: 0 6px;
-  }
   nav ul li a{
-    font-size: 2rem;
-  }
-  .texbox{
-    padding-top: 5em;
+    font-size: 4vw;
+    padding: 0;
+    margin: 0;
   }
   .texbox h2{
     font-size: 6vw;
   }
   .texbox p{
-    font-size: 4vw;
+    font-size: 3vw;
     line-height: normal;
   }
   .skill_text p{
@@ -93,37 +174,30 @@
   .skill_effect{
     width: 100%;
     height: 50%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
   }
-  .skill_btn button{
-    font-size: 3.5vw;
-    border-radius: 10px;
-    height: 70%;
+  .skill_btn{
+    display: flex;
+    flex-wrap: wrap;
+    width: 20em;
+    height: 100%;
   }
-  /* 3 */
+  .btn{
+    width: 30%;
+    height: 5em;
+    margin: 5px;
+  }
+  .btn img{
+    width: 70%;
+    height: 100%;
+  }
+  .skill_text p{
+    font-size: 2vw;
+    position: absolute;
+    top: 15%;
+  }
 
-  #textEven{
-
-    text-align: center;
-  }
-  #textEven h1{
-    font-size: 10vw;
-  }
-  #textEven p{
-    font-size: 4vw;
-    line-height: normal;
-  }
-  .pofol{
-    border: 1px solid red;
-    overflow: hidden;
-  }
-  .pofol img{
-    width: 150%;
-  }
   /* footer */
-  #bye >p{
-    font-size: 9vw;
-  }
-  .rights{
-    left: 8%;
-  } 
 }
