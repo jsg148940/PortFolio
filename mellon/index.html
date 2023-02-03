@@ -12,24 +12,35 @@
     <script src="https://kit.fontawesome.com/242516d697.js" crossorigin="anonymous"></script>
       <title>melon Renewal</title>
     <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
       @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
       @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
       @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap');
-      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
       @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap');
     </style>
   </head>
   <body> 
-    <div class="viewport_side">
-      <div class="slide_top">
-        <div class="d">
-          <input type="text" placeholder="search">
+    <header>
+      <nav>
+        <div class="toggle-wrap" onclick="toggleMenu(this)">
+          <span class="toggle-bar"></span>
         </div>
-        <i class="fa-solid fa-xmark"></i>
-      </div>
-
-      <div class="slide_menu">
+        <div class="nav_menu">
+          <a href="#" class="logo">Melon</a>
+          <div class="search">
+            <input type="text" placeholder="음악 찾기" >
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <div class="join">
+            <a href="#">JOIN</a>
+            <a href="#">SIGIN</a>
+          </div>
+        </div>
+      </nav>
+      <div class="sidebar">
         <ul>
+          <li><a href="#" class="viewport_join">JOIN</a></li>
+          <li><a href="#" class="viewport_join">SIGIN</a></li>
           <li><a href="#">멜론차트</a></li>
           <li><a href="#">최신음악</a></li>  
           <li><a href="#">장르음악</a></li>
@@ -41,42 +52,9 @@
           <li><a href="#">어학</a></li>
         </ul>
       </div>
-    </div>
-  
-    <header>
-      <div class="menu">
-        <nav class="slide_down">
-          <ul class="navigation">
-            <li>
-              <a href="#">Melon</a>
-              <ul>
-                <li><a href="#">멜론차트</a></li>
-                <li><a href="#">최신음악</a></li>  
-                <li><a href="#">장르음악</a></li>
-                <li><a href="#">멜론DJ</a></li>
-                <li><a href="#">멜론TV</a></li>
-                <li><a href="#">스타포스트</a></li>
-                <li><a href="#">매거진</a></li>
-                <li><a href="#">뮤직어워드</a></li>
-                <li><a href="#">어학</a></li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-        <div class="search">
-          <div class="search_bar">
-            <input type="text" placeholder="검색" >
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </div>
-        </div>
-        <div class="hambeger_menu">
-          <i class="fa-solid fa-bars"></i>
-        </div>
-        <div class="join">
-          <a href="#">JOIN</a>
-          <a href="#">SIGIN</a>
-        </div>
-      </div>
+    </header>
+
+    <section>
       <div class="chart_rollig" id="navi">
         <ul class="rolling">
           <li><a href="#">1. Stay - The Kid LAROI, Justin Bieber</a></li>
@@ -89,9 +67,6 @@
         </ul>
         <a href="#">전체 보기</a>
       </div>
-    </header>
-    
-    <section>
       <div class="news_board">
         <div class="board_slider">
           <div class="text_slider">
@@ -132,64 +107,73 @@
           <li>
             <img src="./images/new_album_1.png">
             <div class="album_info">
-              <h2>사나워</h2>
-              <p>Jayci yucca</p>
-              <div class="inner_text">
-                <p>발매일&nbsp;&nbsp;&nbsp;2022.05.19</p>
-                <p>장르&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R&B/Soul, 인디음악</p>
-                <p>발매사&nbsp;&nbsp;&nbsp;YG PLUS</p>
-              </div>
-              <div class="play_icon">
-                <i class="fa-solid fa-record-vinyl"></i>
-                <p class="arrow_box">앨범정보 보기</p>
+              <div class="inner">
+                <h2>사나워</h2>
+                <p>Jayci yucca</p>
+                <div class="inner_text">
+                  <p>발매일&nbsp;&nbsp;&nbsp;2022.05.19</p>
+                  <p>장르&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R&B/Soul, 인디음악</p>
+                  <p>발매사&nbsp;&nbsp;&nbsp;YG PLUS</p>
+                </div>
+                <div class="play_icon">
+                  <i class="fa-solid fa-record-vinyl"></i>
+                  <p class="arrow_box">앨범정보 보기</p>
+                </div>
              </div>
+            </div>
           </li>
           <li>
             <img src="./images/new_album_2.png">
             <div class="album_info">
-              <h2>LOVE & HATE</h2>
-              <p>Kassy</p>
-              <div class="inner_text">
-                <p>발매일&nbsp;&nbsp;&nbsp;2022.05.19</p>
-                <p>장르&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;발라드</p>
-                <p>발매사&nbsp;&nbsp;&nbsp;카카오엔터테인먼트</p>
-              </div>
-              <div class="play_icon">
-                <i class="fa-solid fa-record-vinyl"></i>
-                <p class="arrow_box">앨범정보 보기</p>
+              <div class="inner">
+                <h2>LOVE & HATE</h2>
+                <p>Kassy</p>
+                <div class="inner_text">
+                  <p>발매일&nbsp;&nbsp;&nbsp;2022.05.19</p>
+                  <p>장르&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;발라드</p>
+                  <p>발매사&nbsp;&nbsp;&nbsp;카카오엔터테인먼트</p>
+                </div>
+                <div class="play_icon">
+                  <i class="fa-solid fa-record-vinyl"></i>
+                  <p class="arrow_box">앨범정보 보기</p>
+                </div>
              </div>
             </div>
           </li>
           <li>
             <img src="./images/new_album_3.png">
             <div class="album_info">
-              <h2>알지도 못하면서</h2>
-              <p>넉살, 까데호</p>
-              <div class="inner_text">
-                <p>발매일&nbsp;&nbsp;&nbsp;2022.05.19</p>
-                <p>장르&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;랩/힙합</p>
-                <p>발매사&nbsp;&nbsp;&nbsp;㈜인터파크</p>
-              </div>
-              <div class="play_icon">
-                <i class="fa-solid fa-record-vinyl"></i>
-                <p class="arrow_box">앨범정보 보기</p>
+              <div class="inner">
+                <h2>알지도 못하면서</h2>
+                <p>넉살, 까데호</p>
+                <div class="inner_text">
+                  <p>발매일&nbsp;&nbsp;&nbsp;2022.05.19</p>
+                  <p>장르&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;랩/힙합</p>
+                  <p>발매사&nbsp;&nbsp;&nbsp;㈜인터파크</p>
+                </div>
+                <div class="play_icon">
+                  <i class="fa-solid fa-record-vinyl"></i>
+                  <p class="arrow_box">앨범정보 보기</p>
+                </div>
              </div>
             </div>
           </li>
           <li>
             <img src="./images/new_album_5.png">
             <div class="album_info">
-              <h2>Be there</h2>
-              <p>Ikki</p>
-              <div class="inner_text">
-                <p>발매일&nbsp;&nbsp;&nbsp;2022.05.19</p>
-                <p>장르&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R&B/Soul, 인디음악</p>
-                <p>발매사&nbsp;&nbsp;&nbsp;Stone Music</p>
+              <div class="inner">
+                <h2>Be there</h2>
+                <p>Ikki</p>
+                <div class="inner_text">
+                  <p>발매일&nbsp;&nbsp;&nbsp;2022.05.19</p>
+                  <p>장르&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R&B/Soul, 인디음악</p>
+                  <p>발매사&nbsp;&nbsp;&nbsp;Stone Music</p>
+                </div>
+                <div class="play_icon">
+                  <i class="fa-solid fa-record-vinyl"></i>
+                  <p class="arrow_box">앨범정보 보기</p>
+                </div>
               </div>
-              <div class="play_icon">
-                <i class="fa-solid fa-record-vinyl"></i>
-                <p class="arrow_box">앨범정보 보기</p>
-             </div>
             </div>
           </li>
         </ul>
@@ -211,7 +195,7 @@
         <h1>Hot This Week</h1>
         <button>View more</button>
           <div class="hot_list">
-            <ul class="grow">
+            <ul>
               <li class="item">
                 <img src="./images/hot_songs_1.png" alt="">
                 <div class="text"><p>Stay<br>The Kid LAROI, Justin Bieber</p></div>
@@ -240,26 +224,33 @@
   
     <footer>
       <div class="bottom_menu">
-        <a href="#">멜론6.0 둘러보기</a> |
-        <a href="#">멜론스튜디오</a> |
-        <a href="#">Windows 플레이어</a> |
-        <a href="#">Mac 플레이어</a> |
-        <a href="#">iPad</a>|
-        <a href="#">고객센터</a>
-        <br>
-        <a href="#">이용약관</a> |
-        <a href="#">위치기반서비스 이용약관</a> |
-        <a href="#">개인정보처리방침</a> |
-        <a href="#">청소년보호정책</a> |
-        <a href="#">제휴/ 프로모션문의</a> |
-        <a href="#">이메일주소무단수집거부</a> |
-        <a href="#">파트너센터</a>
+        <div class="bottom left_box">
+          <ul>
+            <li><a href="#">멜론6.0 둘러보기</a></li>
+            <li><a href="#">멜론스튜디오</a></li>
+            <li><a href="#">Windows 플레이어</a></li>
+            <li><a href="#">Mac 플레이어</a></li>
+            <li><a href="#">iPad</a></li>
+            <li><a href="#">고객센터</a></li>
+          </ul>
+        </div>
+        <div class="bottom left_box">
+          <ul>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">위치기반서비스 이용약관</a></li>
+            <li><a href="#">개인정보처리방침</a></li> 
+            <li><a href="#">청소년보호정책</a></li> 
+            <li><a href="#">제휴 / 프로모션문의</a></li> 
+            <li><a href="#">이메일주소무단수집거부</a></li>
+            <li><a href="#">파트너센터</a></li>
+          </ul>
+        </div>
       </div>
-
       <div class="bottom_text">
         <p>(주)카카오엔터테인먼트  경기도 성남시 분당구 판교역로 221 대표이사 : 이진수, 김성수 사업자등록번호 : 220-88-02594 통신판매업신고번호 : 2018-성남분당B-0004 사업자정보확인<br>
         문의전화 : 1566-7727 (평일 09:00-18:00, 유료) 이메일 : melon_info@kakaoent.com 호스팅서비스사업자 : (주)카카오엔터테인먼트 © Kakao Entertainment Corp.</p>
       </div>
+      <img src="./images/mellon_logo.png" alt="">
     </footer>
   </body>
   </html>

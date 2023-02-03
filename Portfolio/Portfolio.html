@@ -20,6 +20,7 @@
 <body>
   <div id="cursor"></div>
   <div id="cursor-border"></div>
+  <a id="button"></a>
 
   <section id="first">
     <div class="hollow">
@@ -34,7 +35,7 @@
   </section>
   
   <section id="second"> 
-    <nav id="navbar">
+    <nav id="navbar"> 
       <ul id="menu">  
         <li><a href="#first" id="main" data-cursor="pointer">Hellow</a></li>
         <li><a href="#second" id="aboutme" data-cursor="pointer">AboutMe</a></li>
@@ -42,7 +43,8 @@
         <li><a href="#bye" id="conact" data-cursor="pointer">Contat</a></li>
       </ul>
     </nav>
-    <div class="texbox">
+    <div class="map">
+      <div class="texbox">
         <h2>편리함을 디자인하는 <br>웹퍼블리셔 <span>정슬기</span> 입니다</h2>
         <p>내 손 끝에서 만들어지는 가상의 세계에 매력을 느껴<br>
           웹퍼블리싱과 프론트엔드를 공부하게 되었습니다.</p>
@@ -51,54 +53,54 @@
         <p>멈추지 않는 도전과 새로운 기술의 도입은 물론<br>
           팀원과의 융합을 가장의 목표로 하며 클라이언트 사이드의<br>
           학습을 토대로 프론트엔드를 목표로 공부중입니다.</p>
-    </div>
-    <div class="skill_effect">
-      <div class="skill_text">
-        <div id="git" class="content" >
-          <p>git과 github를 이용해 소스코드와 파일관리가 가능하며, 웹 호스팅으로 사용가능합니다.</p>
-          <video muted autoplay loop>
-            <source id="ss" src="./videos/git.mp4" type="video/mp4" autoplay controls>
-          </video>
-        </div>
-        <div id="html" class="content" >
-          <p>인라인과 블록 요소등 웹 표준과 웹 접근성에 숙달하고<br>
-            하드코딩이 가능하며, 반응형 웹 페이지를 제작가능합니다.</p>
-            <video muted autoplay loop>
-              <source id="ss" src="./videos/html.mp4" type="video/mp4" autoplay controls>
-            </video>
-        </div>
-        <div id="js" class="content">
-          <p>메서드를 이용한 제어문, 이벤트등에 숙달하며<br>
-            바닐라자바스크립트가 가능하고<br>
-            jQuery 라이브러리를 이용해 엘리먼트 관리, 생성 가능합니다.</p>
-            <video muted autoplay loop>
-              <source id="ss" src="./videos/js.mp4" type="video/mp4" autoplay controls>
-            </video>
-        </div>
-        <div id="design" class="content">
-          <p>Photoshop의 사진편집이나 이미지 생성이 가능하며<br>
-          Illustrator의 간단한 기능을 사용가능합니다.</p>
-          <video muted autoplay loop>
-            <source id="ss" src="./videos/design.mp4" type="video/mp4" autoplay controls>
-          </video>
-        </div>
-        <div id="clanguage" class="content">
-          <p>다양한 함수 사용이 가능하고, 팀 프로젝트 경험이 있습니다.<br>
-          또한, C언어를 이용한 언리얼엔진과 유니티를 사용해봤으며<br>
-          언리얼의 블루프린트를 사용가능합니다.</p>
-          <video muted autoplay loop>
-            <source id="ss" src="./videos/unreal.mp4" type="video/mp4" autoplay controls>
-          </video>
-        </div>
       </div>
-      <div class="skill_btn">
-        <p class="btn" id="git" data-cursor="pointer2"><img src="./images/git.png"></p> 
-        <p class="btn" id="html" data-cursor="pointer2" ><img src="./images/html.png"></p>
-        <p class="btn" id="html" data-cursor="pointer2"><img src="./images/css.png"></p>
-        <p class="btn" id="js" data-cursor="pointer2"><img src="./images/js.png"></p>
-        <p class="btn" id="design" data-cursor="pointer2"><img src="./images/ps.png"></p>
-        <p class="btn" id="clanguage" data-cursor="pointer2"><img src="./images/c++.png"></p>
-        <p class="btn" id="clanguage" data-cursor="pointer2"><img src="./images/c.png"></p>
+      <div class="skill_effect">
+        <div class="skill_text">
+          <div id="git" class="content" >
+            <p>git과 github를 이용해 소스코드와 파일관리가 가능하며<br>웹 호스팅으로 사용가능합니다.</p>
+            <video muted autoplay loop>
+              <source id="ss" src="./videos/git.mp4" type="video/mp4" autoplay>
+            </video>
+          </div>
+          <div id="html" class="content" >
+            <p>인라인과 블록 요소등 웹 표준과 웹 접근성에 숙달하고<br>
+              하드코딩이 가능하며, 반응형 웹 페이지를 제작가능합니다.</p>
+              <video muted autoplay loop>
+                <source id="ss" src="./videos/html.mp4" type="video/mp4" autoplay>
+              </video>
+          </div>
+          <div id="js" class="content">
+            <p>메서드를 이용한 제어문, 이벤트등에 숙달하며<br>
+              바닐라자바스크립트가 가능하고<br>
+              jQuery 라이브러리를 이용해 엘리먼트 관리, 생성 가능합니다.</p>
+              <video muted autoplay loop>
+                <source id="ss" src="./videos/js.mp4" type="video/mp4" autoplay>
+              </video>
+          </div>
+          <div id="design" class="content">
+            <p>Photoshop의 사진편집이나 이미지 생성이 가능하며<br>
+            Illustrator의 간단한 기능을 사용가능합니다.</p>
+            <video muted autoplay loop>
+              <source id="ss" src="./videos/design.mp4" type="video/mp4" autoplay>
+            </video>
+          </div>
+          <div id="clanguage" class="content">
+            <p>다양한 함수 사용이 가능하고, 팀 프로젝트 경험이 있습니다.<br>
+            또한, C언어를 이용한 언리얼엔진과 유니티를 사용해봤으며<br>
+            언리얼의 블루프린트를 사용가능합니다.</p>
+            <video muted autoplay loop>
+              <source id="ss" src="./videos/unreal.mp4" type="video/mp4" autoplay>
+            </video>
+          </div>
+        </div>
+        <div class="skill_btn">
+          <p class="btn" id="git" data-cursor="pointer2"><img src="./images/git.png"></p> 
+          <p class="btn" id="html" data-cursor="pointer2" ><img src="./images/html.png"></p>
+          <p class="btn" id="html" data-cursor="pointer2"><img src="./images/css.png"></p>
+          <p class="btn" id="js" data-cursor="pointer2"><img src="./images/js.png"></p>
+          <p class="btn" id="design" data-cursor="pointer2"><img src="./images/ps.png"></p>
+          <p class="btn" id="clanguage" data-cursor="pointer2"><img src="./images/c++.png"></p>
+        </div>
       </div>
     </div>
   </section>
@@ -184,7 +186,7 @@
           </div>
           <div class="dim">
             <div class="pofol melon" id="meee">
-              <img src="../Portfolio/images/melon.png" >
+              <img src="./images/mellonSH.png" >
               <div class="text_even">
                 <h2>MELLON RENEWAL</h2>
                 <p>제작기간<span>약1주</span></p>

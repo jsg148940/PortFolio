@@ -1,20 +1,5 @@
-body {
-  margin: 0 auto;
-  height: 100%;
-  width: 100%;
-}
-.hot{
-  width: 50vw;
-  height: 80vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.item img{
-  width: 100%;
-  height: 100%;
-}
-.grow {
+
+.hot_list ul {
   width: 100%;
   height: 70%;
   box-sizing: border-box;
@@ -32,9 +17,9 @@ body {
   }
 }
 
-.grow .item {
+.hot_list ul .item {
   position: relative;
-overflow: hidden;
+  overflow: hidden;
   .text {
     position: absolute;
     font-size: 40px;
@@ -79,3 +64,4 @@ overflow: hidden;
 
   
 }
+

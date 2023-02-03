@@ -47,6 +47,46 @@ section{
     height 0.15s ease-out, background-color 0.15s ease-out;
   z-index: 999;
 }
+#button {
+  display: inline-block;
+  background-color: #555;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  transition: all .5s ease-in-out;
+  transform: translateY(100px);
+}
+#button::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1vw;
+  line-height: 50px;
+  color: #fff;
+}
+#button:hover {
+  cursor: pointer;
+  background-color: #caf311;
+}
+#button:active {
+  background-color: #333;
+}
+#button.show {
+  opacity: 1;
+  visibility: visible;
+  transition: all .5s ease-in-out;
+  transform: translateY(0);
+}
 
 /* 1 */
 #first{
@@ -109,7 +149,6 @@ section{
   font-size: 7vw;
   font-weight: bold; 
   line-height: 110px;
-
 }
 .hollow span{
   font-family: 'Scope One', serif;
@@ -158,41 +197,47 @@ section{
 /* 2 */
 #second{
   display: flex;
-  flex-direction: row;
-  position: relative;
-  align-items: flex-end;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 /* 네비메뉴 */
 nav{
   width: 100%;
+  height: 5%; 
   text-align: end;
   display: flex;
   flex-direction: row;
   background: rgb(58, 58, 58);
   z-index: 100;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all .5s ease-in-out;
 }
 nav ul{
   width: 100%;
-  max-height: 200em;
+  height: auto;
   margin-top: 1px;
 }
 nav ul li{
   display: inline-block;
   list-style: none;
-  margin: 10px 30px;
+  margin: 0 30px;
   color: #fff;
 }
 nav.stickys{
   position: fixed;
   top: 0;
   left: 0;
+  opacity: 1;
+  transform: translateY(0);
+  transition: all .5s ease-in-out;
 }
 nav ul li a {
   display: inline-block;
   position: relative;
   text-decoration: none;
-  margin: 10px;
+  margin: 5px 10px;
   font-size: 2rem;
 }
 nav ul li a::after {
@@ -211,11 +256,17 @@ nav ul li a:hover::after {
   transform: scaleX(1);
   transform-origin: left;
 }
+.map{
+  width: 100%;
+  height: 95%;
+  display: flex;
+  flex-direction: row;
+  margin: 50px 0 0 0;
+}
 /* 소개 */
 .texbox{
   width: 40%;
-  height: 94%;
-  padding: 50px 0;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -245,46 +296,47 @@ nav ul li a:hover::after {
 }
 /* 스킬 */
 .skill_effect{
+  width: 60%;
+  height: 100%;
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  width: 60%;
-  height: 94%;
-  padding: 50px 0;
   opacity: 0;
   transform: translateX(1000px);
   transition: all .5s ease-in-out;
   transition-delay: .2s;
 }
-.skill_effect.add{
+ .skill_effect.add{
   transform: translateX(0);
   opacity: 1;
 }
 .skill_text{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items:flex-start;
-  width: 100%;
-  height: 80%;
-  position: relative;
+  width: 50vw;
+  height: auto;
 }
 .content{
   width: 90%;
-  height: 70%;
+  height: 100%;
   transform: translateX(100px);
   animation: changein 1s ease-in-out forwards;
   display: none;
   position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-left: 3em;
 }
 @keyframes changein{
   to{ transform: translateX(0px); }
 }
+@media screen and (max-aspect-ratio: 1219/685) {
+  #background_video {
+      width: auto;
+      height: 100vh;
+   }
+}
 video{
-  width: 100%;
-  height: 100%;
+  width: 100vh;
   filter: blur(2px);
-  border-radius: 30px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.25);
 }
 #git{
@@ -304,22 +356,23 @@ video{
   padding: 30px 10px;
 }
 .skill_btn{
-  width: 30%;
+  width: 8vw;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  padding: 10px;
 }
 .btn{
   width: 100%;
-  height: 15vh;
+  height: 100%;
   background: transparent;
-  overflow: hidden;
   text-align: center;
-  padding-top: 10px ;
+  padding: 1em;
 }
 .skill_btn img{
-  width: 100px;
+  width: 10vh;
 }
 .skill_btn:hover > *{
   opacity: 0.4;
@@ -332,7 +385,7 @@ video{
 }
 .skill_btn p :hover{
   transform: scale(1.07);
-}
+} 
 
 /* 3 */
 /* 포트폴리오 */
@@ -372,15 +425,28 @@ video{
   -moz-transition: all .5s;
   transition: all .5s;
   position: relative;
-  border-radius: 30px;
+  overflow: hidden;
+  overflow-y: scroll;
+  box-shadow: rgb(10, 12, 14) 0px 20px 30px -10px;
+}
+.pofol::-webkit-scrollbar{
+  width: 10px;
+	background-color: #222222;
+}
+.pofol::-webkit-scrollbar-track{
+  border-radius: 10px;
+	background-color: #222222;
+}
+.pofol::-webkit-scrollbar-thumb{
+	border-radius: 10px;
+	background: aliceblue;
 }
 .pofol img{
   width: 100%;
-  height: 100%;
+  height: auto;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
   filter: grayscale(80%);
   position: absolute;
-  border-radius: 30px;
 }
 .pofol:hover img{
   filter: none;
@@ -389,9 +455,9 @@ video{
   display: none;
 }
 .mypofol_text{
-  width: 30%;
+  width: auto;
   height: auto;
-  margin: 20px;
+  margin: 50px;
 }
 .mypofol_text h2{
   font-size: 1.4vw;
@@ -422,8 +488,8 @@ video{
 .mypofol_text button{
   border-radius: 10px;
   border: transparent;
-  margin: 50px 200px;
   padding: 5px 40px;
+  margin: 20px 0;
   width: 150px;
   transition: all .5s ease-in-out;
   font-weight: bold;

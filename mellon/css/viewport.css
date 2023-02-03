@@ -1,24 +1,13 @@
-@media screen and (max-width:1300px){
-  /* 헤더 */
-  header{
-
+@media screen and (max-width:1200px){
+  /* header */
+  .search i{
+    position: absolute;
+    left: 16%;
   }
-  .menu{
-    justify-content: space-between;
+  /* section */
+  .news_board{
+    width: 90%;
   }
-  .slide_down ul li >ul{
-    margin-left: -30px;
-  }
-  .slide_down ul li >a{
-    padding: 0 10px;
-  }
-  .slide_down ul li ul li a{
-    font-size: 2vw;
-  }
-  .search_bar input{
-    width: 50vw;
-  }
-  /* 섹션 */
   .text_slider ul li h1{
     font-size: 2.3vw;
   }
@@ -26,87 +15,74 @@
     font-size: 2vw;
     line-height: 40px;
   }
-  .album_list{
-    display: flex;
-    flex-direction: column;
-  }
   .new_album{
-    height: auto;
+    width: 90%;
+    border-top: 4px solid rgb(1, 116, 218);
   }
-  .album_list{
-    padding: 60px; 
+  .new_album_text h1{
+    padding-top: 20px;
   }
   .album_list li{
     width: 100%;
     margin: 20px 0px;
-    border: 1px solid red;
   }
   .album_list img{
     width: 100%;
     height: 100%;
   }
-  .album_info h2{
-    font-size: 6vw;
-
+  .album_info{
+    position: absolute;
+    top: 510px;
   }
-  .album_info >p{
-    font-size: 4vw;
-
+  .inner p {
+    font-size: 1rem;
   }
-  .inner_text p {
-    font-size: 3vw;
-    width: auto;
+  .inner_text p{
+    padding-left: 50px;
+    font-size: 1.3vw;
   }
-
   .promo{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 200px 0;
   }
-  .grow .item:hover {
-    width: 40%;
+  .video_text{
+    width: 80%;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   }
-  .text{
-    font-size: 1.5vw;
+  .hot_this_week{
+    margin: -100px 0;
+  }
+  .hot_list ul .item:hover {
+    width: 50%;
+  }
+  .item .text p{
+    font-size: 1rem;
   }
 }
 
 
 @media screen and (max-width:800px){
-  header{
+  /* header */
+  .search input{
+    width: 250px;
   }
-  .menu{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  .search i{
+    left: 6em;
   }
-  .navigation,
   .join{
     display: none;
   }
-  .search_bar input{
-    width: 100%;
-  }
-  .search_bar i{
+  .viewport_join{
     display: block;
   }
-  .hambeger_menu{
-    display: block;
-    height: 100%;
-    width: 100px;
-    text-align: center;
-    padding-top: 10px;
-  }
-  .hambeger_menu i{
-    font-size: 5vw;
-    color: aliceblue;
-    cursor: pointer;
-    display: block;
-  }
-  /*  */
+  /* section */
   .news_board{
     width: 90%;
+    height: 1000px;
+    margin: 150px 0;
   }
   .board_slider{
     display: flex;
@@ -117,6 +93,10 @@
     height: 50%;
     overflow: hidden;
   }
+  .text_slider,
+  .image_slider{
+    border-radius: 0 0 0 0;
+  }
   .text_slider ul li h1{
     font-size: 4vw;
   }
@@ -124,72 +104,32 @@
     font-size: 3vw;
     line-height: 30px;
   }
-  /* 반응형 내비메뉴 */
-  .viewport_side{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: green;
-    z-index: 999;
+  .new_album{
+    height: auto;
+    width: 80%;
+  }
+  .album_list{
     display: flex;
-    right: 900px;
     flex-direction: column;
-    align-items:flex-end;
   }
-
-  .slide_top{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    width: inherit;
-    height: 100px;
+  .album_list li{
+    max-height: 500px;
   }
-  .d{
-    width: 70%;
-    height: 60px
+  .album_info{
+    position: absolute;
+    opacity: 0;
   }
-  .slide_top input{
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    border-radius: 20px;
-    border: none;
-    border: 1px solid rgb(0, 0, 0);
-  }
-  .slide_top i{
-    font-size: 60px;
-    color: aliceblue;
-    cursor: pointer;
-  }
-  .slide_menu{
-    width: inherit;
-  }
-  .slide_menu ul{
-    list-style: none;
-  }
-  .slide_menu ul li{
-    border-top: 1px solid rgb(21, 148, 21);
-    width: 100%;
-    height: 90px;
-    text-align: center;
-    padding: 10px;
-    cursor: pointer;
-  }
-  .slide_menu ul li a{
-    font-size: 8vw;
-    text-decoration: none;
-    color: aliceblue;
-    padding: 10px;
-  }
-  .slide_menu ul li:hover{
-    background-color:  rgb(21, 148, 21);
-  }
-  .promo{
+  .inner h2,
+  .inner p,
+  .inner_text p{
+    font-size: 2vh;
     padding: 0;
   }
   video{
     width: 100%
+  }
+  .video_text{
+    box-shadow: none;
   }
   .video_text h1{
     font-size: 6vw;
@@ -202,6 +142,9 @@
   }
   .video_text button{
     font-size: 3vw;
+  }
+  .hot_this_week{
+    border-top: 4px solid rgb(95, 131, 54);
   }
   .hot_this_week h1{
     font-size: 7vw;
@@ -216,7 +159,4 @@
   .text{
     font-size: 2vw;
   }
- 
- 
-
 }

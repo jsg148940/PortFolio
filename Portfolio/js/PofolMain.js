@@ -78,6 +78,25 @@ window.onscroll = function(){
   }
 }
 
+// 처음으로 버튼
+var btn = $('#button');
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '300');
+});
+
+
+
+
 
 //가로 스크롤
 document.addEventListener('scroll', horizontalScroll);
