@@ -1,15 +1,15 @@
 /*초기설정 */
-*{
+* {
   margin: 0; 
   padding: 0;
   box-sizing: border-box;
   font-family: 'Noto Sans KR', sans-serif; 
 }   
-html,body{
+html,body {
   width: 100%; 
   height: 100%;
 }
-section{
+section {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -19,19 +19,18 @@ section{
   position: relative;
   top: 125px;
 }
-a{
+a {
   text-decoration: none;
   list-style: none;
 }
-
 /* header */
-header{
+header {
   position: fixed;
   width: 100%;
   height: 130px;
   z-index: 999;
 }
-.weatherbar{
+.weatherbar {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -41,16 +40,16 @@ header{
   background: rgb(48, 47, 47);
   color: aliceblue;
 }
-.weather{
+.weather{ 
   display: flex;
   font-size: .9rem;
   word-spacing: 1px;
 }
-#dates{
+#dates {
   color: aliceblue;
   font-size: .9rem;
 }
-.homemenu a{
+.homemenu a {
   color: aliceblue;
   padding: 0 10px;
   font-size: .8rem;
@@ -58,28 +57,101 @@ header{
 .homemenu a:hover{
   text-decoration: underline;
 }
-/* 드롭다운 메뉴 */
-.navbar{
-  width: 100%;
-  height: 580px;
-
+.whitelogo{
+  position: absolute;
+  width: auto;
+  height: auto;
+  top: 18%;
+  left: 18%;
+  z-index: 100;
 }
-nav .top{
+.whitelogo img{
+  width: 110%;
+}
+/* nav meun */
+.navbar{
+  background: #fff;
+  position: relative;
+  width: 100%;
+  height: 530px;
+}
+.dropdown{
   width: 100%;
   height: 80px;
-  background-color: rgb(209, 18, 18);
+  overflow: hidden; 
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  border: 1px solid red;
 }
-.nav .bot{
-  background: rgb(243, 164, 164);
-  height: 500px;
+.dropdown:hover{
+  height: 100%;
+}
+.s{
+  height: 20%;
+  background-color: #fff;
+}
+nav{
+  position: absolute;
+  width: 60em; 
+  height: 100%;
+  margin: 0 45em;  
+  border: 1px solid black;
+}
+nav >ul img{
+  position: absolute;
+  height: 440px;
+  top: 57px;
+  right: 300px;
+}
+nav > ul {
+  opacity:1; 
+}
+nav >ul >li{
+  float: left; 
+  list-style: none;
+  text-align: center;
+  position: relative; 
+  width: auto;
+  height: auto;
+  margin: 25px 20px;
+  border: 1px solid rgb(104, 72, 72);
+}
+nav > ul > li:hover ul{
+  opacity:1; 
+}
+nav > ul >li >a{
+  position: relative;
+  margin: 50px;
+  font-weight: bold;
+  color: #000;
+  font-size: 1.2vw;
+}
+.line{
+  margin-top: 35px;
+  width:100%; 
+  height: 100%;
+  opacity:1; 
+  position: absolute; 
+  line-height: 35px;
 
 }
 .line li{
-  opacity: 0;
+ height: 100%;
+  white-space:nowrap;
+  list-style: none;
+  position: relative; 
+  right: 60px;
+  margin: 0 70px;
+  width: 100%;
 }
-
-
-/* 검색버튼 */
+.line a{
+  color: #000;
+  position: relative;
+}
+.line a:hover{
+  font-size: 1.2rem;
+}
+/* magnifying */
 .magnifying p{
   width: 50px;
   height: 50px;

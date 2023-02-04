@@ -1,77 +1,74 @@
 /* 초기설정 */
-*{ 
+* {  
   margin:0; 
   padding:0;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
-body::-webkit-scrollbar { 
-  display: none;
-}   
-html,body{ 
+html, body { 
   width: 100%; 
   height: 100%;
 }
-.container{
+.container {
   width: inherit;
   height: inherit;
-  overflow: hidden;
 }
-a{
-  text-decoration: none;
-}
-
+body::-webkit-scrollbar { display: none; }   
+a { text-decoration: none; }
 /* 1 */
-#page1{
+#page1 {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-image: url(../images/wallpaper_page1.jpg);
   background-size: cover;
 }
-header{	
+/* nav */
+nav {	
+  display: flex;
+  flex-direction: row;
   width: 100%;
   height: 80px;
-}
-
-/* navbar */
-.navbar{
-  display: flex;
-  align-items: center;
   top: 0;
+  border: 1px solid red;
 }
-.logo{
-  color: #134816;
+.logo {
   width: auto;
-  font-size: 2vw;
-  font-weight: bold;
-  color: #0ba168;
-  margin-left: 10px;
+  height: 100%;
+  z-index: 10;
+  border: 1px solid red;
 }
-.navbar a{
+.logo img{
+  width: 100%;
+  height: 100%;
+} 
+.nav a{
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
-.navbar .menu-items {
+nav .menu-items {
   display: flex;
   align-items: flex-start;
+  border: 1px solid red;
 }
-.navbar ul li {
-  list-style: none;
-  transition: 0.3s ease;
-}
-.navbar .menu-item {
-  width: 180px;
-  color: #000;
-  font-size: .8vw;
-  font-weight: bold;
-  margin: 10px;
+
+nav .menu-item {
   display: flex;
   justify-content: center;
+  width: 180px;
+  font-size: 1vw;
+  font-weight: bold;
+  color: #000;
+  border: 1px solid black;
 }
-.navbar .menu-item:hover {
+nav .menu-item:hover {
   color: #0ba168;
+}
+nav ul li {
+  list-style: none;
+  transition: 0.3s ease;
+  border: 1px solid red;
 }
 .navbar:hover{
   background: #fff;
@@ -117,11 +114,11 @@ header{
   opacity: 1;
   visibility: visible;
 }
-.reward_btn{
+.reward-btn{
   position: absolute;
   bottom: 5em;
 }
-.reward_btn button{
+.reward-btn button{
   color: #000;
   font-size: 1.2rem;
   background-color: transparent;
@@ -131,7 +128,7 @@ header{
   font-weight: 700;
   border: 2px solid rgb(90, 87, 87);
 }
-.reward_btn button:hover{
+.reward-btn button:hover{
   cursor: pointer;
   animation: Gbtn_event .5s ease-in-out forwards;
 }
@@ -140,7 +137,7 @@ header{
     color: #fff;
   }
 }
-.front_text{
+.bottom_text{
   position: absolute;
   bottom: 2em;
 }

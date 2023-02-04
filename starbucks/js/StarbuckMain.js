@@ -192,7 +192,7 @@ menuBtn.addEventListener("click", (e) => {
 });
 
 window.onkeydown = function (event) {
-  const key = event.key; // const {key} = event; in ES6+
+  const key = event.key
   const active = menuItems.classList.contains("open");
   if (key === "Escape" && active) {
     toggle();

@@ -1,10 +1,10 @@
+/* 반응형 CSS */
 .hambeger_menu{
   display: none !important;
 }
 .viewport_side{
   display: none;
 }
-/* 반응형 CSS */
 .emphasized{
   position:fixed;
   top:150px;
@@ -63,15 +63,6 @@
 .slide_image2 img{
   width: 100%;
   height: 100%;
-}
-
-
-
-@media screen and (max-width: 1400px){
-
-  .Horizontalmenu{
-    display: none;
-  }
 }
 
 @media screen and (max-width: 1200px){

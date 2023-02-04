@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/PublicMain.css" defer>
+  <link rel="stylesheet" href="./css/PublicMain.css">
   <link rel="stylesheet" href="./css/viewport.css">
   <script src="./js/PublicMain.js" defer></script>
   <script src="./js/jquery.js"></script>
@@ -14,10 +14,11 @@
   <title>지방공기업평가원</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+    @import "css/PublicCom.scss";
+    @import url(css/PublicCom.css);
   </style>
 </head>
 <body>
-
   <header>
     <div class="weatherbar">
       <div class="weather">
@@ -30,71 +31,72 @@
         <a href="#">ENGLISH</a>
       </div>
     </div>
-    <!-- <div class="hambeger_menu">
-      <i class="fa-solid fa-bars"></i>
-    </div> -->
-    <div class="navbar">
+
+    <div class="dropdown">
+      <!-- <div class="whitelogo">
+        <a href="#"><img src="./images/지방공기업평가원white.png" alt="whitelogo"></a>
+      </div>
+      <div class="magnifying">
+        <p><i class="fa-solid fa-magnifying-glass"></i>
+        <p><i class="fa-solid fa-xmark"></i></p>
+      </div> -->
       <nav>
-        <ul class="top">
-          <li><a href="#">주요사업</a></li>
-          <li><a href="#">고객마당</a></li>
-          <li><a href="#">정보공개</a></li>
-          <li><a href="#">기관소개</a></li>
-        </ul>
-        <ul class="bot">
-          <!-- <img src="./images/drop_meun_image.png" alt="drop meun image"> -->
-          <li>
-            <ul class="line">
-                <li><a href="#">정책연구</a></li>
-                <li><a href="#">컨설팅</a></li>
-                <li><a href="#">경영평가</a></li>
-                <li><a href="#">인제개발(교육연수)</a></li>
-                <li><a href="#">타당성 검토</a></li>
-                <li><a href="#">경영지원단</a></li>
-                <li><a href="#">고객만족도조사</a></li>
-                <li><a href="#">경영정보</a></li>
-            </ul>
+        <ul>
+          <li><a href="#">주요사업</a>
+            <img src="./images/drop_meun_image.png" alt="drop meun image">
+              <ul class="line">
+                  <li><a href="#">정책연구</a></li>
+                  <li><a href="#">컨설팅</a></li>
+                  <li><a href="#">경영평가</a></li>
+                  <li><a href="#">인제개발(교육연수)</a></li>
+                  <li><a href="#">타당성 검토</a></li>
+                  <li><a href="#">경영지원단</a></li>
+                  <li><a href="#">고객만족도조사</a></li>
+                  <li><a href="#">경영정보</a></li>
+              </ul>
           </li>
-          <li>
-            <ul class="line">
-              <li><a href="#">공지사항</a></li>
-              <li><a href="#">행사•소식•동향</a></li>
-              <li><a href="#">묻고 답하기</a></li>
-              <li><a href="#">정보나눔터</a></li>
-              <li><a href="#">통합자료실</a></li>
-              <li><a href="#">ERC뉴스레터</a></li>
-              <li><a href="#">계간[지방공기업]</a></li>
-              <li><a href="#">익명신고 헬프라인</a></li>
-            </ul>
-          </li>
-          <li>
-            <ul class="line">
-              <li><a href="#">행정정보 사전공포</a></li>
-              <li><a href="#">정보공개제도 안내</a></li>
-              <li><a href="#">정보공개목록</a></li>
-              <li><a href="#">정보공개청구</a></li>
-              <li><a href="#">공공데이터 개방</a></li>
-            </ul>
-          </li>
-          <li>
-            <ul class="line">
-              <li><a href="#">인삿말</a></li>
-              <li><a href="#">미션 및 비젼</a></li>              
-              <li><a href="#">주요사업</a></li>
-              <li><a href="#">연혁</a></li>
-              <li><a href="#">조직구성</a></li>
-              <li><a href="#">경영공시</a></li>
-              <li><a href="#">윤리•인권 경영</a></li>
-              <li><a href="#">홍보자료</a></li>
-              <li><a href="#">오시는 길</a></li>
-            </ul>
-          </li>
+            <li><a href="#">고객마당</a>
+                <ul class="line">
+                  <li><a href="#">공지사항</a></li>
+                  <li><a href="#">행사•소식•동향</a></li>
+                  <li><a href="#">묻고 답하기</a></li>
+                  <li><a href="#">정보나눔터</a></li>
+                  <li><a href="#">통합자료실</a></li>
+                  <li><a href="#">ERC뉴스레터</a></li>
+                  <li><a href="#">계간[지방공기업]</a></li>
+                  <li><a href="#">익명신고 헬프라인</a></li>
+                </ul>
+            </li>
+            <li><a href="#">정보공개</a>
+               <ul class="line">
+                  <li><a href="#">행정정보 사전공포</a></li>
+                  <li><a href="#">정보공개제도 안내</a></li>
+                  <li><a href="#">정보공개목록</a></li>
+                  <li><a href="#">정보공개청구</a></li>
+                  <li><a href="#">공공데이터 개방</a></li>
+                </ul>
+            </li>
+            <li><a href="#">기관소개</a>
+                <ul class="line">
+                  <li><a href="#">인삿말</a></li>
+                  <li><a href="#">미션 및 비젼</a></li>              
+                  <li><a href="#">주요사업</a></li>
+                  <li><a href="#">연혁</a></li>
+                  <li><a href="#">조직구성</a></li>
+                  <li><a href="#">경영공시</a></li>
+                  <li><a href="#">윤리•인권 경영</a></li>
+                  <li><a href="#">홍보자료</a></li>
+                  <li><a href="#">오시는 길</a></li>
+                </ul>
+            </li>
         </ul>
       </nav>
+  </div>
+    <!-- viewport -->
+    <div class="hambeger_menu">
+      <i class="fa-solid fa-bars"></i>
     </div>
-
-
-    <!-- <div class="viewport_side">
+    <div class="viewport_side">
       <div class="viewport_menu">
         <p onclick="">주요사업</p>
         <p onclick="">고객마당</p>
@@ -105,10 +107,10 @@
     <div class="viewport_side2">
       <input type="text" class="togle" placeholder="검색할 단어를 입력하세요.">
        <i class="fa-solid fa-magnifying-glass"></i>
-    </div> -->
+    </div>
     
   </header>
-
+  
   <main>
     <section>
       <div class="slider">

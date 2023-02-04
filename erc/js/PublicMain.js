@@ -6,43 +6,43 @@ let day = date.getDate();
 let hour = date.getHours();
 let min = date.getMinutes();
 document.getElementById("dates").innerHTML =
-    "(" + year + "." + month + "." + day + "&nbsp" + hour + ":" + min + "기준) / 출처 : Airkorea";
+  "(" + year + "." + month + "." + day + "&nbsp" + hour + ":" + min + "기준) / 출처 : Airkorea";
 
 
-// 내비 드롭다운 메뉴
+// 내비 메뉴
 const $firstmenu = $('.navbar');
 const $header = $('.bot');
     
 $firstmenu.mouseenter(function(){
     $header.stop().animate({height:'530px'},1);
 })
-.mouseleave(function(){ 
+$firstmenu.mouseleave(function(){ 
     $header.stop().animate({height:'80px'},1);
 })
 
 
-// // 검색창 토글
-// $(".fa-magnifying-glass").click(function(){
-//     $('.viewport_side2').toggleClass("active")
-// });
-// $(".fa-magnifying-glass").click(function(){
-//     $(this).toggleClass("active");
-//   });
+// 검색창 토글
+$(".fa-magnifying-glass").click(function(){
+    $('.viewport_side2').toggleClass("active")
+});
+$(".fa-magnifying-glass").click(function(){
+    $(this).toggleClass("active");
+  });
 
-// //viewport menu toggle
-// $('.fa-bars').click(function(){
-//     $('.viewport_side').toggle().animate({left:'0px'});
-// });
+//viewport menu toggle
+$('.fa-bars').click(function(){
+    $('.viewport_side').toggle().animate({left:'0px'});
+});
 
-// $('.magnifying > i').click(function(){
-//     $('.viewport_side2').toggle().toggleClass("emphasized");
-// });
+$('.magnifying > i').click(function(){
+    $('.viewport_side2').toggle().toggleClass("emphasized");
+});
 
-// $(function(){
-//     $("#rel_site").on("change", function(){  
-//         $(".txt").text($(this).val());
-//     });
-// });
+$(function(){
+    $("#rel_site").on("change", function(){  
+        $(".txt").text($(this).val());
+    });
+});
 
 // 이미지 슬라이더 핸들
 const prev = document.querySelector('.left_arrow');
@@ -93,37 +93,30 @@ function changeSlide(){
 changeSlide();
 
 
-// 뷰포드 자동 이미지 슬라이더
-// function changeSlide(){
+//뷰포드 자동 이미지 슬라이더
+function changeSlide(){
 
-//     if(index<0){
-//       index = slides2.length-1;
-//     }
+    if(index<0){
+      index = slides2.length-1;
+    }
     
-//     if(index>slides2.length-1){
-//       index = 0;
-//     }
+    if(index>slides2.length-1){
+      index = 0;
+    }
     
-//     for(let i=0;i<slides2.length;i++){
-//       slides2[i].style.display = "none";
-//     }
+    for(let i=0;i<slides2.length;i++){
+      slides2[i].style.display = "none";
+    }
     
-//     slides2[index].style.display= "block";
+    slides2[index].style.display= "block";
     
-//     index++;
+    index++;
     
-//     setTimeout(changeSlide,5000);
+    setTimeout(changeSlide,5000);
     
-//   }
+  }
   
-//   changeSlide();
-
-
-// setInterval(function(){
-//     $('.slide_image2 :first-child').fadeOut() 
-//     .next().fadeIn().end(1000) 
-//     .appendTo('.slide_image2'); },5000);
-
+  changeSlide();
 
 // 공지사항 자동 슬라이더
 // first
@@ -201,30 +194,30 @@ function fnSlide2() {
   });
 };
 
-// var slide = document.querySelectorAll('slider_image');
-// var currentSlide = 0;
-// var slideInterval = setInterval(nextSlide,2000);
+var slide = document.querySelectorAll('slider_image');
+var currentSlide = 0;
+var slideInterval = setInterval(nextSlide,2000);
 
-// function nextSlide(){
-// 	slides[currentSlide].className = 'slider_image';
-// 	currentSlide = (currentSlide+1)%slides.length;
-// 	slides[currentSlide].className = 'slider_image showing';
-// }
+function nextSlide(){
+	slides[currentSlide].className = 'slider_image';
+	currentSlide = (currentSlide+1)%slides.length;
+	slides[currentSlide].className = 'slider_image showing';
+}
 
-// var playing = true;
-// var pauseButton = document.getElementById('pause');
+var playing = true;
+var pauseButton = document.getElementById('pause');
 
-// function pauseSlideshow(){
-// 	playing = false;
-// 	clearInterval(slideInterval);
-// }
+function pauseSlideshow(){
+	playing = false;
+	clearInterval(slideInterval);
+}
 
-// function playSlideshow(){
-// 	playing = true;
-// 	slideInterval = setInterval(nextSlide,2000);
-// }
+function playSlideshow(){
+	playing = true;
+	slideInterval = setInterval(nextSlide,2000);
+}
 
-// pauseButton.onclick = function(){
-// 	if(playing){ pauseSlideshow(); }
-// 	else{ playSlideshow(); }
-// };
+pauseButton.onclick = function(){
+	if(playing){ pauseSlideshow(); }
+	else{ playSlideshow(); }
+};
