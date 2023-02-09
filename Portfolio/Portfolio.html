@@ -9,19 +9,12 @@
   <script type="text/javascript" src="./js/PofolMain.js" defer></script>
   <script type="text/javascript" src="./js/jquery.js" ></script>
   <script src="https://kit.fontawesome.com/242516d697.js" crossorigin="anonymous"></script>
-  <title>fofo</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Sofia+Sans&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Scope+One&display=swap');
-  </style>
+  <title>Pofol</title>
 </head>
 <body>
   <div id="cursor"></div>
   <div id="cursor-border"></div>
   <a id="button"></a>
-
   <section id="first">
     <div class="hollow">
       <p>DESIGNED PORTFOLIO<br><span>START WITH SCROOLL</span></p>
@@ -33,18 +26,17 @@
         </div>
     </div>
   </section>
-  
   <section id="second"> 
     <nav id="navbar"> 
       <ul id="menu">  
         <li><a href="#first" id="main" data-cursor="pointer">Hellow</a></li>
         <li><a href="#second" id="aboutme" data-cursor="pointer">AboutMe</a></li>
         <li><a href="#horizontal_scroll" id="pofolsite" data-cursor="pointer">Works</a></li>
-        <li><a href="#bye" id="conact" data-cursor="pointer">Contat</a></li>
+        <li><a href="#foot" id="conact" data-cursor="pointer">Contat</a></li>
       </ul>
     </nav>
     <div class="map">
-      <div class="texbox">
+      <div id="texbox">
         <h2>편리함을 디자인하는 <br>웹퍼블리셔 <span>정슬기</span> 입니다</h2>
         <p>내 손 끝에서 만들어지는 가상의 세계에 매력을 느껴<br>
           웹퍼블리싱과 프론트엔드를 공부하게 되었습니다.</p>
@@ -54,7 +46,7 @@
           팀원과의 융합을 가장의 목표로 하며 클라이언트 사이드의<br>
           학습을 토대로 프론트엔드를 목표로 공부중입니다.</p>
       </div>
-      <div class="skill_effect">
+      <div id="skill_effect">
         <div class="skill_text">
           <div id="git" class="content" >
             <p>git과 github를 이용해 소스코드와 파일관리가 가능하며<br>웹 호스팅으로 사용가능합니다.</p>
@@ -94,24 +86,23 @@
           </div>
         </div>
         <div class="skill_btn">
-          <p class="btn" id="git" data-cursor="pointer2"><img src="./images/git.png"></p> 
-          <p class="btn" id="html" data-cursor="pointer2" ><img src="./images/html.png"></p>
-          <p class="btn" id="html" data-cursor="pointer2"><img src="./images/css.png"></p>
-          <p class="btn" id="js" data-cursor="pointer2"><img src="./images/js.png"></p>
-          <p class="btn" id="design" data-cursor="pointer2"><img src="./images/ps.png"></p>
-          <p class="btn" id="clanguage" data-cursor="pointer2"><img src="./images/c++.png"></p>
+          <p class="btn" id="git" data-cursor="pointer2"><img src="./images/git.png" alt="git"></p> 
+          <p class="btn" id="html" data-cursor="pointer2" ><img src="./images/html.png" alt="html"></p>
+          <p class="btn" id="html" data-cursor="pointer2"><img src="./images/css.png" alt="css"></p>
+          <p class="btn" id="js" data-cursor="pointer2"><img src="./images/js.png" alt="js"></p>
+          <p class="btn" id="design" data-cursor="pointer2"><img src="./images/ps.png" alt="design"></p>
+          <p class="btn" id="clanguage" data-cursor="pointer2"><img src="./images/c++.png" alt="c"></p>
         </div>
       </div>
     </div>
   </section>
-
   <div id="horizontal_scroll">
     <div class="pofol_box">
       <div class="sticky">
         <div class="horizontal">
           <div class="dim">
             <div class="pofol mypofol">
-              <img src="../Portfolio/images/pofol.png">
+              <img src="../Portfolio/images/pofol.png" alt="메인포트폴리오 이미지">
               <div class="text_even">
                 <h2>MAIN PORTFOLIO</h2>
                 <p>제작기간<span>약2주</span></p>
@@ -136,7 +127,7 @@
           </div>
           <div class="dim">
             <div class="pofol public">
-              <img src="../Portfolio/images/공기업평가.png">
+              <img src="../Portfolio/images/공기업평가.png" alt="공기업평가원 이미지">
               <div class="text_even">
                 <div class="veiwport_mypofol_text">
                   <h2>공기업 평가원</h2>
@@ -161,7 +152,7 @@
           </div>
           <div class="dim">
             <div class="pofol starbuck">
-              <img src="../Portfolio/images/starbucks.png">
+              <img src="../Portfolio/images/starbucks.png" alt="스타벅스 이미지">
               <div class="text_even">
                 <h2>Starbuck RENEWAL</h2>
                 <p>제작기간<span>약2주</span></p>
@@ -186,7 +177,7 @@
           </div>
           <div class="dim">
             <div class="pofol melon" id="meee">
-              <img src="./images/mellonSH.png" >
+              <img src="./images/mellonSH.png" alt="멜론 이미지">
               <div class="text_even">
                 <h2>MELLON RENEWAL</h2>
                 <p>제작기간<span>약1주</span></p>
@@ -213,12 +204,11 @@
       </div>
     </div>
   </div>
-
-  <footer>
+  <footer id="foot">
     <div id="bye">
       <p>MORE ABOUT ME?</p>
     </div>
-    <div class="contact">
+    <div id="contact">
       <i class="fa-solid fa-envelope" data-cursor="pointer2" onclick= "document.location = 'mailto:jsg148940@gmail.com'"></i>
       <i class="fa-brands fa-github" data-cursor="pointer2" onclick= "window.open('https://github.com/jsg148940/Portfolio1')"></i>
       <i class="fa-solid fa-comments" data-cursor="pointer2" onclick= "window.open('https://open.kakao.com/o/s2GaC1ge')"></i>
@@ -227,6 +217,5 @@
       <p>Copyright By Seul All Rights Reserved</p>
     </div>
   </footer>
-
 </body>
 </html>

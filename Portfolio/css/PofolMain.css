@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Scope+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
 /* 초기설정 */
 * {
   margin: 0;
@@ -6,23 +10,19 @@
   font-family: 'Sofia Sans', sans-serif;
   cursor: none;
 }
-body::-webkit-scrollbar{ 
-  display: none;
-}   
-html,body{
+html,body {
   width: 100%;
   height: 100%;
-  background: rgb(58, 58, 58);
+  background: rgb(58, 58, 58);;
 }
-a,p{
-  color: aliceblue;
-}
-section{
+section {
   height: 100vh;
   width: 100vw;
 }
+body::-webkit-scrollbar { display: none; }  
+a, p { color: aliceblue; }
 /* 커서 애니매이션 */
-#cursor{
+/* #cursor {
   position: fixed;
   top: -5px;
   left: -5px;
@@ -33,7 +33,7 @@ section{
   pointer-events: none;
   z-index: 999;
 }
-#cursor-border{
+#cursor-border {
   --size: 50px;
   position: fixed;
   top: calc(var(--size) / -2);
@@ -46,30 +46,28 @@ section{
   transition: top 0.15s ease-out, left 0.15s ease-out, width 0.15s ease-out,
     height 0.15s ease-out, background-color 0.15s ease-out;
   z-index: 999;
-}
+} */
+/* 처음으로 버튼 */
 #button {
   display: inline-block;
-  background-color: #555;
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  border-radius: 50%;
   position: fixed;
   bottom: 30px;
   right: 30px;
-  transition: background-color .3s, 
-    opacity .5s, visibility .5s;
+  width: 50px;
+  height: 50px;
+  background-color: #555;
+  text-align: center;
+  border-radius: 50%;
   opacity: 0;
-  visibility: hidden;
-  z-index: 1000;
-  transition: all .5s ease-in-out;
+  z-index: 100;
   transform: translateY(100px);
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+transition: all .5s ease-in-out;
 }
 #button::after {
   content: "\f077";
   font-family: FontAwesome;
-  font-weight: normal;
-  font-style: normal;
   font-size: 1vw;
   line-height: 50px;
   color: #fff;
@@ -83,20 +81,22 @@ section{
 }
 #button.show {
   opacity: 1;
-  visibility: visible;
-  transition: all .5s ease-in-out;
   transform: translateY(0);
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
 }
-
 /* 1 */
-#first{
+#first {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+    -webkit-animation: appear 1.5s ease-in-out forwards;
+    -moz-animation: appear 1.5s ease-in-out forwards;
   animation: appear 1.5s ease-in-out forwards;
 }
-.hollow{
+.hollow {
   width: 100%;
   height: auto;
   text-align: center;
@@ -104,18 +104,19 @@ section{
   color: #fc3735;
   background: -webkit-linear-gradient(left, #F57170, #10DDC2, #F57170);
   background-size: 1600px 200px;
-  -webkit-background-clip: text;
+    -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-name: animationgradienttitle;
-          animation-name: animationgradienttitle;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+    -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+    -webkit-animation-name: animationgradienttitle;
+  animation-name: animationgradienttitle;
+    -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+    -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
-@keyframes appear{
+@keyframes appear {
   0% {
     opacity: 0;
     transform: translateY(-70px);
@@ -124,7 +125,7 @@ section{
     opacity: 1;
   }
 }
-@-webkit-keyframes animationgradienttitle{
+@-webkit-keyframes animationgradienttitle {
   0% {
     background-position: 0 1600px;
   }
@@ -132,7 +133,7 @@ section{
     background-position: 1600px 0;
   }
 }
-@keyframes animationgradienttitle{
+@keyframes animationgradienttitle {
   0% {
     background-position: 0 1600px;
   }
@@ -140,23 +141,23 @@ section{
     background-position: 1600px 0;
   }
 }
-.hollow.add{ 
+.hollow.add { 
   transform: translateY(0); 
   opacity: 1; 
 }
-.hollow p{
+.hollow p {
   font-family: 'Scope One', serif;
   font-size: 7vw;
   font-weight: bold; 
   line-height: 110px;
 }
-.hollow span{
+.hollow span {
   font-family: 'Scope One', serif;
   font-size: 5vw;
   font-weight: lighter;
 }
 /* 원 애니메이션 */
-.circle{
+.circle {
   position: relative;
   top: 10%;
   width: 200px;
@@ -166,7 +167,7 @@ section{
   align-items: center;
   border-radius: 50%;
 }
-.logo{
+.logo {
   position: absolute;
   width: 150px;
   height: 150px;
@@ -176,61 +177,64 @@ section{
   background-repeat: no-repeat;
   background-position: 40px;
 }
-.text{
+.text {
   position: absolute;
   width: 100%;
   height: 100%;
+  -webkit-animation: rotares 10s linear infinite;
   animation: rotares 10s linear infinite;
 }
-.text span{
+.text span {
   position: absolute;
   left: 50%;
   font-size: 1em;
   font-weight: lighter;
+  -webkit-transform-origin: 0 100px;
   transform-origin: 0 100px;
 }
-@keyframes rotares{
+@keyframes rotares {
   0%{transform: rotate(360deg);}
   100%{transform: rotate(0deg);}
 }
-
 /* 2 */
-#second{
+#second {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 /* 네비메뉴 */
-nav{
+nav {
+  display: flex;
+  flex-direction: row;
   width: 100%;
   height: 5%; 
   text-align: end;
-  display: flex;
-  flex-direction: row;
   background: rgb(58, 58, 58);
   z-index: 100;
   opacity: 0;
   transform: translateY(100px);
+  -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
 }
-nav ul{
+nav ul {
   width: 100%;
   height: auto;
   margin-top: 1px;
 }
-nav ul li{
+nav ul li {
   display: inline-block;
-  list-style: none;
   margin: 0 30px;
   color: #fff;
+  list-style: none;
 }
-nav.stickys{
+nav.stickys {
   position: fixed;
   top: 0;
   left: 0;
   opacity: 1;
   transform: translateY(0);
+  -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
 }
 nav ul li a {
@@ -243,89 +247,111 @@ nav ul li a {
 nav ul li a::after {
   content: '';
   position: absolute;
+  top: 50%;
+  left: 0;
   width: 100%;
   height: 3px;
   transform: scaleX(0);
-  top: 50%;
-  left: 0;
   background-color: rgb(173, 204, 0);
+  -webkit-transform-origin: left;
   transform-origin: left;
+  -webkit-transition: transform 0.25s ease-out;
   transition: transform 0.25s ease-out;
 }
 nav ul li a:hover::after {
   transform: scaleX(1);
   transform-origin: left;
 }
-.map{
-  width: 100%;
-  height: 95%;
+.map {
   display: flex;
   flex-direction: row;
+  width: 100%;
+  height: 95%;
   margin: 50px 0 0 0;
 }
 /* 소개 */
-.texbox{
-  width: 40%;
-  height: 100%;
+#texbox {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: right;
   flex-wrap: nowrap;
+  width: 40%;
+  height: 100%;
+  text-align: right;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+.not-visible {
   opacity: 0;
-  transform: translateX(-1000px);
-  transition: all .5s ease-in-out;
 }
-.texbox.add{
-  transform: translateX(0);
-  opacity: 1;
+.right {
+  animation: right-slide 1s ease-out;
 }
-.texbox h2{
+@keyframes right-slide {
+  0%{
+    opacity: 0;
+    transform:translateX(-200px);
+}
+  100%{
+    transform:translate(0px);
+    opacity: 1;
+  }
+}
+#texbox h2 {
   font-size: 3vw;
   color: aliceblue;
   padding-bottom: 20px;  
 }
-.texbox span{
+#texbox span {
   color: rgb(173, 204, 0);
 }
-.texbox p{
+#texbox p {
   font-family: 'IBM Plex Sans KR', sans-serif;
   font-size: 1.2vw;
   padding-bottom: 20px;
   line-height: 40px;
 }
 /* 스킬 */
-.skill_effect{
-  width: 60%;
-  height: 100%;
+#skill_effect {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  opacity: 0;
-  transform: translateX(1000px);
-  transition: all .5s ease-in-out;
-  transition-delay: .2s;
+  width: 60%;
+  height: 100%;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
- .skill_effect.add{
-  transform: translateX(0);
-  opacity: 1;
+.left {
+  animation: left-slide 1s ease-out;
 }
-.skill_text{
+@keyframes left-slide {
+  0%{
+    opacity: 0;
+    transform:translateX(200px);
+}
+  100%{
+    transform:translate(0px);
+    opacity: 1;
+  }
+}
+.skill_text {
   width: 50vw;
   height: auto;
 }
-.content{
-  width: 90%;
-  height: 100%;
-  transform: translateX(100px);
-  animation: changein 1s ease-in-out forwards;
+.content {
   display: none;
   position: relative;
+  width: 90%;
+  height: 100%;
   border-radius: 30px;
   overflow: hidden;
   margin-left: 3em;
+  text-align: center;
+  transform: translateX(100px);
+  -webkit-animation: changein 1s ease-in-out forwards;
+  animation: changein 1s ease-in-out forwards;
 }
-@keyframes changein{
+@keyframes changein {
   to{ transform: translateX(0px); }
 }
 @media screen and (max-aspect-ratio: 1219/685) {
@@ -334,15 +360,15 @@ nav ul li a:hover::after {
       height: 100vh;
    }
 }
-video{
+video {
   width: 100vh;
   filter: blur(2px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.25);
 }
-#git{
+#git {
   display: block;
 } 
-.skill_text p{
+.skill_text p {
   width: 100%;
   height: auto;
   position: absolute;
@@ -351,11 +377,11 @@ video{
   font-size: 1.2vw;
   word-spacing: 7px;
   z-index: 200;
-  background: rgba(255, 255, 255, 0.089);
+  background: rgba(43, 31, 31, 0.753);
   font-weight: bold;
   padding: 30px 10px;
 }
-.skill_btn{
+.skill_btn {
   width: 8vw;
   height: 100%;
   display: flex;
@@ -364,172 +390,182 @@ video{
   align-items: center;
   padding: 10px;
 }
-.btn{
+.btn {
   width: 100%;
   height: 100%;
   background: transparent;
   text-align: center;
   padding: 1em;
 }
-.skill_btn img{
+.skill_btn img {
   width: 10vh;
 }
-.skill_btn:hover > *{
+.skill_btn:hover > * {
   opacity: 0.4;
   transform: scale(0.9);
 }
-.skill_btn > *:hover{
+.skill_btn > *:hover {
   opacity: 1; 
   transform: scale(1); 
   transition-delay: 0ms, 0ms; 
 }
-.skill_btn p :hover{
+.skill_btn p :hover {
   transform: scale(1.07);
 } 
-
-/* 3 */
 /* 포트폴리오 */
-.pofol_box{
+.pofol_box {
   height: 700vh;
 }
-.sticky{
+.sticky {
   position: sticky;
   top: 0px;
   max-height: 100vh;
   overflow-x: hidden;
   overflow-y: hidden;
 }
-.horizontal{
+.horizontal {
   display: flex;
 }
-.dim{
-  min-width: 100vw;
-  height: 100vh;
+.dim {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  opacity: 0;
-  transition: 1s all ease;
-  transform: translatey(500px);
   position: relative;
+  min-width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  transform: translatey(200px);
+  -webkit-transition: 1s all ease;
+  transition: 1s all ease;
 }
-.dim.add{
+.dim.add {
   transform: translateY(0);
   opacity: 1;
 }
-.pofol{
+.pofol {
+  position: relative;
   width: 60%;
   height: 70%;
-  -webkit-transition: all .5s;
-  -moz-transition: all .5s;
-  transition: all .5s;
-  position: relative;
   overflow: hidden;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   box-shadow: rgb(10, 12, 14) 0px 20px 30px -10px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
-.pofol::-webkit-scrollbar{
+.pofol::-webkit-scrollbar {
   width: 10px;
 	background-color: #222222;
 }
-.pofol::-webkit-scrollbar-track{
+.pofol::-webkit-scrollbar-track {
   border-radius: 10px;
 	background-color: #222222;
 }
-.pofol::-webkit-scrollbar-thumb{
+.pofol::-webkit-scrollbar-thumb {
 	border-radius: 10px;
 	background: aliceblue;
 }
-.pofol img{
+.pofol img {
+  position: absolute;
   width: 100%;
   height: auto;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
   filter: grayscale(80%);
-  position: absolute;
 }
-.pofol:hover img{
+.pofol:hover img {
   filter: none;
 }
-.text_even{
+.text_even {
   display: none;
 }
-.mypofol_text{
+.mypofol_text {
   width: auto;
   height: auto;
   margin: 50px;
 }
-.mypofol_text h2{
+.mypofol_text h2 {
   font-size: 1.4vw;
   color: aliceblue;
   border-left: 4px solid rgb(207, 85, 85);
   padding-left: 10px;
 }
-.mypofol_text p{
+.mypofol_text p {
   font-size: 1vw;
   padding: 20px 0 10px 10px;
 }
-.mypofol_text img{
-  box-shadow: 0 5px 10px rgba(0,0,0,0.25);
-  border-radius: 5px;
-  width: 50px;
-  height: 50px;
+.mypofol_text img {
   position: relative;
   top: 20px;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.25);
+  border-radius: 5px;
   margin: 5px;
 }
-.mypofol_text span{
+.mypofol_text span {
   padding-left: 30px;
   font-size: 1.2vw;
 }
-.mypofol_text :nth-child(5) span{
+.mypofol_text :nth-child(5) span {
   word-spacing: 30px;
 }
-.mypofol_text button{
+.mypofol_text button {
+  width: 150px;
   border-radius: 10px;
   border: transparent;
   padding: 5px 40px;
   margin: 20px 0;
-  width: 150px;
-  transition: all .5s ease-in-out;
   font-weight: bold;
   box-shadow: 0 5px 10px rgba(0,0,0,0.25);
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
 }
-.mypofol_text button:hover{
+.mypofol_text button:hover {
   background: rgb(58, 58, 58);
   color: aliceblue;
   border: 1px solid aliceblue;
+  -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
 }
 /* footer */
-footer{
+footer {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: 80vh;
-  background-color: rgb(173, 204, 0);
+  align-items: center;
   position: relative;
+  width: 100%;
+  max-height: 1000px;
+  background-color: rgb(173, 204, 0);
 }
-#bye >p{
-  font-size: 10vw;
-  color: rgb(0, 57, 65);
-  margin: 0 50px 40px;
+#bye > p {
+  font-family: 'IBM Plex Sans KR', sans-serif;
+  font-size: 5vw;
+  font-weight: 700;
+  margin: 1em 0 0 0;
+  color: rgb(1, 117, 133);
 }
-.contact{
+#contact {
   float: left;
   word-spacing: 50px;
-  margin: 0 50px 0;
+  font-weight: 700;
+  margin: 1em 0 20em 0;
 }
-.contact i{
+#contact i {
+  font-size: 4rem;
   padding-right: 13px;
   padding-left: 13px;
   color: #fff;
-  font-size: 5vw;
+  opacity: .8;
 }
-.rights{
-  font-size: 2rem;
-  color: #fff;
-  position: absolute;
-  bottom: 5%;
-  left: 37%;
+#contact i:hover{
+  opacity: 1;
+  transform: scale(1.2);
+  transition: all .3s ease-out;
+}
+.rights p{
+  font-family: 'IBM Plex Sans KR', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 1em;
+  color: rgb(1, 117, 133);
 }

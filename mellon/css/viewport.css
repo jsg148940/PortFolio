@@ -1,64 +1,63 @@
 @media screen and (max-width:1200px){
   /* header */
-  .search i{
+  .search i {
     position: absolute;
     left: 16%;
   }
   /* section */
-  .news_board{
+  .news_board {
     width: 90%;
+    margin-top: 150px;
   }
-  .text_slider ul li h1{
-    font-size: 2.3vw;
+  .text_slider ul li h1 {
+    font-size: 2rem;
   }
-  .text_slider ul li h3{
-    font-size: 2vw;
-    line-height: 40px;
+  .text_slider ul li p {
+    font-size: 1.3rem;
+    line-height: 30px;
   }
-  .new_album{
+  .new_album {
     width: 90%;
     border-top: 4px solid rgb(1, 116, 218);
   }
-  .new_album_text h1{
+  .new_album_text h1 {
     padding-top: 20px;
   }
-  .album_list li{
+  .album_list li {
     width: 100%;
     margin: 20px 0px;
   }
-  .album_list img{
+  .album_list img {
     width: 100%;
     height: 100%;
   }
-  .album_info{
+  .album_info {
     position: absolute;
     top: 510px;
   }
   .inner p {
     font-size: 1rem;
   }
-  .inner_text p{
+  .inner_text p {
     padding-left: 50px;
     font-size: 1.3vw;
   }
-  .promo{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 200px 0;
+  .promo {
+    width: 90%;
   }
-  .video_text{
+  .video_text {
+    position: relative;
+    left: 0;
     width: 80%;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   }
-  .hot_this_week{
+  .hot_this_week {
     margin: -100px 0;
   }
   .hot_list ul .item:hover {
     width: 50%;
   }
-  .item .text p{
+  .item .text p {
     font-size: 1rem;
   }
 }
@@ -66,97 +65,103 @@
 
 @media screen and (max-width:800px){
   /* header */
-  .search input{
+  .search input {
     width: 250px;
   }
-  .search i{
+  .search i {
     left: 6em;
   }
-  .join{
+  .join {
     display: none;
   }
-  .viewport_join{
+  .viewport_join {
     display: block;
   }
   /* section */
-  .news_board{
+  .news_board {
     width: 90%;
     height: 1000px;
     margin: 150px 0;
   }
-  .board_slider{
+  .board_slider {
     display: flex;
     flex-direction: column;
   }
-  .board_slider div{
+  .board_slider div {
     width: 100%;
     height: 50%;
     overflow: hidden;
   }
   .text_slider,
-  .image_slider{
+  .image_slider {
     border-radius: 0 0 0 0;
   }
-  .text_slider ul li h1{
-    font-size: 4vw;
+  .text_slider ul li h1 {
+    font-size: 2rem;
   }
-  .text_slider ul li h3{
-    font-size: 3vw;
-    line-height: 30px;
+  .text_slider ul li p {
+    font-size: 1.5rem;
   }
-  .new_album{
+  .new_album {
     height: auto;
     width: 80%;
   }
-  .album_list{
+  .album_list {
     display: flex;
     flex-direction: column;
   }
-  .album_list li{
+  .album_list li {
     max-height: 500px;
   }
-  .album_info{
+  .album_info {
     position: absolute;
     opacity: 0;
   }
   .inner h2,
   .inner p,
-  .inner_text p{
+  .inner_text p {
     font-size: 2vh;
     padding: 0;
   }
-  video{
+  .promo {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+  video {
     width: 100%
   }
-  .video_text{
-    box-shadow: none;
+  .video_text {
+    width: 100%;
+    height: 100%;
   }
-  .video_text h1{
+  .video_text h1 {
     font-size: 6vw;
   }
-  .video_text p{
+  .video_text p {
     font-size: 3vw;
   }
-  .video_text :nth-child(3){
+  .video_text :nth-child(3) {
     font-size: 3vw;
   }
-  .video_text button{
+  .video_text button {
     font-size: 3vw;
   }
-  .hot_this_week{
+  .hot_this_week {
+    margin-top: 100px;
     border-top: 4px solid rgb(95, 131, 54);
   }
-  .hot_this_week h1{
+  .hot_this_week h1 {
     font-size: 7vw;
     height: auto;
   }
-  .hot_this_week button{
+  .hot_this_week button { 
     font-size: 4vw;
   }
   .grow .item:hover {
     width: 60%;
   }
-  .text{
+  .text {
     font-size: 2vw;
   }
 }

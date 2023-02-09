@@ -10,7 +10,6 @@ document.addEventListener("mousemove", (e) => {
 
   cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
 });
-
 requestAnimationFrame(function loop() {
   const easting = 8;
   cursorBorderPos.x += (cursorPos.x - cursorBorderPos.x) / easting;
@@ -19,7 +18,6 @@ requestAnimationFrame(function loop() {
   cursorBorder.style.transform = `translate(${cursorBorderPos.x}px, ${cursorBorderPos.y}px)`;
   requestAnimationFrame(loop);
 });
-
 document.querySelectorAll("[data-cursor]").forEach((item) => {
   item.addEventListener("mouseover", (e) => {
     if (item.dataset.cursor === "pointer") {
@@ -48,22 +46,28 @@ document.querySelectorAll("[data-cursor]").forEach((item) => {
   });
 });
 
-
-// 스킬메뉴 토글
-$('.btn').hover(function(e) {
-  e.preventDefault();
-  
-  $(".content").hide();
-  $("#"+this.id).show();
-});
-
-
 //움직이는 원 애니메이션
 const text = document.querySelector('.text p');
 text.innerHTML = text.innerText.split("").map(
 (char, i) =>
 `<span style= "transform:rotate(${i * 10.5}deg)">${char}</span>`
 ).join("")
+
+// 처음으로 버튼
+var btn = $('#button');
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+//
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '100');
+});
 
 // 내비메뉴 고정 
 var navbar = document.getElementById("navbar");
@@ -78,27 +82,50 @@ window.onscroll = function(){
   }
 }
 
-// 처음으로 버튼
-var btn = $('#button');
-
-$(window).scroll(function() {
-  if ($(window).scrollTop() > 300) {
-    btn.addClass('show');
-  } else {
-    btn.removeClass('show');
-  }
-});
-
-btn.on('click', function(e) {
+// 스킬메뉴 토글
+$('.btn').hover(function(e) {
   e.preventDefault();
-  $('html, body').animate({scrollTop:0}, '300');
+  
+  $(".content").hide();
+  $("#"+this.id).show();
 });
 
+// slide right
+var observer = new IntersectionObserver(function(entries){
+  
+  entries.forEach(e =>{
+      let element = e.target;
+      if(e.isIntersecting === true){
+          element.classList.remove("not-visible");
+          element.classList.add("right");
+      }else{
+          element.classList.remove("right");
+          element.classList.add("not-visible");
+      }
+  });
+}, { threshold: [0] });
+observer.observe(document.querySelector("#texbox"));
+observer.observe(document.querySelector("#contact"));
+
+// slide left
+var observer = new IntersectionObserver(function(entries){
+
+  entries.forEach(e =>{
+      let element = e.target;
+      if(e.isIntersecting === true){
+          element.classList.remove("not-visible");
+          element.classList.add("left");
+      }else{
+          element.classList.remove("left");
+          element.classList.add("not-visible");
+      }
+  });
+}, { threshold: [0] });
+observer.observe(document.querySelector("#skill_effect"));
+observer.observe(document.querySelector("#bye"));
 
 
-
-
-//가로 스크롤
+// horizontal scroll
 document.addEventListener('scroll', horizontalScroll);
 
 let sticky = document.querySelector('.sticky');
@@ -107,54 +134,17 @@ let scrollWidth = sticky.scrollWidth;
 let verticalScrollHeight = stickyParent.getBoundingClientRect().height-sticky.getBoundingClientRect().height;
 
 function horizontalScroll(){
-
     let stickyPosition = sticky.getBoundingClientRect().top;
     if(stickyPosition > 1){
         return;
     }else{
         let scrolled = stickyParent.getBoundingClientRect().top;
         sticky.scrollLeft =(scrollWidth/verticalScrollHeight)*(-scrolled)*0.80;
-    
     }
 }
 
-// slide in 이펙트
+// slide up
 function reveal() {
-  var reveals = document.querySelectorAll(".texbox");
-
-  for (var i = 0; i < reveals.length; i++) {
-      var windowHeight = window.innerHeight;
-      var elementTop = reveals[i].getBoundingClientRect().top;
-      var elementVisible = 100;
-
-      if (elementTop < windowHeight - elementVisible) {
-      reveals[i].classList.add("add");
-      } else {
-      reveals[i].classList.remove("add");
-      }
-  }
-  }
-  window.addEventListener("scroll", reveal);
-
-function reveal2() {
-  var reveals = document.querySelectorAll(".skill_effect");
-
-  for (var i = 0; i < reveals.length; i++) {
-      var windowHeight = window.innerHeight;
-      var elementTop = reveals[i].getBoundingClientRect().top;
-      var elementVisible = 100;
-
-      if (elementTop < windowHeight - elementVisible) {
-      reveals[i].classList.add("add");
-      } else {
-      reveals[i].classList.remove("add");
-      }
-  }
-  }
-  window.addEventListener("scroll", reveal2);
-
-// fade in 이펙트
-function reveal3() {
   var reveals = document.querySelectorAll(".dim");
 
   for (var i = 0; i < reveals.length; i++) {
@@ -169,30 +159,4 @@ function reveal3() {
       }
   }
   }
-  window.addEventListener("scroll", reveal3);
-
-
-  /*-----
-Spanizer
-- Wraps letters with spans, for css animations
------*/
-// (function($) {
-//   var s,
-//   spanizeLetters = {
-//     settings: {
-//       letters: $('.js-spanize'),
-//     },
-//     init: function() {
-//       s = this.settings;
-//       this.bindEvents();
-//     },
-//     bindEvents: function(){
-//       s.letters.html(function (i, el) {
-//         //spanizeLetters.joinChars();
-//         var spanizer = $.trim(el).split("");
-//         return '<span>' + spanizer.join('</span><span>') + '</span>';
-//       });
-//     },
-//   };
-//   spanizeLetters.init();
-// })(jQuery);
+  window.addEventListener("scroll", reveal);

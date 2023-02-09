@@ -1,15 +1,10 @@
-// 메뉴
-$(".navigation li").hover(function() {
-  var isHovered = $(this).is(":hover");
-  if (isHovered) {
-    $(this).children("ul").stop().slideDown(300);
-  } else {
-    $(this).children("ul").stop().slideUp(100);
-  }
-});
+// slide left menu
+function toggleMenu(e) {
+  e.classList.toggle("active");
+  document.querySelector(".sidebar").classList.toggle("active");
+}
 
-
-// 음악 차트 롤링
+// 음악차트 rolling
 setInterval(fnSlide, 3000);
 function fnSlide() {
   $(".chart_rollig >ul").animate({ "margin-top": "-30px" }, 1000, function () {
@@ -18,29 +13,7 @@ function fnSlide() {
   });
 };
 
-
-// 공지 슬라이더
-setInterval(function(){ 
-  $('.text_slider >ul>li:first-child').show() 
-  .next().fadeIn().end(1000) 
-  .appendTo('.text_slider >ul'); },4000);
-
-setInterval(function(){ 
-  $('.image_slider >ul>li:first-child').hide() 
-  .next().fadeIn().end(1000) 
-  .appendTo('.image_slider >ul'); },4000);
-
-
-//viewport menu set
-$('.hambeger_menu i').click(function(){
-  $('.viewport_side').css({'display':'block'}).animate({ left:'0px'});
-});
-$('.slide_top i').click(function(){
-  $('.viewport_side').animate({left:'-900px'});
-});
-
-
-// 사라지는 이펙트
+// 음악차트 slide up
 var didScroll;
 var lastScrollTop = 0;
 var delta = 5;
@@ -73,27 +46,13 @@ function hasScrolled() {
     lastScrollTop = st;
 }
 
-//
-// function preventScroll(e){
-//   e.preventDefault();
-//   e.stopPropagation();
+// 공지 슬라이더
+setInterval(function(){ 
+  $('.text_slider >ul>li:first-child').show() 
+  .next().fadeIn().end(1000) 
+  .appendTo('.text_slider >ul'); },4000);
 
-//   return false;
-// }
-
-// function disable(){
-// document.querySelector('.viewport_side').addEventListener('wheel', preventScroll);
-// }
-
-// function enable(){
-//   document.querySelector('.viewport_side').removeEventListener('wheel', preventScroll);
-// }
-
-// document.querySelector('.slide_top i').addEventListener('click', disable);
-
-
-function toggleMenu(e) {
-  e.classList.toggle("active");
-  document.querySelector(".sidebar").classList.toggle("active");
-}
-
+setInterval(function(){ 
+  $('.image_slider >ul>li:first-child').hide() 
+  .next().fadeIn().end(1000) 
+  .appendTo('.image_slider >ul'); },4000);

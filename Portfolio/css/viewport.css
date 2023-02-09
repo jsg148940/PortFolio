@@ -1,104 +1,104 @@
 @media (max-width:1200px){
   /* 1 */
-  .circle{
+  .circle {
     display: none;
   }
-  .hollow p{
+  .hollow p {
     font-size: 11vw;
   }
-  .hollow span{
+  .hollow span {
     font-size: 9vw;
   }
   /* 2 */
-  nav ul{
+  nav ul {
     width: 100%;
     height: auto;
   }
-  nav ul li a{
+  nav ul li a {
     font-size: 2.6vw;
   }
-  nav ul{
+  nav ul {
     width: 100%;
     height: auto;
     margin-top: 1px;
   }
-  .texbox h2{
+  #texbox h2 {
     font-size: 3vw;
   }
-  .texbox p{
+  #texbox p {
     font-size: 1.7vw;
   }
-  .skill_effect{
+  #skill_effect {
     display: flex;
     flex-direction: column;
   }
-  .skill_text{
+  .skill_text {
     width: 100%;
     height: 70%;
   }
-  .content{
+  .content {
     padding: 50px;
     margin: 0;
   }
-  .content p{
+  .content p {
     font-size: 2vw;
   }
-  .skill_btn{
+  .skill_btn {
     width: 100%;
     height: 30%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .btn{
+  .btn {
     width: 30%;
     height: 50%;
     margin: 0;
     padding: 0;
   }
   /* 3 */
-  .pofol{
+  .pofol {
     width: 90%;
   }
-  .mypofol_text{
+  .mypofol_text {
     display: none;
   }
-  .text_even{
+  .text_even {
     display: block;
-    border-radius: 30px;
+    position: relative;
     width: 100%;
     height: 100%;
     padding: 80px;
+    border-radius: 30px;
+    opacity: 0;
     background: rgba(240, 248, 255, 0.863);
     transition: all .5s ease-in-out;
     transform: translateY(700px);
-    opacity: 0;
-    position: relative;
   }
-  .pofol:hover .text_even{
+  .pofol:hover .text_even {
     opacity: 1;
     transform: translateY(0px);
     transition: all .5s ease-in-out;
   } 
-  .text_even h2{
+  .text_even h2 {
     font-size: 4vw;
     color: rgb(54, 54, 54);
     border-left: 4px solid rgb(75, 109, 219);
     padding-left: 10px;
   }
-  .text_even p{
+  .text_even p {
     color: rgb(54, 54, 54);
     font-size: 20px;
     padding: 10px 0 0 10px;
     font-weight: bold;
   }
-  .text_even span{
+  .text_even span {
     padding-left: 30px;
   }
-  .text_even :nth-child(4){
+  .text_even :nth-child(4) {
     padding-bottom: 50px;
   }
-  .text_even img{
+  .text_even img {
     box-shadow: 0 5px 10px rgba(0,0,0,0.25);
     border-radius: 5px;
     width: 50px;
@@ -107,7 +107,7 @@
     top: 20px;
     margin: 5px;
   }
-  .text_even button{
+  .text_even button {
     border-radius: 10px;
     padding: 5px 40px;
     width: 150px;
@@ -116,102 +116,98 @@
     box-shadow: 0 5px 10px rgba(0,0,0,0.25);
     margin: 40px 0;
   }
-  .text_even button:hover{
+  .text_even button:hover {
     background: rgb(58, 58, 58);
     color: aliceblue;
     border: 1px solid aliceblue;
     transition: all .5s ease-in-out;
   }
   /* footer */
-  footer{
+  footer {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   #bye p{
-    font-size: 11vw;
+    font-size: 6rem;
   }
-  .contact i{
-    font-size: 12vw;
+  #contact {
+    margin: 1em 0 3em 0;
   }
-  .rights{
+  .rights {
     text-align: center;
   }
 }
 
 @media (max-width:800px){
   /* 1 */
-  .hollow p{
+  .hollow p {
     font-size: 15vw;
   }
-  .hollow span{
+  .hollow span {
     font-size: 10vw;
   }
   /* 2 */
-  nav ul li a{
+  nav ul li {
+    margin: 0 20px;
+  }
+  nav ul li a {
     font-size: 4vw;
   }
-  .map{
+  .map {
     display: flex;
     flex-direction: column;
   }
-  .texbox{
+  #texbox {
     width: 100%;
     height: 60%;
     text-align: left;
     padding-top: 30px;
     margin-left: 50px;
   }
-  .texbox h2{
+  #texbox h2 {
     font-size: 5vw;
   }
-  .texbox p{
+  #texbox p {
     font-size: 3vw;
     line-height: normal;
   }
-  .skill_effect{
+  #skill_effect {
     width: 100%;
     height: 40%;
     display: flex;
     flex-direction: column;
   }
-  .skill_text{
+  .skill_text {
     width: 100%;
     height: 70%;
     display: flex;
     flex-wrap: nowrap;
   }
-  .content{
+  .content {
     width: 100%;
     padding: 10px;
     border-radius: 0;
   }
-  .content p{
+  .content p {
     font-size: 2.5vw;
   }
-  .skill_btn{
+  .skill_btn {
     width: 100%;
     height: 30%;
   }
-  .btn{
+  .btn {
     width: 10vh;
   }
-  .btn img{
+  .btn img {
     width: 8vw;
   }
+  /* 3 */
+  .pofol {
+    overflow-y: hidden;
+  }
   /* footer */
-  footer{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content:space-evenly;
-  }
-  .contact{
-    position: absolute;
-    top: 40%;
-
-  }
-  .rights{
-    position: static;
+  #bye p{
+    font-size: 4rem;
   }
 }
