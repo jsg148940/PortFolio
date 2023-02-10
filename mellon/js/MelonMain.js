@@ -1,3 +1,75 @@
+// smooth scroll
+customScrollable = $("body");
+
+var scrollTo = 0;
+var scrollTop = 0;
+
+function scrollTick() {
+  requestAnimationFrame(scrollTick); 
+  
+  if (!touchDown) {
+    scrollTop -= (scrollTop - scrollTo) / 8;
+    customScrollable.scrollTop(scrollTop);
+  }
+}
+
+customScrollable.on("DOMMouseWheel mousewheel", function(event) {
+  event.preventDefault();
+  scrollTop = customScrollable.scrollTop()
+  
+  var delta = event.originalEvent.wheelDelta/120 || -event.originalEvent.detail/3;
+  scrollTo = scrollTop - (delta * 180);
+});
+
+var touchDown = false;
+var scrolling = false;
+var scrollDelta = 0;
+customScrollable.on("touchstart touchend touchmove", function(event) {
+  event.preventDefault();
+  
+  if (event.type == "touchstart") {
+    touchDown = true;
+    
+    
+    
+    touchStart = {
+      x: event.originalEvent.touches[0].clientX,
+      y: event.originalEvent.touches[0].clientY
+    }
+  }
+  if (event.type == "touchmove" && touchDown) {
+    currPos = {
+      x: event.originalEvent.touches[0].clientX,
+      y: event.originalEvent.touches[0].clientY
+    }
+    if (Math.abs(currPos.y - touchStart.y) > 10 || scrolling) {
+      scrolling = true;
+
+      scrollDelta = currPos.y - touchStart.y;
+      touchStart = {
+        x: currPos.x,
+        y: currPos.y
+      }
+      
+      var st = customScrollable.scrollTop() - scrollDelta;
+
+      scrollTop = st;
+      scrollTo = st;
+      customScrollable.scrollTop( st );
+    }
+  }
+  if (event.type == "touchend" && event.originalEvent.touches.length == 0) {
+    scrolling = false;
+    touchDown = false;
+   
+    console.log(scrollDelta);
+    scrollTo = scrollTop - scrollDelta * 10;
+  }
+});
+
+scrollTick();
+
+
 // slide left menu
 function toggleMenu(e) {
   e.classList.toggle("active");

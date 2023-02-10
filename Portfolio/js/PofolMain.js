@@ -1,3 +1,5 @@
+
+
 // 커서 애니메이션
 const cursor = document.querySelector("#cursor");
 const cursorBorder = document.querySelector("#cursor-border");
@@ -139,7 +141,7 @@ function horizontalScroll(){
         return;
     }else{
         let scrolled = stickyParent.getBoundingClientRect().top;
-        sticky.scrollLeft =(scrollWidth/verticalScrollHeight)*(-scrolled)*0.80;
+        sticky.scrollLeft =(scrollWidth/verticalScrollHeight)*(-scrolled)* .8;
     }
 }
 

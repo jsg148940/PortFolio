@@ -9,7 +9,7 @@
 }
 html, body { 
   width: 100%; 
-  height: 100%;
+  height: 100%; 
 
 }
 #container {
@@ -60,7 +60,7 @@ button{ font-family: 'Noto Sans KR', sans-serif; }
   color: #122f48;
   width: 60px;
   height: 60px;
-  margin-top: 5px;
+  margin: 5px;
 }
 .nav_logo img{
   width: 100%;
@@ -480,8 +480,7 @@ button{ font-family: 'Noto Sans KR', sans-serif; }
 }
 #slogan button:hover {
   color: aliceblue;
-  border: 3px solid rgb(68, 76, 85);
-  background: rgb(68, 76, 85);
+  background: rgb(18, 159, 100);
   transition: all .2s ease-out;
 }
 #slogan p {
@@ -604,10 +603,9 @@ button{ font-family: 'Noto Sans KR', sans-serif; }
   width: 30vw;
   height:20em;
   text-align: center;
-  border-radius: 30px;
+  border-radius: 10px;
   margin-left: 1em;
   box-shadow: rgba(0, 0, 0, 0.822) 2.95px 2.95px 5.6px;
-
   overflow: hidden;
   position: relative;
   display: inline-block;
@@ -619,49 +617,35 @@ cursor: pointer;
   background-size: cover;
   background-repeat: no-repeat;
   -webkit-transition: all .5s;
-  -moz-transition: all .5s;
-  -o-transition: all .5s;
   transition: all .5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .bg-one {background-image: url(../images/toraja3.jpg) 
 }
 
 .box_text1 >h2 {
-  display: none;
+  /* display: none; */
   font-family: 'Noto Sans KR', sans-serif;
   font-size: 1vw;
   color: #fff;
   text-align: center;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  bottom: 150px;
-  left: 0;
-  right: 0;
-  height: 50px;
   cursor: pointer;
 }
 
 .box_text1 >p {
-  display: none;
+  /* display: none; */
   font-family: 'Noto Sans KR', sans-serif;
   font-size: .8rem;
-
   color: #fff;
   text-align: center;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 50px;
-  right: 0;
-  height: 50px;
   cursor: pointer;
+  margin: 20px 0;
 }
 .box_text1 >button {
-  bottom: 60px;
-  left: 220px;
-  position: absolute;
+  text-align: center;
   width: 200px;
   padding: 5px 0;
   border-radius: 10px;
@@ -669,7 +653,7 @@ cursor: pointer;
   background-color: transparent;
   transition: all .3s ease-out;
   cursor: pointer;
-  display: none;
+  /* display: none; */
 }
 .box_text1 >button a{
   color: rgb(255, 255, 255);
@@ -738,21 +722,21 @@ cursor: pointer;
   border-top: 3px solid #aaa838;
   background: #2c2c2173;
   transition: all .3s ease-in-out;
+  padding: 10px;
 }
 .inner-text:hover .inner-text_box {
   opacity: 1;
   bottom: 0;
   transition: all .3s ease-in-out;
 }
-.inner-text_box h2 {
+.inner-text_box >h2 {
   font-family: 'Noto Sans KR', sans-serif;
   font-size: .9vw;
-  padding: 5px 30px;
+  color: rgb(243, 243, 243);
 }
 .inner-text_box p { 
   font-family: 'Noto Sans KR', sans-serif;
   font-size: .7vw;
-  padding-bottom: 10px;
   color: rgb(243, 243, 243);
 }
 .inner-text_box h2:hover,
@@ -899,15 +883,15 @@ cursor: pointer;
   transform: translateY(-7px);
   background: #1a1914e5;
 }
-/* video */
-.video{
+/* videos */
+.videos{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
   position: relative;
 }
-.video video{
+.videos video{
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 #video-text{
@@ -966,52 +950,71 @@ cursor: pointer;
   color: aliceblue;
   transition: all .3s ease-in-out;
 }
+
 /* footer */
 footer {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
-  flex-wrap: nowrap;
-  position: relative;
+  justify-content: center;
   width: 100%;
   min-height: 300px;
   background: rgb(18, 159, 100);
 }
+/*  */
 .adress {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  width: 40vw;
 }
+
 .adress_icon {
-  color: aliceblue;
+  float: left;
   text-align: center;
-  margin-top: 1em;
 }
+
 .adress_icon i {
-  font-size: 3rem;
-  padding: .6em;
+  margin: 0 40px;
+  font-size: 4rem;
+  color: aliceblue;
   cursor: pointer;
+  transition: all .5s ease-out;
+}
+.adress_icon i:hover {
+  transform: scale(1.3);
+  transition: all .3s ease-out;
+}
+.adress_txt{
+  margin: 2em 0 0 0;
 }
 .adress_txt p {
   font-size: 1rem;
   text-align: center;
   color: aliceblue;
 }
+/*  */
 .sitemap {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  width: 45vw;
+}
+
+.sitemap_btn{
+  width: 100%;
 }
 .sitemap_btn button {
-  width: 150px;
-  padding: 5px 0;
+  padding: 10px 0;
+  width: 10vw;
   font-size: 1rem;
   color: aliceblue;
   cursor: pointer;
-  border: 3px solid aliceblue;
   background: transparent;
   transition: all  .3s ease-in-out;
+  border: 2px solid aliceblue;
 }
 .sitemap_btn button:hover {
   color: rgb(18, 159, 100);
@@ -1019,16 +1022,16 @@ footer {
   transition: all  .3s ease-in-out;
 }
 .sitemap_list {
-  width: 20vw;
+  width: 100%;
   text-align: center;
   line-height: 30px;
-  margin: 20px 0;
+  margin: 2em 0 0 0;
 }
 .sitemap_list a {
   position: relative;
   font-size: 1rem;
+  padding: 0 1em;
   color: #fff;
-  padding-left: 1em;
   text-decoration: none;
 }
 .sitemap_list a:hover {

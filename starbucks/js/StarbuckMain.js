@@ -9,10 +9,10 @@ $(elm).each(function (index) {
         if (!event) event = window.event;
         if (event.wheelDelta) {
             delta = event.wheelDelta / 120;
-            if (window.opera) delta = -delta;
+            // if (window.opera) delta = -delta;
         } 
         else if (event.detail)
-            delta = -event.detail / 3;
+            delta = -event.detail / 6;
         var moveTop = $(window).scrollTop();
         var elmSelecter = $(elm).eq(index);
 
@@ -41,6 +41,7 @@ $(elm).each(function (index) {
 });
 }
 
+
 // slide up
 function reveal() {
     var reveals = document.querySelectorAll(".reward");
@@ -48,7 +49,7 @@ function reveal() {
 for (var i = 0; i < reveals.length; i++) {
     var windowHeight = window.innerHeight;
     var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 100;
+    var elementVisible = 10;
 
     if (elementTop < windowHeight - elementVisible) {
     reveals[i].classList.add("add");
