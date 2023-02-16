@@ -1,18 +1,17 @@
-
 .hot_list ul {
+  display: flex;
   width: 100%;
   height: 70%;
   box-sizing: border-box;
-  display: flex;
   $items_hover_width: 50%;
+
   .item {
     box-sizing: border-box;
     flex-grow: 1;
-    //padding: 10px 10px 10px 10px; /* Just for presentation (Not required) */
     transition: width .4s ease;
     width: 0;
     &:hover {
-      width: $items_hover_width; /* This is the height on hover */
+      width: $items_hover_width;
     }
   }
 }
@@ -22,31 +21,32 @@
   overflow: hidden;
   .text {
     position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0%;
+    width: 300px;
     font-size: 40px;
     font-weight: 700;
     font-family: sans-serif;
+    text-align: center;
     color: #000;
-    opacity: 0;
     text-shadow: 1px 1px 0 rgba(255,255,255,0.5);
-    bottom: 0%;
     margin-left: auto;
     margin-right: auto;
-    left: 0;
-    right: 0;
-    width: 300px;
-    background-color: rgba(127,127,127,0.5);
-    text-align: center;
+    background: rgba(127,127,127,0.5);
     transition-property: opacity, bottom;
     transition-duration: .1s;
     transition-delay: 0;
     transition-timing-function: linear, ease;
+    opacity: 0;
   }
+
   &:hover {
     .text {
-      opacity: 1;
       bottom: 10%;
       transition-duration: .3s, .7s;
       transition-delay: .4s, .2s;
+      opacity: 1;
     }
   }
   

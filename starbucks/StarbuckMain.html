@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="./js/jquery.js"></script>
-  <script src="./js/StarbuckMain.js" defer></script>
   <script src="https://kit.fontawesome.com/242516d697.js" crossorigin="anonymous"></script>
   <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="./css/StarbuckMain.css" defer>
   <link rel="stylesheet" href="./css/viewport.css">
+  <script src="./js/StarbuckMain.js" defer></script>
+  <script src="./js/jquery.js"></script>
   <title>Starbucks Renewal</title>
 </head>
-<body> 
-  <div id="container" class="page intro">
+<body>
+  <div class="container intro">
+
     <nav class="navbar sticky">
       <a href="#" class="nav_logo"><img src="./images/pngwing.com.png" alt="원형 스타벅스 로고"></a>
       <div class="menu-btn">
@@ -347,7 +348,9 @@
         </li>
       </ul>
     </nav>
+
     <div class="overlay"></div>
+
     <div class="intro-box">
       <div id="intro-text">
         <p><span>HAPPY 2023</span></p>
@@ -367,9 +370,9 @@
         <p>ⓒ 2022 Starbucks Coffee Company. All Rights Reserved.</p>
       </div>
     </div>
-
   </div>
-  <div id="container" class="page cards">
+
+  <div class="container cards">
     <div class="reward moblie">
       <img src="./images/card1.jpeg" alt="슬라이더 모바일">
       <div class="slider-text">
@@ -395,7 +398,8 @@
       </div>
     </div>
   </div>
-  <div id="container" class="page coffees">
+  
+  <div class="container coffees">
     <div id="slogan">
       <h1>FIND<br>YOUR<br>TASTE</h1>
       <button>전체 메뉴 더보기</button>
@@ -403,6 +407,7 @@
       <p>대표메뉴와 커스텀 믹스로 즐기세요.</p>
       <p>디케페인 에스프레소샷 추가 가능(일부음료 제외)</p>
     </div>
+
     <div id="new_menu">
       <div class="new coffee1">
         <img src="./images/coffee1.png" alt="아이스 커피">
@@ -435,18 +440,19 @@
       <div class="new coffee8"><p>마이 메뉴</p></div>
     </div>
   </div>
-  <div id="container" class="page product">
+
+  <div class="container product">
     <div id="product-box">
-      <div class="parent" onclick="">
-      <div class="box_text1 bg-one">
-          <h2>스타벅스만의 지속가능한 커피 생산</h2>
-          <p>스타벅스는 온도, 일광, 강우량 등 커피 재배에 이상적인 기후가<br>
-            나타나는 고지대에서 생산된 아라비카 커피만 구매합니다.<br>
-            그 이유는 고지대에서 재배된 원두는<br>
-            풍부한 풍미와 세련된 바디감과 산미를 가지고 있기 때문입니다.<br>
-            이를 위해 스타벅스는 농장과 농부들의 곁에서 커피 경작을 함께 연구합니다.<br></p>
-          <button><a href="#">커피이야기 더보기<a></button>
-       </div>
+      <div class="box-parent">
+        <div class="box_text1 bg-one">
+            <h2>스타벅스만의 지속가능한 커피 생산</h2>
+            <p>스타벅스는 온도, 일광, 강우량 등 커피 재배에 이상적인 기후가<br>
+              나타나는 고지대에서 생산된 아라비카 커피만 구매합니다.<br>
+              그 이유는 고지대에서 재배된 원두는<br>
+              풍부한 풍미와 세련된 바디감과 산미를 가지고 있기 때문입니다.<br>
+              이를 위해 스타벅스는 농장과 농부들의 곁에서 커피 경작을 함께 연구합니다.<br></p>
+            <button><a href="#">커피이야기 더보기<a></button>
+        </div>
       </div>
         
       <div class="box_text2">
@@ -503,11 +509,12 @@
       </div>
     </div>
   </div>
-  <div id="container" class="page videos">
-    <video muted autoplay loop width="1600" height="900">
-      <source src="./video/Starbucks Premium Select Collection.mp4" type="video/mp4">
-    </video>
-    <div id="video-text">
+
+  <div class="container videos">
+    <div class="video-container">
+      <video src="./video/Starbucks Premium Select Collection.mp4" muted autoplay loop></video>
+    </div>
+    <div class="video-text">
       <h2>스타벅스를 가까이에서 경험해 보세요</h2>
       <h3>고객님과 가장 가까이 있는 매장을 찾아보세요!</h3>
       <p>차별화된 커피 경험을 누릴 수 있는&nbsp;&nbsp;<span>리저브™ 매장</span></p>
@@ -530,7 +537,6 @@
            : 하익성 ⓒ 2022 Starbucks Coffee Company.<br>All Rights Reserved</p> 
       </div>
     </div>
-
     <div class="sitemap">
       <div class="sitemap_btn">
         <button>찾아오시는 길</button>
@@ -548,7 +554,7 @@
         <a href="#">윤리경여 핫라인</a>
       </div>
     </div>
-
   </footer> 
+  
 </body>
 </html>

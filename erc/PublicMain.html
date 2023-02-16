@@ -4,42 +4,53 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/PublicMain.css">
+  <link rel="stylesheet" href="./css/PublicMain.css" defer>
   <link rel="stylesheet" href="./css/viewport.css">
   <script src="./js/PublicMain.js" defer></script>
   <script src="./js/jquery.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
   <script src="https://kit.fontawesome.com/242516d697.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <title>지방공기업평가원</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
-    @import "css/PublicCom.scss";
-    @import url(css/PublicCom.css);
-  </style>
 </head>
 <body>
   <header>
     <div class="weatherbar">
       <div class="weather">
-        <p>22 / 30 ℃ &nbsp; 미세먼지 보통&nbsp;</p>
+        <p>22 / 30 ℃ &nbsp; 미세먼지 보통 &nbsp;</p>
         <p id="dates"></p>
       </div>
-      <div class="homemenu">
+      <div class="home-menu">
         <a href="#">HOME</a>
         <a href="#">CONTACT US</a>
         <a href="#">ENGLISH</a>
       </div>
     </div>
 
-    <div class="dropdown">
-      <!-- <div class="whitelogo">
-        <a href="#"><img src="./images/지방공기업평가원white.png" alt="whitelogo"></a>
+    <div class="header-bar">
+      <div class="toggle-wrap" onclick="toggleMenu(this)">
+        <span class="toggle-bar"></span>
       </div>
-      <div class="magnifying">
-        <p><i class="fa-solid fa-magnifying-glass"></i>
-        <p><i class="fa-solid fa-xmark"></i></p>
-      </div> -->
+      <div class="white-logo">
+        <a href="#"><img src="./images/지방공기업평가원white.png" alt="탑 로고 이미지"></a>
+      </div>
+      <div class="sss">
+      <div class="search-btn">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="검색할 단어를 입력하세요.">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+    </div>
+    </div>
+
+    <aside>
+      <a href="#">주요사업</a>
+      <a href="#">고객마당</a>
+      <a href="#">정보공개</a>
+      <a href="#">기관소개</a>
+    </aside>
+
+    <div class="drop-down">
       <nav>
         <ul>
           <li><a href="#">주요사업</a>
@@ -91,154 +102,125 @@
             </li>
         </ul>
       </nav>
-  </div>
-    <!-- viewport -->
-    <div class="hambeger_menu">
-      <i class="fa-solid fa-bars"></i>
     </div>
-    <div class="viewport_side">
-      <div class="viewport_menu">
-        <p onclick="">주요사업</p>
-        <p onclick="">고객마당</p>
-        <p onclick="">정보공개</p>
-        <p onclick="">기관소개</p>
-      </div>
-    </div>
-    <div class="viewport_side2">
-      <input type="text" class="togle" placeholder="검색할 단어를 입력하세요.">
-       <i class="fa-solid fa-magnifying-glass"></i>
-    </div>
-    
   </header>
-  
+
   <main>
     <section>
-      <div class="slider">
-        <div class="slider_handle">
-          <div class="slider_arrows">
-            <button class="slider_arrow left_arrow"><i class="fa-solid fa-arrow-left"></i></button>
-            <button class="slider_arrow right_arrow"><i class="fa-solid fa-arrow-right"></i></button>
-            <button class="slider_arrow pause" id="pause"><i class="fa-solid fa-pause"></i></button>
-          </div>
-        </div>
-        <div class="slider_carousel">
-          <div class="slider_image"><img src="./images/bg_img01.jpg" alt=""></div>
-          <div class="slider_image"><img src="./images/bg_img02.jpg" alt=""></div>
-          <div class="slider_image"><img src="./images/bg_img03.jpg" alt=""></div>
-        </div>
+      <ul id="slides">
+        <li class="slide showing"><img src="./images/bg_img01.jpg" alt="슬라이드 이미지1"></li>
+        <li class="slide"><img src="./images/bg_img02.jpg" alt="슬라이드 이미지2"></li>
+        <li class="slide"><img src="./images/bg_img03.jpg" alt="슬라이드 이미지3"> </li>
+      </ul>
+      <div class="slider_handle">
+        <button class="slider_handle_left"><i class="fa-solid fa-arrow-left"></i></button>
+        <button class="slider_handle_right"><i class="fa-solid fa-arrow-right"></i></button>
       </div>
     </section>
 
-      <!-- <div class="slide_image2">
-        <img src="../지방공기업평가원/images/bg_img01_viewport.png" alt="">
-        <img src="../지방공기업평가원/images/bg_img02_viewport.png" alt="">
-        <img src="../지방공기업평가원/images/bg_img03_viewport.png" alt="">
-      </div> -->
-      <!-- <div class="controller_num1">
-        <button class="pause"><i class="fa-solid fa-pause"></i></button>
-      </div> -->
-
-    <div class="Horizontalmenu">
-      <ul>
-        <li><a href="#">정책연구</a></li>
-        <li><a href="#">컨설팅</a></li>
-        <li><a href="#">경영평가</a></li>
-        <li><a href="#">인재개발</a></li>
-        <li><a href="#">타당성검토</a></li>
-        <li><a href="#">경영지원</a></li>
-        <li><a href="#">고객만족도조사</a></li>
-        <li><a href="#">경영평가시스템</a></li>
-      </ul>
-    </div>
-
     <section>
-      <div class="noticebar">
-        <div class="noticeline">
+      <div class="vertical-menu">
+        <ul>
+          <li><a href="#">정책연구</a></li>
+          <li><a href="#">컨설팅</a></li>
+          <li><a href="#">경영평가</a></li>
+          <li><a href="#">인재개발</a></li>
+          <li><a href="#">타당성검토</a></li>
+          <li><a href="#">경영지원</a></li>
+          <li><a href="#">고객만족도조사</a></li>
+          <li><a href="#">경영평가시스템</a></li>
+        </ul>
+      </div>
+    </section>
+    
+    <section>
+      <div class="notice-rolling">
+        <div class="notice left-box">
           <a href="#">경영정보DB</a>
-            <div class="notice_first">
-              <ul class="rolling first_list">
-                <li><a href="#">2020년 경영평가결과</a></li>
-                <li><a href="#">2019년 경영평가결과</a></li>
-                <li><a href="#">2018년 경영평가결과</a></li>
-              </ul>
-            </div>
-            <div class="note_control">
-              <i class="fa-solid fa-pause"></i>
-              <i class="fa-solid fa-plus"></i>
-            </div> 
-        </div>
-        <div class="noticeline">
-          <a href="#">공지사항</a>
-          <div class="notice_second">
-            <ul class="rolling second_list">
-              <li><a href="#">개인정보 처리방침 변경 안내</a></li>
-              <li><a href="#">영상정보 처리방침 안내</a></li>
-              <li><a href="#">2022년 연구위원 신규채용 안내</a></li>
+          <div class="rolling">
+            <ul id="ticker">
+              <li><a href="#"><span>2021년</span> 경영평가</a></li>
+              <li><a href="#"><span>2020년</span> 경영평가</a></li>
+              <li><a href="#"><span>2019년</span> 경영평가</a></li>
             </ul>
           </div>
           <div class="note_control">
-            <i class="fa-solid fa-pause"></i>
-            <i class="fa-solid fa-plus"></i>
-          </div> 
+            <button class="prev2"><i class="fa-solid fa-caret-left" ></i></button>
+            <button class="next2"><i class="fa-solid fa-caret-right" ></i></button>
+          </div>
+        </div>
+        <div class="notice right-box">
+          <a href="#">공지사항</a>
+          <div class="rolling2">
+            <ul id="ticker2">
+            <li><a href="#">개인정보 처리방침 변경 안내</a></li>
+            <li><a href="#">영상정보 처리방침 안내</a></li>
+            <li><a href="#">2022년 연구위원 신규채용 안내</a></li>
+            </ul>
+          </div>
+          <div class="note_control">
+            <button class="prev3"><i class="fa-solid fa-caret-left" ></i></button>
+            <button class="next3"><i class="fa-solid fa-caret-right" ></i></button>
+          </div>
         </div>
       </div> 
      </section>
 
     <section>
-      <div class="boxes">
-        <div class="noticeboard box">
-          <div class="noticebutton">
-            <div class="btn left" data-color="red"><p>공지사항</p></div>
-            <div class="btn right" data-color="red"><p>공공기관 일자리 정보</p></div>
+      <div class="three-boxes">
+        <div class="notice-board">
+          <div class="notice_button">
+            <div class="list_btn_left"><p>공지사항</p></div>
+            <div class="list_btn_right"><p>공공기관 일자리 정보</p></div>
           </div>
-          <div class="boardtext">
-            <div class="notice board">
+          <div class="board-list">
+            <div class="board_box list1">
               <ul>
                 <li><p>2022년 지방공기업평가원 연구보조원(경영평가 및 고객만족도 조사) 모집 공고</p><span>2022-07-13</span></li>
                 <li><p>[국민권익위원회] 공공계약 부패행위 집중신고기간 안내(~9-30)</p><span>2022-07-13</span></li>
-                <li><p>영상정보 처리방침 변경 안내</p><span>2022-07-13</span></li>
+                <li><p>영상정보 처리방침 변경 안내</p><span>2022-07-13</span>
                 <li><p>2022년 연구위원 신규채용 최종합격자 공고</p><span>2022-07-13</span></li>
                 <li><p>2022년 연구위원 신규채용 필기전형 결과 발표 및 인성검사·면접전형 시행계획 공고</p><span>2022-07-13</span></li>
                 <li><p>2022년 행정원(휴직대체) 신규채용 최종합격자 공고</p><span>2022-07-13</span></li>
               </ul>
             </div>
-            <div class="notice btnboard">
+            <div class="board_box list2">
               <ul>
                 <li><p>(대구광역시 수성구청)2022 수성구청</p><span>2022-07-13</span></li>
                 <li><p>(전라북도 군산시청)2022년 희망희망</p><span>2022-07-13</span></li>
                 <li><p>산사태현장예방단</p><span>2022-07-13</span></li>
                 <li><p>산사태현장예방단</p><span>2022-07-13</span></li>
               </ul> 
-              <div class="btnboard_button">
+              <div class="list2_btn">
                 <button>NCS<i class="fa-solid fa-circle-chevron-right"></i></button>
                 <button>HRD<i class="fa-solid fa-circle-chevron-right"></i></butto>
               </div>
             </div>
           </div>
         </div>
-        <div class="event box">
-          <div class="event_controll">
-            <div class="event_title">
+        
+        <div class="image-board">
+          <div class="pic-control">
+            <div class="contro_title">
               <h3>행사 · 소식 · 동향</h3>
             </div>
-            <div class="event_button">
-              <button class="btn_prev"><i class="fa-solid fa-caret-left"></i></button>
-              <button class="btn_auto"><i class="fa-solid fa-pause"></i></button>
-              <button class="slider_arrow btn_next "><i class="fa-solid fa-caret-right"></i></button>
+            <div class="control_btn">
+              <button class="control_btn_prev"><i class="fa-solid fa-angle-left"></i></button>
+              <button class="control_btn_next "><i class="fa-solid fa-angle-right"></i></button>
             </div>
           </div>
-          <div class="event_slider">
-            <div class="evensection">
+          <div class="event-slider">
+            <div class="event_pic">
               <ul>
-                <li>
+                <li class="pics showing">
                   <img src="./images/pic1.png" alt="">
                   <p>나무심기의 날 행사</p>
                 </li>
-                <li>
+                <li class="pics">
                   <img src="./images/pic2.png" alt="">
                   <p>울진 삼척 산블피해 구호 성금 전달</p>
                 </li>
-                <li>
+                <li class="pics">
                   <img src="./images/pic3.png" alt="">
                   <p>[동향] ERC 경영혁신TF팀 2기 발대식</p>
                 </li>
@@ -246,11 +228,12 @@
             </div>
           </div>
         </div>
-        <div class="video box">
+
+        <div class="video-board">
           <div class="youtube">
             <iframe src="https://www.youtube.com/embed/XlKKIjobe0g? controls=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
-          <table class="videobtn">
+          <table class="video_btn">
             <tr>
               <td>CEO정책포럼</td>
               <td>지방공기업평가원</td>
@@ -266,14 +249,9 @@
   </main>
 
   <footer>
-    <div class="family_company">
+    <div class="family-company">
       <div class="sitemap_slider">
         <h3>협력기관</h3>
-        <div class="sitemap_controll">
-          <button class="btn_prev"><i class="fa-solid fa-caret-left"></i></button>
-          <button class="btn_auto"><i class="fa-solid fa-pause"></i></button>
-          <button class="btn_next"><i class="fa-solid fa-caret-right"></i></button>
-        </div>
         <div class="sitemap_scroll">
           <ul>
             <li>
@@ -298,6 +276,7 @@
         </div>
       </div>
     </div>
+
     <div class="site_info">
       <div class="site_info_text">
         <a href="#">개인정보처리방침</a> |
@@ -311,6 +290,7 @@
         <a href="#"><i class="fa-brands fa-youtube"></i></a>
       </div>
     </div>
+
     <div class="site_text">
       <div class="site_text_logo">
         <a href="#"><img src="./images/지방공기업로고black.png"></a>

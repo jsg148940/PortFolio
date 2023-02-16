@@ -1,6 +1,5 @@
 // smooth scroll
 customScrollable = $("body");
-
 var scrollTo = 0;
 var scrollTop = 0;
 
@@ -29,9 +28,6 @@ customScrollable.on("touchstart touchend touchmove", function(event) {
   
   if (event.type == "touchstart") {
     touchDown = true;
-    
-    
-    
     touchStart = {
       x: event.originalEvent.touches[0].clientX,
       y: event.originalEvent.touches[0].clientY
@@ -52,7 +48,6 @@ customScrollable.on("touchstart touchend touchmove", function(event) {
       }
       
       var st = customScrollable.scrollTop() - scrollDelta;
-
       scrollTop = st;
       scrollTo = st;
       customScrollable.scrollTop( st );
@@ -76,6 +71,7 @@ function toggleMenu(e) {
   document.querySelector(".sidebar").classList.toggle("active");
 }
 
+
 // 음악차트 rolling
 setInterval(fnSlide, 3000);
 function fnSlide() {
@@ -84,39 +80,6 @@ function fnSlide() {
     $(".chart_rollig >ul >li:first-child").insertAfter(".chart_rollig >ul >li:last-child");
   });
 };
-
-// 음악차트 slide up
-var didScroll;
-var lastScrollTop = 0;
-var delta = 5;
-var navbarHeight = $('#navi').outerHeight();
-$(window).scroll(function(event){
-    didScroll = true;
-});
-
-setInterval(function() {
-    if (didScroll) {
-        hasScrolled();
-        didScroll = false;
-    }
-}, 250);
-
-function hasScrolled() {
-    var st = $(this).scrollTop();
-    
-    if(Math.abs(lastScrollTop - st) <= delta)
-        return;
-  
-    if (st > lastScrollTop && st > navbarHeight){
-        $('#navi').css('opacity',0);
-    } else {
-        if($(window).scrollTop() == 0) {
-          $('#navi').css('opacity',1);
-        }
-    }
-    
-    lastScrollTop = st;
-}
 
 // 공지 슬라이더
 setInterval(function(){ 

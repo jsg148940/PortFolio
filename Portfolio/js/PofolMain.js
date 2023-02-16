@@ -1,5 +1,3 @@
-
-
 // 커서 애니메이션
 const cursor = document.querySelector("#cursor");
 const cursorBorder = document.querySelector("#cursor-border");
@@ -48,12 +46,14 @@ document.querySelectorAll("[data-cursor]").forEach((item) => {
   });
 });
 
+
 //움직이는 원 애니메이션
 const text = document.querySelector('.text p');
 text.innerHTML = text.innerText.split("").map(
 (char, i) =>
 `<span style= "transform:rotate(${i * 10.5}deg)">${char}</span>`
 ).join("")
+
 
 // 처음으로 버튼
 var btn = $('#button');
@@ -71,6 +71,7 @@ btn.on('click', function(e) {
   $('html, body').animate({scrollTop:0}, '100');
 });
 
+
 // 내비메뉴 고정 
 var navbar = document.getElementById("navbar");
 var menu = document.getElementById("menu");
@@ -84,6 +85,7 @@ window.onscroll = function(){
   }
 }
 
+
 // 스킬메뉴 토글
 $('.btn').hover(function(e) {
   e.preventDefault();
@@ -91,6 +93,7 @@ $('.btn').hover(function(e) {
   $(".content").hide();
   $("#"+this.id).show();
 });
+
 
 // slide right
 var observer = new IntersectionObserver(function(entries){
@@ -108,6 +111,7 @@ var observer = new IntersectionObserver(function(entries){
 }, { threshold: [0] });
 observer.observe(document.querySelector("#texbox"));
 observer.observe(document.querySelector("#contact"));
+
 
 // slide left
 var observer = new IntersectionObserver(function(entries){
@@ -144,6 +148,7 @@ function horizontalScroll(){
         sticky.scrollLeft =(scrollWidth/verticalScrollHeight)*(-scrolled)* .8;
     }
 }
+
 
 // slide up
 function reveal() {
