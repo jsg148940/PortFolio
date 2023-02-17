@@ -93,7 +93,7 @@
     right: 0;
     width: 100%;
     height: 100%;
-    padding: 80px;
+    padding: 20px 50px 20px 50px;
     background: rgba(240, 248, 255, 0.863);
     -webkit-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
@@ -108,16 +108,16 @@
   } 
 
   .text_even h2 {
-    font-size: 4vw;
+    font-size: 5vw;
     color: rgb(54, 54, 54);
     border-left: 4px solid rgb(75, 109, 219);
     padding-left: 10px;
   }
   
   .text_even p {
-    color: rgb(54, 54, 54);
-    font-size: 20px;
-    padding: 10px 0 0 10px;
+    color: rgb(80, 76, 76);
+    font-size: 2.5vw;
+    padding: 10px 0 0 20px;
     font-weight: bold;
   }
 
@@ -126,7 +126,7 @@
   }
 
   .text_even :nth-child(4) {
-    padding-bottom: 50px;
+    padding-bottom: 30px;
   }
 
   .text_even img {
@@ -142,7 +142,7 @@
   .text_even button {
     width: 150px;
     font-weight: bold;
-    margin: 40px 0;
+    margin: 20px 0;
     border-radius: 10px;
     padding: 5px 40px;
     box-shadow: 0 5px 10px rgba(0,0,0,0.25);
