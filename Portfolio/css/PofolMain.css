@@ -555,6 +555,7 @@ video {
   width: auto;
   height: auto;
   margin: 50px;
+  border: 1px solid red;
 }
 
 .mypofol_text h2 {

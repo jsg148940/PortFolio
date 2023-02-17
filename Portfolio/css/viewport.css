@@ -115,10 +115,17 @@
   }
   
   .text_even p {
+<<<<<<< Updated upstream
     color: rgb(80, 76, 76);
     font-size: 2.5vw;
     padding: 10px 0 0 20px;
+=======
+    color: rgb(54, 54, 54);
+    font-size: 20px;
+    /* padding: 5px 0 0 5px; */
+>>>>>>> Stashed changes
     font-weight: bold;
+    background-color: aqua;line-height: 30px;
   }
 
   .text_even span {
@@ -131,7 +138,7 @@
 
   .text_even img {
     position: relative;
-    top: 20px;
+    top: 10px;
     width: 50px;
     height: 50px;
     margin: 5px;
